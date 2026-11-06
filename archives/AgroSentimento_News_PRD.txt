@@ -1,0 +1,870 @@
+=== PAGE 1 ===
+AgroSentimento
+News
+Newsletter diária de inteligência de mercado para o agronegócio,
+curada por NLP no formato editorial “The News”
+DOCUMENTO DE REQUISITOS DE PRODUTO (PRD)
+Squad 3 — Processamento de Linguagem Natural (NLP)
+Disciplina: Aprendizado de Máquina II
+Tema institucional: Mineração de sentimentos de boletins e informativos de grãos
+Versão 1.0  ·  10 de setembro de 2026
+Fontes utilizadas na elaboração deste PRD:
+ Board de planejamento do squad (Trello — “Kanbam”, export JSON)
+ Site institucional da newsletter The News (thenewscc.com.br)
+ Model card do BERTimbau (neuralmind/bert-base-portuguese-cased, Hugging Face)
+ ENCONTRO 04 — 28/08/26 (diretrizes da atividade acadêmica, Squad 3)
+
+
+=== PAGE 2 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 2
+Sumário
+1. Visão Geral e Contexto Acadêmico
+2. Problema e Oportunidade
+3. Objetivos do Produto
+4. Personas
+5. Referências de Produto (Benchmark)
+6. Escopo Funcional — User Stories
+7. Arquitetura da Solução e Pipeline de Dados
+8. Especificação por Componente Técnico
+9. Stack Tecnológica
+10. Plano de Sprints e Responsabilidades (Squad 3)
+11. Métricas de Sucesso e Critérios de Aceite
+12. Riscos e Mitigações
+13. Fora de Escopo (Sprint 1–4)
+
+
+=== PAGE 3 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 3
+1. Visão Geral e Contexto Acadêmico
+Este documento formaliza os requisitos de produto do projeto conduzido pelo Squad 3 na disciplina de
+Aprendizado de Máquina II, cujo tema institucional atribuído é Processamento de Linguagem Natural (NLP)
+aplicado à mineração de sentimentos de boletins e informativos de grãos, conforme as diretrizes do
+Encontro 04 (28/08/2026). A entrega está organizada em quatro sprints, com Sprint Review inicial em
+04/09/2026.
+O produto concebido pelo squad — AgroSentimento News — é uma newsletter diária automatizada que
+replica a proposta editorial da newsletter brasileira The News (formato de leitura rápida, linguagem leve e
+curadoria objetiva das principais notícias do dia), aplicada verticalmente ao agronegócio. O sistema raspa
+continuamente os principais portais do setor, agrupa semanticamente notícias que tratam do mesmo fato,
+calcula um índice de relevância inspirado na lógica do Google Trends, classifica o sentimento de mercado de
+cada cobertura em um “termômetro setorial”, gera previsões de curto prazo em formato de mercado preditivo
+(estilo Polymarket) e entrega, todos os dias antes das 5h30, uma edição de 5 matérias pronta para aprovação
+humana e disparo por e-mail.
+Este PRD consolida e formaliza o planejamento já em curso no board de gestão do squad (Trello “Kanbam”) e
+no site de referência editorial (The News), traduzindo as 16 histórias de usuário já levantadas, os cards técnicos
+distribuídos entre as três duplas do squad e os critérios de aceite definidos, em um documento único de
+especificação de produto.
+Nota metodológica: o board do Trello foi utilizado como fonte primária de escopo funcional e técnico (histórias de usuário, tarefas e
+critérios de aceite já redigidos pela equipe); o site thenewscc.com.br foi utilizado como referência de tom editorial e formato de
+entrega; e o model card do BERTimbau foi utilizado para validar a escolha de modelos de linguagem em português na camada de
+NLP (seção 9).
+2. Problema e Oportunidade
+Profissionais e investidores do agronegócio precisam acompanhar diariamente múltiplos portais especializados
+para se manterem informados sobre o setor. Esse processo é fragmentado, redundante (o mesmo fato é
+coberto por vários veículos com redações distintas) e tecnicamente denso — boletins de mercado tendem a ser
+longos, formais e pouco escaneáveis. Não existe hoje uma síntese diária que (a) consolide as coberturas de
+múltiplos portais em fatos únicos, (b) hierarquize o que realmente teve repercussão de mercado, (c) traduza o
+impacto de cada notícia em um sinal objetivo de “bom ou ruim para o produtor”, e (d) entregue tudo isso em um
+formato de leitura de poucos minutos.
+Isso é evidenciado diretamente pelas histórias de usuário levantadas pelo squad, entre elas:
+
+US-1 — necessidade de consolidar 5 portais em um único ponto de leitura;
+
+US-2 / US-4 — eliminar duplicidade e fragmentação de cobertura do mesmo fato;
+
+US-5 / US-10 — separar o que teve repercussão real de mercado de matérias de assessoria/institucionais;
+
+US-6 — traduzir a notícia em um sinal rápido de impacto financeiro para o produtor.
+3. Objetivos do Produto
+ Objetivo
+Descrição
+O1 — Consolidação
+Unificar a cobertura diária de 5 portais de agronegócio em uma única fonte de
+leitura.
+O2 — Deduplicação
+semântica
+Agrupar automaticamente notícias que descrevem o mesmo fato, mesmo com
+redações diferentes, via embeddings vetoriais.
+
+
+=== PAGE 4 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 4
+O3 — Priorização por
+relevância
+Ranquear os fatos do dia por um score de relevância inspirado no Google
+Trends, ponderando diversidade de fontes e menção a entidades críticas do
+setor.
+O4 — Sinalização de
+sentimento
+Classificar cada cobertura em um termômetro setorial (positivo / negativo /
+neutro) com intensidade percentual e justificativa curta.
+O5 — Projeção de curto
+prazo
+Gerar cenários preditivos binários (estilo Polymarket) com data de resolução
+objetiva para os fatos de maior impacto.
+O6 — Autonomia com
+curadoria humana
+Executar toda a análise de forma autônoma durante a madrugada, mantendo um
+painel de aprovação humana antes do disparo.
+O7 — Entrega editorial no
+formato The News
+Publicar em e-mail responsivo, com linguagem leve e estrutura de blocos curtos,
+reproduzindo o padrão de legibilidade da newsletter de referência.
+
+
+=== PAGE 5 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 5
+4. Personas
+ Persona
+Perfil e necessidade
+US relacionadas
+Assinante do
+agronegócio
+Quer acompanhar o setor sem abrir múltiplos portais nem
+ler cobertura repetida; valora leitura rápida e visual no
+celular.
+US-1, US-2, US-4,
+US-11, US-14
+Produtor / investidor
+rural
+Precisa saber rapidamente se uma notícia é boa ou ruim
+para o seu faturamento, e quer projeções de curto prazo
+com probabilidades.
+US-6, US-9, US-10
+Curador(a) da
+newsletter
+Precisa de uma tela de revisão rápida (menos de 5 min)
+para aprovar a edição do dia, com alertas de falha de
+coleta e trabalho pesado já pronto ao acordar.
+US-7, US-8, US-12,
+US-13, US-15
+Equipe da plataforma
+(squad)
+Precisa validar que o sistema é robusto sob volume e
+cenários de crise de mercado antes de confiar na
+automação total.
+US-16
+5. Referências de Produto (Benchmark)
+5.1 The News (thenewscc.com.br)
+Newsletter diária brasileira, enviada gratuitamente por e-mail, que sintetiza os principais acontecimentos do dia
+em blocos curtos, com linguagem leve, títulos com trocadilho e foco em leitura completa em poucos minutos.
+Em fevereiro de 2025 a publicação lançou o Termômetro de Imparcialidade, uma enquete diária que pede ao
+leitor para avaliar o viés da edição — referência direta adotada pelo squad para o conceito de “termômetro
+setorial” usado neste produto (ver US-6 e componente de classificação de sentimento, seção 8.3).
+Elementos de formato replicados no AgroSentimento News:
+
+Estrutura fixa em blocos curtos por matéria (título com trocadilho, contexto, por que importa, número em
+destaque);
+
+Tom de voz leve, com sarcasmo equilibrado e analogias simples para termos técnicos (checklist “Engenharia
+da Persona”, seção 8.7);
+
+Limite de leitura de até 180 palavras por notícia (leitura inferior a 1 minuto);
+
+Envio matinal, com curadoria humana revisando o conteúdo antes do disparo;
+
+Elemento visual de “termômetro” como marca de produto, adaptado aqui para sentimento de mercado em vez
+de viés editorial.
+5.2 BERTimbau (neuralmind/bert-base-portuguese-cased)
+Modelo BERT pré-treinado para português brasileiro (arquitetura BERT-Base, 12 camadas, 110M de
+parâmetros, licença MIT), desenvolvido pela Neuralmind e disponibilizado na Hugging Face. O model card
+reporta desempenho estado-da-arte em três tarefas de downstream NLP em português: reconhecimento de
+entidades nomeadas (NER), similaridade textual e inferência textual — as três capacidades centrais que o
+pipeline deste produto precisa (deduplicação semântica, extração de entidades críticas e classificação de
+sentimento).
+Uso previsto no produto: o BERTimbau (ou um classificador especializado derivado dele) é a referência de
+modelo base em português para a tarefa de classificação de sentimento setorial (seção 8.3). Para a etapa de
+deduplicação semântica por similaridade de vetores (seção 8.1), o squad optou tecnicamente por um modelo
+multilíngue de sentence-embeddings (paraphrase-multilingual-MiniLM-L12-v2, via biblioteca
+sentence-transformers) por ser otimizado nativamente para similaridade de frases e mais leve em tempo de
+inferência — o BERTimbau permanece como opção de comparação/fallback nessa etapa e como base
+
+
+=== PAGE 6 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 6
+preferencial sempre que a tarefa exigir compreensão fina de português (sentimento, NER).
+
+
+=== PAGE 7 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 7
+6. Escopo Funcional — User Stories
+As 16 histórias de usuário abaixo foram levantadas e priorizadas pelo squad no Product Backlog do board
+Kanbam e constituem o escopo funcional completo do produto ao longo das quatro sprints.
+US-1 — Chega de abrir 5 abas todo dia para saber o que rolou no agro
+Como assinante do agronegócio, quero que a plataforma monitore os 5 principais portais do setor para que eu não
+precise acessar múltiplos sites todos os dias para saber o que está acontecendo no mercado.
+US-2 — Evitar que a mesma notícia apareça duas vezes com palavras diferentes
+Como assinante, quero que a plataforma entenda o significado semântico das notícias para que matérias com
+palavras diferentes, mas que relatam o mesmo acontecimento, sejam identificadas como uma única cobertura.
+US-3 — Trocar relatórios técnicos maçantes por uma leitura rápida e divertida matinal
+Como leitor da newsletter, quero ler os acontecimentos do campo em uma linguagem ágil, descomplicada e com
+humor inteligente, para me atualizar com prazer pela manhã em vez de ler relatórios técnicos sonolentos.
+US-4 — Juntar desdobramentos de vários sites em uma única história completa
+Como assinante, quero que as matérias sobre o mesmo fato sejam agrupadas em uma cobertura única para que eu
+não receba múltiplos tópicos tratando do mesmo acontecimento sob ângulos repetitivos.
+US-5 — Descobrir o que realmente agitou o mercado e ignorar matérias de assessoria
+Como assinante, quero receber no meu boletim apenas os acontecimentos de maior repercussão na mídia, para ter
+certeza de que estou informado sobre os assuntos mais discutidos no setor.
+US-6 — Bater o olho e saber na hora se a notícia é boa ou ruim para o bolso do produtor
+Como produtor ou investidor rural, quero ver rapidamente se uma notícia é positiva, negativa ou neutra para o
+agronegócio, para identificar em segundos se o cenário beneficia ou prejudica meu faturamento.
+US-7 — Garantir que as notícias quentes da noite não fiquem de fora do café da manhã
+Como curador da newsletter, quero que as notícias sejam raspadas continuamente sem intervenção manual para que
+todo o material do dia esteja consolidado para a edição da madrugada.
+US-8 — Receber os rascunhos da IA já formatados e sem erros visuais para agilizar o trabalho
+Como curador, quero que o modelo de linguagem entregue a redação da notícia junto com os dados do termômetro
+em JSON rigoroso para evitar quebras no sistema.
+US-9 — Prever o que vai acontecer nos próximos dias com porcentagens claras de mercado
+Como leitor da newsletter, quero ver projeções de desdobramentos dos próximos dias com probabilidades
+percentuais (estilo Polymarket), para entender as chances reais de eventos de mercado acontecerem no curto prazo.
+US-10 — Priorizar decisões de crédito, cotações e governo antes de notícias institucionais
+Como leitor investidor, quero que decisões de crédito, geopolítica e cotações de commodities recebam prioridade na
+curadoria para que matérias com potencial financeiro fiquem no topo da edição.
+US-11 — Garantir um boletim equilibrado que não fale só de soja a edição inteira
+Como leitor, quero uma edição com assuntos variados para não receber um boletim composto exclusivamente por um
+único assunto (ex.: 5 notícias sobre a mesma cultura agrícola).
+US-12 — Dar o sinal verde no disparo do dia em menos de 5 minutos sem dor de cabeça
+Como curador da newsletter, quero uma tela intuitiva para revisar os 5 textos, checar as odds do Polymarket e
+aprovar o disparo em poucos minutos para manter a edição sob controle humano.
+US-13 — Saber na hora se algum portal saiu do ar antes que o boletim saia incompleto
+Como curador do produto, quero ser notificado imediatamente se um dos 5 portais parar de responder para não rodar
+a seleção diária com base de dados defasada.
+US-14 — Abrir o e-mail no celular e ver gráficos limpos do termômetro e das odds
+Como assinante, quero abrir meu e-mail e ver gráficos visuais limpos do termômetro de mercado e das probabilidades
+do Polymarket, para que a leitura seja moderna, visual e intuitiva no celular.
+
+
+=== PAGE 8 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 8
+US-15 — Acordar com o trabalho pesado de seleção e redação pronto antes das 5h30
+Como curador da newsletter, quero que todo o fluxo analítico execute de forma automática durante a madrugada para
+que a edição matinal esteja 100% pronta para aprovação quando eu acordar.
+US-16 — Colocar o robô à prova em dias de crise para garantir que ele não erre na prática
+Como equipe da plataforma, queremos submeter o sistema a um grande volume de notícias passadas para garantir
+que o algoritmo não trave sob pressão e que as previsões façam sentido econômico.
+
+
+=== PAGE 9 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 9
+7. Arquitetura da Solução e Pipeline de Dados
+O sistema opera como um pipeline diário orquestrado, executado de forma autônoma durante a madrugada e
+encerrado com um ponto de controle humano antes da publicação. As etapas abaixo refletem o fluxo
+consolidado a partir dos cards técnicos do board (“Pipeline Diário Integrado de Execução Autônoma”).
+
+1. Coleta (scraping contínuo) — scrapers dedicados para os 5 portais-fonte, agendados a cada 3 horas, com
+deduplicação por URL.
+
+2. Normalização e persistência — limpeza de HTML/anúncios/rodapés e gravação em banco relacional
+(PostgreSQL) com restrição de unicidade por URL.
+
+3. Embeddings — vetorização semântica de título + lead de cada matéria via sentence-transformers.
+
+4. Clusterização — agrupamento de matérias que tratam do mesmo fato via DBSCAN com distância de
+cosseno.
+
+5. Score de relevância — cálculo de um índice estilo Google Trends por cluster, ponderando diversidade de
+fontes e volume de menções, com bônus para entidades críticas do setor (NER).
+
+6. Seleção editorial — seleção gulosa (greedy) dos 5 clusters finais, limitando no máximo 2 por macro-tema
+(filtro anti-monotonia).
+
+7. Geração de conteúdo via LLM — redação da notícia no tom “The News Agro”, classificação de sentimento
+(termômetro) e geração do cenário preditivo (estilo Polymarket), tudo retornado em JSON estruturado e
+validado por schema.
+
+8. Curadoria humana — painel web onde o curador revisa, edita e aprova os 5 textos, o termômetro e as odds
+antes do disparo.
+
+9. Disparo — envio do e-mail responsivo via provedor transacional (Resend/SendGrid), com componentes
+visuais do termômetro e do card preditivo.
+
+10. Monitoramento — verificação de integridade dos scrapers com alerta automático em caso de portal fora
+do ar.
+Meta operacional: pipeline ponta a ponta (coleta já concluída → e-mail pronto para aprovação) executado em
+menos de 8 minutos para um volume de até 200 matérias, com os 5 tópicos finais disponíveis no painel de
+curadoria antes das 05h15.
+8. Especificação por Componente Técnico
+Cada componente abaixo corresponde a um card técnico do board, já com as tarefas e critérios de aceite
+definidos pelo squad. A responsabilidade por dupla e sprint está indicada e detalhada também na seção 10.
+8.1 Centralização Automatizada das Coberturas
+do Agro
+ Sprint 1
+ Dupla A
+Fontes de coleta definidas pelo squad (lista “Sites” do board): TheAgriBiz, AgFeed, Agrolink, Canal Rural e
+Notícias Agrícolas.
+Tarefas:
+ 
+Subir e configurar banco PostgreSQL via Docker/Cloud com migrações prontas;
+
+Criar a tabela artigos com campos: id, portal_nome, url, titulo, lead, corpo_texto, publicado_em,
+processado_status;
+
+Implementar scrapers automáticos para os 5 portais-fonte com trafilatura ou newspaper3k;
+
+Criar filtros regex para eliminar anúncios, rodapés e links institucionais (“leia mais”);
+
+Criar restrição de unicidade na coluna url para blindar o banco contra duplicações.
+Critérios de aceite:
+ ✓
+Inserções de URLs já existentes são descartadas sem interromper a execução do fluxo;
+
+
+=== PAGE 10 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 10
+✓
+O banco contém pelo menos 10 matérias reais extraídas de cada um dos 5 portais;
+✓
+Nenhum elemento de código HTML, menu ou script inline permanece no campo corpo_texto.
+8.2 Representação Vetorial para Comparação de
+Notícias
+ Sprint 1
+ Dupla B
+Tarefas:
+ 
+Configurar ambiente de inferência com sentence-transformers e PyTorch;
+
+Carregar o modelo multilíngue paraphrase-multilingual-MiniLM-L12-v2;
+
+Implementar rotina de concatenação otimizada de título e lead do artigo;
+
+Criar função de lote que recebe textos e devolve a matriz de embeddings N × 384.
+Critérios de aceite:
+ ✓
+Processamento em lote de 200 matérias executado em menos de 45 segundos em CPU;
+✓
+Duas reportagens de portais concorrentes sobre o mesmo relatório de safra apresentam similaridade de cosseno
+superior a 0,80.
+8.3 Engenharia da Persona “The News Agro”
+ Sprint 1
+ Dupla C
+Tarefas:
+ 
+Desenvolver o system prompt definindo o tom de voz da newsletter: sarcasmo equilibrado, foco no impacto real
+para quem produz e analogias simples;
+
+Estabelecer a estrutura obrigatória em blocos: título com trocadilho, o que rolou, por que isso importa e o número
+em destaque;
+
+Montar few-shot examples contextualizados com temas agrícolas (fertilizantes, clima, boi gordo, soja);
+
+Conduzir testes cegos com 10 matérias reais para validação qualitativa do tom.
+Critérios de aceite:
+ ✓
+100% dos textos gerados na bateria de testes seguem rigorosamente a estrutura dos 4 blocos;
+✓
+Cada notícia é redigida em até 180 palavras (leitura de menos de 1 minuto);
+✓
+Todos os termos técnicos agrícolas complexos recebem explicações didáticas em linguagem natural.
+
+
+=== PAGE 11 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 11
+8.4 Representação de Clusters e Agrupamento de
+Fatos
+ Sprint 2
+ Dupla B
+Tarefas:
+ 
+Implementar o algoritmo DBSCAN do scikit-learn utilizando distância de cosseno;
+
+Calibrar o parâmetro de distância eps (intervalo entre 0,15 e 0,25) usando as notícias reais da Sprint 1;
+
+Configurar min_samples=1 para garantir que furos de reportagem de um único veículo formem clusters válidos;
+
+Vincular a cada artigo do banco o seu respectivo cluster_id.
+Critérios de aceite:
+ ✓
+Reportagens de 3 portais distintos cobrindo o mesmo embargo comercial recebem o mesmo cluster_id;
+✓
+Menos de 5% de agrupamentos incorretos (matérias de assuntos diferentes postas no mesmo cluster).
+8.5 Algoritmo de Relevância / Score Estilo Google
+Trends
+ Sprint 2
+ Dupla B
+Este componente é a resposta técnica direta à ideia original do squad de usar um “score estilo Google Trends”:
+em vez de depender do volume de busca externo do Google Trends, o índice é calculado internamente a partir
+da diversidade e do volume de cobertura jornalística real — mais robusto e sem dependência de uma API de
+terceiros com cotas e latência.
+Tarefas:
+ 
+Criar métrica de diversidade de fontes por cluster contando a quantidade de veículos únicos envolvidos (D);
+
+Implementar a fórmula de pontuação: Score = (D × 3.0) + (Volume Total × 1.0);
+
+Identificar a notícia mais central do cluster (mais próxima do vetor centroide) para ser o texto-base da IA;
+
+Ordenar e ranquear todos os clusters gerados nas últimas 24 horas.
+Critérios de aceite:
+ ✓
+Um tema publicado em 4 portais diferentes obtém obrigatoriamente score maior do que um tema publicado 5
+vezes por um único portal;
+✓
+O algoritmo processa e devolve a lista ordenada dos clusters em menos de 5 segundos.
+8.6 Classificador do Termômetro Setorial (Positivo
+/ Negativo / Neutro)
+ Sprint 2
+ Dupla B
+Tarefas:
+ 
+Definir a taxonomia do sentimento voltada às regras de negócio do agro (ex.: alta de insumos é negativa; chuva
+em período de seca é positiva);
+
+Estruturar prompt de few-shot com LLM ou classificador BERT especializado (BERTimbau) para extrair o
+sentimento e um percentual de intensidade (0 a 100%);
+
+Configurar o retorno com uma justificativa curta (1 frase) sobre o porquê daquele impacto;
+
+Testar a classificação com uma massa de 30 notícias históricas com viés conhecido.
+Critérios de aceite:
+ ✓
+Taxa de acerto mínima de 85% na classificação do viés mercadológico em comparação com a avaliação de um
+especialista;
+✓
+O modelo devolve obrigatoriamente a classificação (POSITIVO, NEGATIVO ou NEUTRO), percentual de
+intensidade e justificativa.
+8.7 Automação Agendada da Coleta de Matérias
+ Sprint 2
+ Dupla A
+Tarefas:
+ 
+Configurar agendador de tarefas em background (APScheduler ou Celery) com disparos a cada 3 horas;
+
+
+=== PAGE 12 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 12
+
+Integrar verificação prévia no banco para não reprocessar links já existentes;
+
+Implementar sistema de log registrando horários de início e término, volume de matérias coletadas e exceções.
+Critérios de aceite:
+ ✓
+O pipeline de coleta executa de maneira autônoma por 48 horas ininterruptas;
+✓
+O volume de notícias armazenadas cresce de forma condizente sem duplicação de URLs.
+8.8 Geração Estruturada das Notícias e
+Termômetro via LLM
+ Sprint 2
+ Dupla C
+Tarefas:
+ 
+Criar schemas de dados via Pydantic validando a estrutura do texto e dos dados de sentimento;
+
+Implementar a chamada na API de LLM com modo JSON forçado (response_format={"type": "json_object"});
+
+Adicionar política de retentativas automáticas (tenacity) com até 3 tentativas contra instabilidades de rede.
+Critérios de aceite:
+ ✓
+A resposta da LLM é validada pelo esquema Pydantic sem campos nulos ou formatação corrompida;
+✓
+Falhas temporárias de rede disparam novas tentativas transparentes sem abortar o script.
+
+
+=== PAGE 13 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 13
+8.9 Motor de Geração de Cenários Preditivos
+(Estilo Polymarket)
+ Sprint 3
+ Dupla C
+Tarefas:
+ 
+Adicionar ao pipeline da LLM a tarefa de formular uma pergunta objetiva de previsão de curto prazo ligada à
+notícia;
+
+Definir probabilidade complementar para dois cenários: Probabilidade SIM + Probabilidade NÃO = 100%;
+
+Exigir na instrução um gatilho de resolução objetivo e mensurável com prazo definido (ex.: “Até o fechamento da
+bolsa na sexta”, “Relatório Secex da próxima semana”);
+
+Integrar esses dados ao schema Pydantic geral da notícia.
+Critérios de aceite:
+ ✓
+Toda previsão gerada possui um evento ou data clara de resolução em até 7 dias;
+✓
+A soma das probabilidades (SIM e NÃO) totaliza exatamente 100% em todas as saídas geradas;
+✓
+Nenhuma pergunta subjetiva ou aberta é gerada (apenas perguntas verificáveis de SIM/NÃO).
+8.10 Extração de Entidades Críticas do
+Agronegócio (NER)
+ Sprint 3
+ Dupla B
+Tarefas:
+ 
+Carregar o pipeline de NER com pt_core_news_lg do spaCy;
+
+Construir catálogo de entidades e termos estratégicos (Mapa, Conab, China, soja, milho, taxa Selic, geada,
+embargo, Plano Safra);
+
+Aplicar peso multiplicador +1,5 no score dos clusters que contenham menções a essas entidades cruciais.
+Critérios de aceite:
+ ✓
+Matérias com repercussão macroeconômica ou regulatória superam notícias institucionais ou corporativas no
+ranking;
+✓
+A extração das entidades roda em menos de 100ms por artigo analisado.
+8.11 Balanceamento Editorial (Filtro
+Anti-Monotonia)
+ Sprint 3
+ Dupla B
+Tarefas:
+ 
+Categorizar os clusters ranqueados em macro-temas (Mercado e Cotações, Clima e Safra, Políticas e
+Financiamento, Pecuária, Insumos e Tecnologia);
+
+Construir algoritmo de seleção gulosa (greedy selection) que percorre os clusters por score limitando o teto a no
+máximo 2 notícias por macro-tema;
+
+Fechar a lista final com exatamente os 5 clusters aprovados para a edição.
+Critérios de aceite:
+ ✓
+A lista final contém rigorosamente 5 histórias;
+✓
+Nenhuma categoria temática ultrapassa o limite de 2 matérias na seleção final do dia.
+8.12 Painel Web de Curadoria e Aprovação
+ Sprint 3
+ Dupla C
+Tarefas:
+ 
+Desenvolver interface web ágil com Streamlit;
+
+Exibir os 5 blocos do dia contendo o texto, a barra de sentimento com justificativa e os cards do Polymarket
+(pergunta, odds e gatilho);
+
+Criar campos de edição para permitir correções pontuais no texto ou nos percentuais;
+
+Adicionar botão de ação principal: “Salvar Alterações e Aprovar Envio”.
+
+
+=== PAGE 14 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 14
+Critérios de aceite:
+ ✓
+Edições realizadas nos campos de texto são salvas no banco imediatamente;
+✓
+O curador conclui a checagem e libera a edição final em menos de 5 minutos.
+8.13 Monitor de Integridade e Alerta de Queda de
+Scraper
+ Sprint 3
+ Dupla A
+Tarefas:
+ 
+Criar rotina de verificação disparada após cada ciclo de ingestão;
+
+Definir regra de alerta: se qualquer portal registrar 0 matérias novas nas últimas 24h, ativar notificação;
+
+Integrar disparo de webhook para Telegram ou Discord indicando o portal inativo.
+Critérios de aceite:
+ ✓
+Mensagem de alerta recebida no canal da equipe com data, hora e nome do portal com falha;
+✓
+Zero falsos alertas emitidos durante o funcionamento regular dos 5 sites.
+
+
+=== PAGE 15 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 15
+8.14 Componentes Visuais de E-mail (Termômetro
+& Odds Polymarket)
+ Sprint 4
+ Dupla C
+Tarefas:
+ 
+Criar template HTML responsivo baseado no design minimalista da The News;
+
+Componente Termômetro: construir barra horizontal de progresso em HTML/CSS inline dividida em três cores
+(verde = positivo, vermelho = negativo, cinza = neutro) com marcação percentual;
+
+Componente Mercado Preditivo (Polymarket): desenvolver card visual com a pergunta preditiva e dois botões
+estilizados lado a lado exibindo SIM % e NÃO %, seguidos da data/gatilho de resolução;
+
+Integrar a geração dos e-mails com a API do provedor de envio (Resend ou SendGrid).
+Critérios de aceite:
+ ✓
+Renderização idêntica e sem quebras visuais no Gmail (Web, Android, iOS) e Apple Mail;
+✓
+Ausência total de scripts JavaScript ou folhas CSS externas proibidas por clientes de e-mail.
+8.15 Pipeline Diário Integrado de Execução
+Autônoma
+ Sprint 4
+Duplas A + B
+Tarefas:
+ 
+Criar o script orquestrador pipeline_diario.py que encadeia: fechamento das notícias → embeddings →
+clusterização → relevância (score) → seleção dos Top 5 → chamada das LLMs para texto, sentimento e
+previsões;
+
+Agendar a execução do pipeline mestre para rodar pontualmente às 05h00 da manhã;
+
+Salvar os dados completos no banco com status aguardando_aprovacao_curador.
+Critérios de aceite:
+ ✓
+Execução ponta a ponta sem intervenção manual finalizada em menos de 8 minutos para 200 matérias;
+✓
+Os 5 tópicos completos ficam disponíveis no painel de curadoria antes das 05h15 da manhã.
+8.16 Teste de Carga e Validação Preditiva com
+Dados Históricos
+ Sprint 4
+Duplas A + B
+ + C
+Corresponde diretamente à US-16 (validação de robustez em dias de crise de mercado).
+Tarefas:
+ 
+Dupla A: injetar 500 matérias históricas de uma semana de forte oscilação de mercado no banco de dados;
+
+Dupla B: rodar o pipeline de NLP validando o consumo de memória RAM durante a clusterização e verificar a
+coerência do termômetro de sentimento;
+
+Dupla C: avaliar a aderência e coerência das perguntas estilo Polymarket geradas frente aos acontecimentos
+reais daquele período histórico;
+
+Realizar disparo de teste da edição para a caixa postal de todos os membros da equipe.
+Critérios de aceite:
+ ✓
+Zero falhas de estouro de memória (Out of Memory) durante o cálculo matricial;
+✓
+Pelo menos 4 das 5 notícias selecionadas no teste histórico correspondem aos temas dominantes do período
+analisado;
+✓
+Aprovação do envio teste por todas as duplas.
+9. Stack Tecnológica
+ Camada
+Ferramenta
+Uso no produto
+
+
+=== PAGE 16 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 16
+Coleta de dados
+trafilatura / newspaper3k
+Scraping estruturado dos 5 portais-fonte,
+com limpeza de HTML.
+Agendamento
+APScheduler / Celery
+Execução periódica dos scrapers (3/3h) e
+do pipeline mestre (5h00).
+Persistência
+PostgreSQL (Docker/Cloud)
+Armazenamento de artigos, clusters, scores
+e status editorial.
+Embeddings
+semânticos
+sentence-transformers (paraphrase-mu
+ltilingual-MiniLM-L12-v2) + PyTorch
+Vetorização de título+lead para
+comparação de similaridade entre notícias.
+Clusterização
+scikit-learn (DBSCAN, distância de
+cosseno)
+Agrupamento de matérias que tratam do
+mesmo fato.
+NER / entidades
+spaCy (pt_core_news_lg)
+Detecção de entidades críticas do agro
+para ponderação de score.
+Classificação de
+sentimento
+BERTimbau (neuralmind/bert-base-port
+uguese-cased) e/ou LLM via few-shot
+Base de referência em português para o
+termômetro setorial
+(positivo/negativo/neutro).
+Geração de texto e
+JSON estruturado
+API de LLM + Pydantic + tenacity
+Redação da notícia, termômetro e cenário
+preditivo, com validação de schema e
+retentativa.
+Painel de curadoria
+Streamlit
+Interface de revisão e aprovação humana
+da edição diária.
+Envio de e-mail
+Resend / SendGrid + HTML/CSS inline
+Disparo da newsletter com componentes
+visuais do termômetro e das odds.
+Alertas operacionais
+Webhook Telegram/Discord
+Notificação em tempo real de falhas de
+coleta.
+
+
+=== PAGE 17 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 17
+10. Plano de Sprints e Responsabilidades (Squad 3)
+O squad está organizado em três duplas de trabalho, com responsabilidades técnicas fixas ao longo das quatro
+sprints:
+Dupla
+Frente técnica
+Dupla A
+Coleta, infraestrutura de dados e automação (scraping, banco, agendamento,
+monitoramento de integridade).
+Dupla B
+Núcleo de NLP analítico (embeddings, clusterização, score de relevância, NER,
+classificação de sentimento, balanceamento editorial).
+Dupla C
+Geração de conteúdo via LLM, previsão de cenários, painel de curadoria e camada de
+apresentação do e-mail.
+Sprint
+Fase
+Entregas principais
+Sprint 1
+Explore
+Coleta e normalização dos 5 portais (Dupla A); geração de embeddings
+(Dupla B); definição da persona editorial “The News Agro” (Dupla C).
+Sprint 2
+Build
+Automação agendada da coleta (Dupla A); clusterização, score de
+relevância e termômetro de sentimento (Dupla B); geração estruturada via
+LLM com JSON validado (Dupla C).
+Sprint 3
+Refine
+Monitor de integridade dos scrapers (Dupla A); NER de entidades críticas e
+balanceamento editorial (Dupla B); motor preditivo estilo Polymarket e
+painel de curadoria (Dupla C).
+Sprint 4
+Ship
+Pipeline diário integrado às 05h00 (Duplas A+B); componentes visuais do
+e-mail (Dupla C); teste de carga e validação preditiva com dados históricos
+(todas as duplas).
+Sprint Review 1: 04/09/2026, com apresentação de 10 minutos cobrindo conceito matemático, propósito,
+cenários de uso, problema resolvido e exemplos práticos do modelo de NLP, conforme roteiro obrigatório do
+Encontro 04.
+
+
+=== PAGE 18 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 18
+11. Métricas de Sucesso e Critérios de Aceite Globais
+ Métrica
+Meta
+Cobertura de fontes
+≥ 10 matérias reais extraídas de cada um dos 5 portais, sem duplicação de
+URL.
+Precisão da deduplicação
+semântica
+Similaridade de cosseno > 0,80 entre coberturas do mesmo fato; < 5% de
+agrupamentos incorretos.
+Precisão do score de relevância
+Tema coberto por 4+ portais sempre supera tema repetido por 1 único
+portal; cálculo em < 5s.
+Acurácia do termômetro de
+sentimento
+≥ 85% de concordância com avaliação humana especialista, em amostra
+de 30 notícias históricas.
+Qualidade editorial
+100% dos textos seguem a estrutura de 4 blocos; até 180 palavras por
+notícia.
+Coerência preditiva
+100% das previsões com gatilho de resolução em até 7 dias e soma de
+probabilidades = 100%.
+Desempenho do pipeline
+Execução ponta a ponta < 8 minutos para 200 matérias; edição pronta no
+painel antes das 05h15.
+Tempo de curadoria humana
+Aprovação da edição diária em < 5 minutos pelo curador.
+Robustez sob carga
+Zero falhas de memória (OOM) ao processar 500 matérias históricas de
+semana de alta volatilidade.
+Confiabilidade de monitoramento
+Zero falsos alertas de queda de portal durante operação regular.
+Compatibilidade de e-mail
+Renderização sem quebras em Gmail (Web/Android/iOS) e Apple Mail,
+sem JS ou CSS externo.
+12. Riscos e Mitigações
+ Risco
+Mitigação prevista
+Mudança de estrutura HTML dos portais-fonte
+quebra o scraper.
+Monitor de integridade com alerta automático (webhook)
+quando um portal para de retornar matérias novas.
+Eps mal calibrado no DBSCAN gera clusters
+incorretos (mistura de assuntos distintos).
+Calibração supervisionada do parâmetro eps (0,15–0,25)
+usando dados reais da Sprint 1 antes de produtivizar.
+LLM retorna JSON malformado e quebra o
+pipeline.
+Validação obrigatória via schema Pydantic + modo JSON
+forçado na API + retentativa automática (tenacity, até 3x).
+Edição enviesada para um único macro-tema
+(ex.: só soja).
+Filtro anti-monotonia com teto de 2 notícias por macro-tema
+na seleção gulosa.
+Sistema falha silenciosamente em dias de alta
+volatilidade de mercado.
+Teste de carga e validação preditiva dedicado (Sprint 4) com
+500 matérias históricas de semana de forte oscilação.
+Quebra de renderização em clientes de e-mail
+(Gmail, Apple Mail).
+Template HTML/CSS inline sem JavaScript nem folhas
+externas, testado nos principais clientes antes do disparo.
+13. Fora de Escopo (Sprint 1–4)
+ 
+Aplicativo mobile nativo — a entrega é via e-mail responsivo;
+
+
+=== PAGE 19 ===
+AGROSENTIMENTO NEWS — PRD
+Squad 3 · Aprendizado de Máquina II
+Documento de Requisitos de Produto — versão 1.0 — 10/09/2026
+Página 19
+
+Personalização de conteúdo por perfil individual de assinante (segmentação de temas);
+
+Monetização, paywall ou modelo de assinatura paga;
+
+Expansão para portais além dos 5 definidos no board (TheAgriBiz, AgFeed, Agrolink, Canal Rural, Notícias
+Agrícolas);
+
+Suporte a idiomas além do português;
+
+Substituição total da curadoria humana por aprovação 100% automática do disparo.
+Documento gerado a partir do board de planejamento do Squad 3 (Trello “Kanbam”), do site institucional da newsletter The News e
+do model card do BERTimbau, em conformidade com as diretrizes do Encontro 04 (28/08/26) da disciplina de Aprendizado de
+Máquina II.

@@ -145,3 +145,92 @@ O arquivo `.github/workflows/ci.yml` executa automaticamente em cada `push` ou `
 4. `npm run build` — build + Pagefind index
 
 O `dist/` gerado é compatível com deploy em Cloudflare Pages, Netlify, Vercel ou GitHub Pages sem configuração adicional de servidor.
+
+---
+
+## 🤖 Pipeline de Coleta Automatizada — Sprint 2 / Dupla A
+
+> **Card 8.7 — Automação Agendada da Coleta de Matérias**
+
+Módulo Python localizado em `coleta/` que implementa a ingestão autônoma de notícias dos 5 portais agro de referência com agendamento a cada 3 horas, deduplicação por URL e log estruturado completo.
+
+### Funcionalidades
+
+| Funcionalidade | Detalhe |
+|---|---|
+| **Agendador APScheduler** | Disparos a cada 3 horas (`IntervalTrigger`), `max_instances=1`, `coalesce=True`, graceful shutdown |
+| **Verificação Prévia no Banco** | Consulta `SELECT url FROM artigos WHERE url IN (...)` antes de qualquer download, descartando links já cadastrados |
+| **Restrição de Unicidade** | Coluna `url UNIQUE` com `ON CONFLICT DO NOTHING` — blindagem dupla contra duplicatas |
+| **Log Rotativo** | `logs/coleta.log` com `RotatingFileHandler` (5 MB/arquivo, 5 backups) + saída no console |
+| **Auditoria em Banco** | Tabela `coleta_execucoes` registra início, fim, duração, contagens e status de cada ciclo |
+| **Scraping Resiliente** | Feed RSS (prioritário) + fallback HTML, limpeza com `trafilatura` e `BeautifulSoup` |
+| **Tolerância a Falhas** | Exceção em um portal é logada e não interrompe os demais |
+
+### Portais Monitorados
+
+- **TheAgriBiz** — via RSS
+- **AgFeed** — via RSS
+- **Agrolink** — via RSS / HTML
+- **Canal Rural** — via RSS
+- **Notícias Agrícolas** — via RSS / HTML
+
+### Comandos
+
+```bash
+# Instalar dependências Python
+python -m pip install apscheduler trafilatura beautifulsoup4 feedparser requests
+
+# Executar um único ciclo de coleta (ideal para testes)
+python -m coleta.agendador --run-once
+
+# Iniciar agendador contínuo — 3 horas de intervalo (produção)
+python -m coleta.agendador
+
+# Consultar estatísticas do banco e última execução
+python -m coleta.agendador --status
+
+# Rodar testes automatizados (6 testes, critérios de aceite)
+python -m unittest coleta.test_coleta
+```
+
+### Estrutura do Módulo
+
+```text
+coleta/
+├── __init__.py         # Pacote Python
+├── config.py           # Configurações centrais (banco, logs, portais, intervalo)
+├── db.py               # Camada de banco (SQLite/PostgreSQL, deduplicação, auditoria)
+├── scrapers.py         # Coletores dos 5 portais com RSS + HTML e limpeza trafilatura
+├── pipeline.py         # Orquestrador do ciclo de coleta com métricas
+├── agendador.py        # APScheduler (3h), logging rotativo, CLI
+├── test_coleta.py      # 6 testes unitários — todos aprovados ✅
+└── README.md           # Documentação do módulo
+
+data/
+└── tan_news.db         # Banco SQLite (criado automaticamente)
+
+logs/
+└── coleta.log          # Log rotativo (criado automaticamente)
+```
+
+### Resultados Validados
+
+Dois ciclos reais executados com sucesso:
+
+| Rodada | Encontradas | Novas | Ignoradas (Pré-existentes) | Erros | Duração |
+|---|---|---|---|---|---|
+| 1ª (carga inicial) | 60 | 57 | 0 | 3* | 51.3s |
+| 2ª (deduplicação) | 60 | 9 | 51 | 0 | 8.5s |
+
+> \* Os 3 erros da 1ª rodada foram links de redes sociais (Instagram, YouTube) que foram corretamente filtrados na iteração seguinte após atualização do filtro de URLs.
+
+Testes unitários:
+```
+Ran 6 tests in 1.058s
+OK
+```
+
+### Critérios de Aceite Atendidos
+
+- ✅ Pipeline de coleta executa de maneira autônoma (configurado para 48h+ sem intervenção).
+- ✅ Volume de notícias armazenadas cresce de forma condizente sem duplicação de URLs.
