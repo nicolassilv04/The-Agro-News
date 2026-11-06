@@ -1,0 +1,8 @@
+{
+  "id": "pecuaria",
+  "slug": "pecuaria",
+  "name": "Pecuária",
+  "description": "Tudo sobre pecuária de corte e leite, avicultura, suinocultura, sanidade animal e mercado da carne.",
+  "subcategories": ["Bovinos", "Suínos", "Aves", "Leite", "Nutrição Animal", "Sanidade"],
+  "icon": "beef"
+}

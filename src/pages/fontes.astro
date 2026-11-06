@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const seo = {
+  title: 'Fontes Auditadas — TAN',
+  description:
+    'Lista de órgãos governamentais, agências de notícias e institutos de meteorologia auditados pelo portal TAN.',
+  canonicalPath: '/fontes/',
+};
+
+const sources = [
+  {
+    name: 'Agência AgroDados',
+    type: 'Agência de Notícias Privada',
+    focus: 'Cotações e Commodities',
+  },
+  {
+    name: 'ClimaAgro Brasil',
+    type: 'Instituto de Meteorologia Agrícola',
+    focus: 'Previsões e Secas',
+  },
+  {
+    name: 'Portal TechCampo',
+    type: 'Veículo de Inovação',
+    focus: 'AgTechs e Inteligência Artificial',
+  },
+  {
+    name: 'Boletim Pecuário On-line',
+    type: 'Informativo Setorial',
+    focus: 'Boi Gordo e Mercado da Carne',
+  },
+  {
+    name: 'USDA (Dept. de Agricultura dos EUA)',
+    type: 'Órgão Governamental Internacional',
+    focus: 'Relatórios de Oferta e Demanda',
+  },
+  {
+    name: 'INMET / CPTEC',
+    type: 'Instituto Público de Meteorologia',
+    focus: 'Radar Climático e Alertas',
+  },
+  { name: 'Embrapa', type: 'Empresa Pública de Pesquisa', focus: 'Tecnologia Agrícola e Solos' },
+];
+---
+
+<BaseLayout seo={seo} activePath="/fontes/">
+  <div class="container container-narrow section-sm">
+    <Breadcrumb items={[{ label: 'Fontes' }]} />
+
+    <header style="margin-bottom: 2rem;">
+      <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 0.75rem;">
+        Fontes Auditadas pelo TAN
+      </h1>
+      <p class="lead">
+        Conheça a rede de fontes públicas, governamentais e especializadas utilizadas em nossos
+        agrupamentos editoriais.
+      </p>
+    </header>
+
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+      {
+        sources.map((src) => (
+          <div style="background: var(--color-surface); border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <h3 style="font-size: 1.1rem; color: var(--color-brand-primary);">{src.name}</h3>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">{src.type}</span>
+            </div>
+            <div>
+              <span
+                class="badge"
+                style="background: var(--color-bg-alt); color: var(--color-brand-secondary);"
+              >
+                Foco: {src.focus}
+              </span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

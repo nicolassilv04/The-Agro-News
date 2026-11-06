@@ -1,0 +1,103 @@
+[
+  {
+    "id": "agricultura",
+    "slug": "agricultura",
+    "name": "Agricultura",
+    "description": "Acompanhe novidades sobre produção vegetal, safra de grãos, sementes, insumos e manejo sustentável no campo.",
+    "subcategories": [
+      "Soja",
+      "Milho",
+      "Algodão",
+      "Café",
+      "Trigo",
+      "Cana-de-açúcar",
+      "Fertilizantes"
+    ],
+    "icon": "sprout"
+  },
+  {
+    "id": "pecuaria",
+    "slug": "pecuaria",
+    "name": "Pecuária",
+    "description": "Tudo sobre pecuária de corte e leite, avicultura, suinocultura, sanidade animal e mercado da carne.",
+    "subcategories": ["Bovinos", "Suínos", "Aves", "Leite", "Nutrição Animal", "Sanidade"],
+    "icon": "beef"
+  },
+  {
+    "id": "mercado",
+    "slug": "mercado",
+    "name": "Mercado",
+    "description": "Cotações de commodities, análise financeira, câmbio, exportações, importações e tendências de comércio global.",
+    "subcategories": [
+      "Commodities",
+      "Exportação",
+      "Câmbio",
+      "Crédito Rural",
+      "Bolsa de Mercadorias"
+    ],
+    "icon": "trending-up"
+  },
+  {
+    "id": "tecnologia",
+    "slug": "tecnologia",
+    "name": "Tecnologia",
+    "description": "Inovações em AgTech, inteligência artificial, conectividade 5G no campo, automação, drones e sensores agrícolas.",
+    "subcategories": [
+      "AgTech",
+      "Inteligência Artificial",
+      "Drones & Sensores",
+      "Software Agrícola",
+      "Automação"
+    ],
+    "icon": "cpu"
+  },
+  {
+    "id": "clima",
+    "slug": "clima",
+    "name": "Clima",
+    "description": "Previsões meteorológicas, monitoramento de secas e chuvas, fenômenos El Niño/La Niña e alerta de eventos extremos.",
+    "subcategories": [
+      "Previsão do Tempo",
+      "Chuva & Seca",
+      "El Niño / La Niña",
+      "Radar Meteorológico"
+    ],
+    "icon": "cloud-sun"
+  },
+  {
+    "id": "politica",
+    "slug": "politica",
+    "name": "Política e Regulação",
+    "description": "Legislação agrícola, Plano Safra, tributação, políticas públicas do Ministério da Agricultura e regulação ambiental.",
+    "subcategories": ["Plano Safra", "Legislação", "Ministério da Agricultura", "Tributação Agro"],
+    "icon": "landmark"
+  },
+  {
+    "id": "sustentabilidade",
+    "slug": "sustentabilidade",
+    "name": "Sustentabilidade",
+    "description": "Práticas ESG no Agro, mercado de carbono, agricultura regenerativa, bioinsumos, rastreabilidade e preservação.",
+    "subcategories": [
+      "Mercado de Carbono",
+      "Agricultura Regenerativa",
+      "Bioinsumos",
+      "Rastreabilidade",
+      "ESG"
+    ],
+    "icon": "leaf"
+  },
+  {
+    "id": "internacional",
+    "slug": "internacional",
+    "name": "Internacional",
+    "description": "Panoramas geopolíticos, acordos comerciais com China, EUA e Europa, e acontecimentos globais que afetam o Agro.",
+    "subcategories": [
+      "China",
+      "Estados Unidos",
+      "União Europeia",
+      "Acordos Comerciais",
+      "Geopolítica"
+    ],
+    "icon": "globe"
+  }
+]

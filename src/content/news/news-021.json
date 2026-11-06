@@ -1,0 +1,52 @@
+{
+  "id": "news-021",
+  "slug": "agricultura-cafe-conilon-espirito-santo-safra",
+  "title": "Produção de café conilon no Espírito Santo supera expectativas e bate recorde de produtividade",
+  "summary": "Investimentos em irrigação localizada e renovação de cafezais impulsionam rendimento médio para 55 sacas por hectare no estado.",
+  "content": "A colheita do café conilon (robusta) no estado do Espírito Santo foi concluída com números extremamente positivos para os cafeicultores capixabas. O balanço final aponta para uma produção estadual recorde, impulsionada pelo manejo nutricional moderno e pela expansão da irrigação por gotejamento.\n\nO resultado consolida o Espírito Santo como o maior produtor nacional e uma das principais referências mundiais na espécie conilon.\n\nA liquidez no mercado interno permanece alta, com forte demanda por parte de indústrias de café solúvel e exportadores que atendem aos mercados da Europa e África.",
+  "category": "agricultura",
+  "subcategory": "Café",
+  "published_at": "2026-09-07T10:00:00-03:00",
+  "updated_at": "2026-09-07T10:30:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Capixaba Agro",
+    "url": "https://capixabaagro.example.com/conilon-recorde"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Capixaba Agro",
+      "url": "#"
+    },
+    {
+      "name": "Incaper Boletim Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["agricultura", "cafe", "conilon", "espirito-santo", "produtividade", "irrigacao"],
+  "entities": {
+    "pessoas": ["Luiz Carlos Bastianello"],
+    "empresas": ["Cooabriel", "Realcafé"],
+    "organizacoes": ["INCAPER", "Conab"],
+    "locais": ["Linhares", "São Mateus", "Espírito Santo"],
+    "produtos": ["Café Conilon Tipo 7", "Café Solúvel"],
+    "commodities": ["Café Robusta"]
+  },
+  "regions": ["Sudeste"],
+  "nlp": {
+    "importance_score": 0.82,
+    "sentiment": "positive",
+    "cluster_id": "cluster-agricultura-conilon-2026",
+    "topics": ["Produção de Café", "Café Conilon", "Irrigação no Campo"],
+    "key_points": [
+      "Espírito Santo encerra colheita do conilon com marca recorde de produção.",
+      "Média de produtividade atinge 55 sacas por hectare no estado.",
+      "Uso de tecnologia de irrigação por gotejamento foi decisivo.",
+      "Indústria de café solúvel absorve grande parte da safra com ágio."
+    ],
+    "tan_summary": "Espírito Santo alcança resultado histórico na colheita do café conilon. A combinação de irrigação eficiente e técnicas avançadas de manejo elevou a produtividade capixaba a patamares inéditos."
+  },
+  "related_news": ["news-008", "news-015", "news-018"]
+}

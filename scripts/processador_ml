@@ -1,0 +1,95 @@
+import os
+import json
+import glob
+from dotenv import load_dotenv
+import numpy as np
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import google.generativeai as genai
+
+# CONFIGURAÇÕES
+load_dotenv()
+CHAVE_API_GEMINI = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=CHAVE_API_GEMINI)
+modelo_ia = genai.GenerativeModel('gemini-1.5-flash')
+
+print("Carregando modelo de IA para deduplicação...")
+modelo_embedding = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
+
+CAMINHO_NOTICIAS = "../src/content/news/*.json"
+LIMIAR_SIMILARIDADE = 0.85 
+
+CATEGORIAS_PERMITIDAS = [
+    "agricultura", "clima", "internacional", "mercado", 
+    "pecuaria", "politica", "sustentabilidade", "tecnologia"
+]
+
+# 1. CARREGAR NOTÍCIAS
+arquivos = glob.glob(CAMINHO_NOTICIAS)
+noticias = []
+
+for arq in arquivos:
+    with open(arq, 'r', encoding='utf-8') as f:
+        dados = json.load(f)
+        noticias.append({
+            "arquivo": arq,
+            "titulo": dados.get("title", ""),
+            "texto": dados.get("content", dados.get("texto", "")),
+            "dados_completos": dados
+        })
+
+print(f"Foram encontradas {len(noticias)} notícias.")
+
+# 2. DEDUPLICAÇÃO SEMÂNTICA
+if len(noticias) > 0:
+    print("Gerando vetores (embeddings) para deduplicação...")
+    textos_para_vetorizar = [n["titulo"] + " " + n["texto"] for n in noticias]
+    embeddings = modelo_embedding.encode(textos_para_vetorizar)
+    matriz_similaridade = cosine_similarity(embeddings)
+
+    indices_duplicados = set()
+    for i in range(len(noticias)):
+        for j in range(i + 1, len(noticias)):
+            if matriz_similaridade[i][j] >= LIMIAR_SIMILARIDADE:
+                print(f"Duplicata encontrada: {noticias[i]['arquivo']} é igual a {noticias[j]['arquivo']}")
+                indices_duplicados.add(j)
+
+    noticias_unicas = [n for i, n in enumerate(noticias) if i not in indices_duplicados]
+    print(f"Após deduplicação, restaram {len(noticias_unicas)} notícias únicas.")
+else:
+    noticias_unicas = []
+    print("Nenhuma notícia encontrada para processar.")
+
+# 3. NLP E CLASSIFICAÇÃO (GEMINI)
+def processar_texto_com_ia(texto):
+    prompt = f"""
+    Analise a seguinte notícia relacionada ao agronegócio e retorne APENAS um JSON válido.
+    
+    Categorias permitidas: {", ".join(CATEGORIAS_PERMITIDAS)}.
+    
+    Notícia:
+    {texto}
+    
+    Formato JSON esperado:
+    {{
+      "categoria": "uma das categorias permitidas",
+      "resumo": "um parágrafo curto resumindo a notícia",
+      "pontos_chave": ["ponto 1", "ponto 2", "ponto 3"],
+      "entidades": ["Nome Empresa", "Pessoa", "Local", "Produto Agrícola"]
+    }}
+    """
+    try:
+        resposta = modelo_ia.generate_content(prompt)
+        json_texto = resposta.text.replace("```json", "").replace("```", "").strip()
+        return json.loads(json_texto)
+    except Exception as e:
+        print(f"Erro na IA: {e}")
+        return None
+
+print("Iniciando extração de NLP e Classificação...")
+for noticia in noticias_unicas:
+    print(f"Processando: {noticia['arquivo']}...")
+    resultado_nlp = processar_texto_com_ia(noticia["titulo"] + "\n" + noticia["texto"])
+    
+    if resultado_nlp:
+        noticia

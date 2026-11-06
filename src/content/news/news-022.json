@@ -1,0 +1,52 @@
+{
+  "id": "news-022",
+  "slug": "pecuaria-suinocultura-exportacoes-mercado-mexico",
+  "title": "Setor de suínos comemora ampliação de cotas e novas plantas autorizadas para o México",
+  "summary": "Abertura comercial diversifica os destinos da carne suína brasileira e reduz concentração no mercado asiático.",
+  "content": "A Associação Brasileira de Proteína Animal (ABPA) confirmou o recebimento da notificação oficial das autoridades sanitárias do México autorizando o início das operações de seis novos frigoríficos de carne suína localizados em Santa Catarina e no Rio Grande do Sul.\n\nO México é um dos maiores importadores globais de cortes suínos, e a expansão da presença brasileira é vista como fundamental para garantir o equilíbrio da oferta e demanda no setor.\n\nProdutores do Sul comemoram a medida, que deve sustentar o valor do quilo do suíno vivo pago ao integrado ao longo do segundo semestre.",
+  "category": "pecuaria",
+  "subcategory": "Suínos",
+  "published_at": "2026-09-07T14:40:00-03:00",
+  "updated_at": "2026-09-07T15:10:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Suino & Aves Notícias",
+    "url": "https://suinoeaves.example.com/mexico-suinos"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Suino & Aves Notícias",
+      "url": "#"
+    },
+    {
+      "name": "Comunicado ABPA Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["pecuaria", "suinos", "exportacao", "mexico", "abpa", "santa-catarina"],
+  "entities": {
+    "pessoas": ["Ricardo Santin"],
+    "empresas": ["BRF", "Aurora Coop", "Pamplona Alimentos"],
+    "organizacoes": ["ABPA", "SENASICA México"],
+    "locais": ["Cidade do México", "Santa Catarina", "Rio Grande do Sul"],
+    "produtos": ["Pernil Suíno", "Paleta Suína In Natura"],
+    "commodities": ["Carne Suína"]
+  },
+  "regions": ["Sul", "Internacional"],
+  "nlp": {
+    "importance_score": 0.85,
+    "sentiment": "positive",
+    "cluster_id": "cluster-pecuaria-suinos-2026",
+    "topics": ["Suinocultura", "Exportação de Carne", "Mercado Mexicano"],
+    "key_points": [
+      "México habilita 6 novas plantas brasileiras de processamento de carne suína.",
+      "Diversificação de mercados reduz dependência da demanda chinesa.",
+      "Expectativa de alta nos preços pagos ao produtor integrado no Sul.",
+      "Segurança sanitária do rebanho brasileiro foi diferencial nas auditorias."
+    ],
+    "tan_summary": "Habilitação de novas indústrias de carne suína para exportação ao México fortalece a proteína animal brasileira. A diversificação comercial beneficia produtores integrados da Região Sul."
+  },
+  "related_news": ["news-004", "news-009", "news-014"]
+}

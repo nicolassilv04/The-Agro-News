@@ -1,0 +1,52 @@
+{
+  "id": "news-006",
+  "slug": "sustentabilidade-mercado-carbono-agro",
+  "title": "Projetos de créditos de carbono no Agro brasileiro recebem validação internacional de alto padrão",
+  "summary": "Metodologia desenvolvida para rastreamento de estoque de carbono em solos tropicais obtém certificação global, abrindo oportunidade bilionária para produtores de grãos.",
+  "content": "Uma aliança entre pesquisadores da Embrapa e entidades de certificação internacional aprovou uma nova metodologia para mensurar a remoção de dióxido de carbono da atmosfera através do plantio direto e rotação de culturas em solos tropicais.\n\nCom a validação, produtores rurais brasileiros poderão converter práticas conservacionistas em créditos de carbono auditáveis com alto valor de comercialização nos mercados voluntários da Europa e América do Norte.\n\nEstudos preliminares indicam que propriedades que praticam integração lavoura-pecuária podem gerar ganhos extras de até US$ 35 por hectare ao ano com a venda dos ativos ambientais.",
+  "category": "sustentabilidade",
+  "subcategory": "Mercado de Carbono",
+  "published_at": "2026-09-10T12:00:00-03:00",
+  "updated_at": "2026-09-10T12:15:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "EcoAgro Notícias",
+    "url": "https://ecoagro.example.com/carbono-validacao"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "EcoAgro Notícias",
+      "url": "#"
+    },
+    {
+      "name": "Verra Carbon Standards Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["sustentabilidade", "carbono", "esg", "embrapa", "plantio-direto", "certificacao"],
+  "entities": {
+    "pessoas": ["Dra. Mariane Mendes"],
+    "empresas": ["Verra Standard", "CarbonAgro Solutions"],
+    "organizacoes": ["Embrapa Solos", "ONU Meio Ambiente"],
+    "locais": ["Brasília", "Genebra", "Mato Grosso"],
+    "produtos": ["Créditos de Carbono Tropicais"],
+    "commodities": ["Crédito Voluntário de Carbono"]
+  },
+  "regions": ["Nacional"],
+  "nlp": {
+    "importance_score": 0.89,
+    "sentiment": "positive",
+    "cluster_id": "cluster-sustentabilidade-carbono-2026",
+    "topics": ["Mercado de Carbono", "Agricultura Regenerativa", "Sustentabilidade"],
+    "key_points": [
+      "Nova metodologia de medição de carbono em solo tropical recebe aprovação internacional.",
+      "Produtores rurais poderão comercializar créditos no mercado global.",
+      "Potencial de receita adicional estimado em até US$ 35 por hectare/ano.",
+      "Técnicas de plantio direto e ILPF são os pilares da certificação."
+    ],
+    "tan_summary": "Aprovação de nova metodologia científica valida o potencial do solo brasileiro na retenção de carbono. A certificação abre portas para a remuneração direta de produtores por serviços ambientais prestados."
+  },
+  "related_news": ["news-005", "news-012", "news-017"]
+}

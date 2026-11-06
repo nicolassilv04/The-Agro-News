@@ -1,0 +1,20 @@
+---
+import type { NewsItem } from '../types/content';
+import NewsGrid from './NewsGrid.astro';
+
+interface Props {
+  news: NewsItem[];
+}
+
+const { news } = Astro.props;
+if (!news || news.length === 0) return null;
+---
+
+<section
+  style="margin-top: 3rem; border-top: 2px solid var(--color-brand-primary); padding-top: 1.5rem;"
+>
+  <div class="section-header" style="border: none; padding-bottom: 0.5rem;">
+    <h3 class="section-title">Notícias Relacionadas (NLP)</h3>
+  </div>
+  <NewsGrid news={news} featuredIndex={-1} />
+</section>

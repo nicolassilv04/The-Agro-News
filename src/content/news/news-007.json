@@ -1,0 +1,56 @@
+{
+  "id": "news-007",
+  "slug": "internacional-china-demanda-graos-brasil",
+  "title": "China intensifica acordos fitossanitários com o Brasil para ampliação na importação de farelo e milho",
+  "summary": "Reunião de cúpula em Pequim resulta na autorização de 15 novas unidades fabris brasileiras para exportação direta de subprodutos agrícolas.",
+  "content": "Representantes do Ministério da Agricultura do Brasil e da Administração Geral de Alfândegas da China (GACC) concluíram negociações bilaterais em Pequim. O acordo habilita 15 novos estabelecimentos industriais brasileiros a exportarem farelo de soja, DDG de milho e óleos vegetais para o mercado chinês.\n\nA expansão das habilitações reforça a parceria estratégica geopolítica e comercial entre os dois países, garantindo maior previsibilidade de escoamento para os processadores nacionais.\n\nAnalistas de comércio exterior preveem que a medida aumentará o faturamento das exportações do agronegócio em mais de US$ 1,2 bilhão nos próximos doze meses.",
+  "category": "internacional",
+  "subcategory": "China",
+  "published_at": "2026-09-10T06:30:00-03:00",
+  "updated_at": "2026-09-10T07:00:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "Global Trade Agro",
+    "url": "https://globaltrade.example.com/china-brasil-acordo"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Global Trade Agro",
+      "url": "#"
+    },
+    {
+      "name": "Xinhua News Agency",
+      "url": "#"
+    },
+    {
+      "name": "Boletim de Comércio Exterior MAPA",
+      "url": "#"
+    }
+  ],
+  "tags": ["internacional", "china", "acordo-comercial", "exportacao", "farelo-soja", "gacc"],
+  "entities": {
+    "pessoas": ["Wang Wentao", "Roberto Perosa"],
+    "empresas": ["COFCO", "FS Agrisolucões", "Caramuru Alimentos"],
+    "organizacoes": ["GACC China", "MAPA", "Abiove"],
+    "locais": ["Pequim", "Brasília", "China", "Brasil"],
+    "produtos": ["Farelo de Soja", "DDGS de Milho"],
+    "commodities": ["Milho", "Soja Processada"]
+  },
+  "regions": ["Internacional", "Nacional"],
+  "nlp": {
+    "importance_score": 0.92,
+    "sentiment": "positive",
+    "cluster_id": "cluster-internacional-china-2026",
+    "topics": ["Comércio Internacional", "Acordos Bilaterais", "Mercado Chinês"],
+    "key_points": [
+      "China habilita 15 novas plantas industriais brasileiras de farelo e derivados.",
+      "Acordo gera expectativa de incremento de US$ 1,2 bi na pauta exportadora.",
+      "Foco no processamento com maior valor agregado no território nacional.",
+      "Parceria sinaliza consolidação do Brasil como principal fornecedor de segurança alimentar da Ásia."
+    ],
+    "tan_summary": "Conclusão bem-sucedida de negociações fitossanitárias em Pequim resulta na habilitação de 15 indústrias brasileiras para o envio de derivados de soja e milho à China. O acerto fortalece a agregação de valor na pauta exportadora nacional."
+  },
+  "related_news": ["news-001", "news-004", "news-013"]
+}

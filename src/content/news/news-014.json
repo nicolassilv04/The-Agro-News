@@ -1,0 +1,56 @@
+{
+  "id": "news-014",
+  "slug": "pecuaria-sanidade-animal-vacinacao-febre-aftosa",
+  "title": "Brasil consolida status internacional de zona livre de febre aftosa sem vacinação",
+  "summary": "Reconhecimento da WOAH abre portas para exportação de carnes para mercados de alto valor agregado, como Japão e Coreia do Sul.",
+  "content": "A Organização Mundial de Saúde Animal (WOAH) homologou formalmente a ampliação das zonas brasileiras reconhecidas como livres de febre aftosa sem vacinação. Com a decisão, praticamente todo o território nacional passa a integrar o grupo internacional com o status sanitário mais rigoroso do mundo.\n\nA conquista é fruto de décadas de cooperação entre governos estaduais, Ministério da Agricultura e pecuaristas rurais que mantiveram vigilância epidemiológica constante.\n\nCom o novo status, o Brasil inicia tratativas bilaterais para vender cortes nobres de bovinos e suínos para mercados exigentes do Leste Asiático e América do Norte.",
+  "category": "pecuaria",
+  "subcategory": "Sanidade",
+  "published_at": "2026-09-09T09:00:00-03:00",
+  "updated_at": "2026-09-09T09:30:00-03:00",
+  "edition_id": "edition-2026-09-09",
+  "is_featured": false,
+  "source": {
+    "name": "Sanidade Pecuária BR",
+    "url": "https://sanidade.example.com/aftosa-livre"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Sanidade Pecuária BR",
+      "url": "#"
+    },
+    {
+      "name": "Comunicado Oficial WOAH",
+      "url": "#"
+    },
+    {
+      "name": "Assessoria de Imprensa MAPA",
+      "url": "#"
+    }
+  ],
+  "tags": ["pecuaria", "sanidade", "febre-aftosa", "woah", "exportacao", "carne"],
+  "entities": {
+    "pessoas": ["Dr. Luiz Carlos de Oliveira"],
+    "empresas": ["BRF", "Seara", "Frigol"],
+    "organizacoes": ["WOAH", "MAPA", "IAGRO"],
+    "locais": ["Paris", "Brasília", "Japão", "Coreia do Sul"],
+    "produtos": ["Carne Suína", "Cortes Nobres Bovinos"],
+    "commodities": ["Carne Bovina e Suína"]
+  },
+  "regions": ["Nacional"],
+  "nlp": {
+    "importance_score": 0.95,
+    "sentiment": "positive",
+    "cluster_id": "cluster-pecuaria-sanidade-2026",
+    "topics": ["Sanidade Animal", "Febre Aftosa", "Acesso a Mercados"],
+    "key_points": [
+      "WOAH confirma ampliação das zonas brasileiras livres de aftosa sem vacinação.",
+      "Abertura de negociações comerciais prioritárias com Japão e Coreia do Sul.",
+      "Eliminação dos custos com campanhas vacinais periódicas.",
+      "Reforço nos sistemas estaduais de vigilância de fronteira."
+    ],
+    "tan_summary": "Homologação internacional confirma o Brasil como zona livre de febre aftosa sem vacinação em escala nacional. O feito histórico viabiliza a entrada de cortes brasileiros em mercados premium de alto valor agregado."
+  },
+  "related_news": ["news-004", "news-009", "news-022"]
+}

@@ -1,0 +1,90 @@
+---
+interface Props {
+  activePath?: string;
+}
+
+const { activePath = '/' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'início' },
+  { href: '/noticias/', label: 'edições' },
+  { href: '/categorias/', label: 'categorias' },
+  { href: '/sobre/', label: 'anuncie no the agro news' },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand-logo" aria-label="the agro news - início">
+      <div class="brand-emblem" aria-hidden="true">🌱</div>
+      <div>
+        <div class="logo-main">the agro news</div>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      {
+        navItems.map((item) => {
+          const isActive =
+            activePath === item.href || (item.href !== '/' && activePath.startsWith(item.href));
+          return (
+            <a href={item.href} class={`nav-link ${isActive ? 'active' : ''}`}>
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+
+    <div class="header-actions">
+      <a href="/sobre/#termos" class="header-login-btn">termos e políticas</a>
+      <a href="/#subscribe" class="header-subscribe-btn">inscreva-se</a>
+
+      <button
+        id="mobileMenuBtn"
+        class="mobile-menu-btn"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-navigation" class="mobile-nav-drawer" aria-label="Navegação mobile">
+    {
+      navItems.map((item) => (
+        <a href={item.href} class="mobile-nav-link">
+          {item.label}
+        </a>
+      ))
+    }
+    <a href="/#subscribe" class="btn btn-primary mt-md">inscreva-se no TAN</a>
+  </div>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavDrawer = document.getElementById('mobile-navigation');
+
+  if (mobileMenuBtn && mobileNavDrawer) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileNavDrawer.classList.toggle('open');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+</script>

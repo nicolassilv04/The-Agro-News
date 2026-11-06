@@ -1,0 +1,52 @@
+{
+  "id": "news-010",
+  "slug": "politica-regulamentacao-bioinsumos-congresso",
+  "title": "Comissão aprova marco legal para incentivar a produção e uso de bioinsumos na agricultura",
+  "summary": "Projeto de lei simplifica regras de registro para defensivos biológicos produzidos na própria fazenda (on-farm) e estabelece incentivos fiscais.",
+  "content": "A Comissão de Agricultura da Câmara dos Deputados aprovou por unanimidade o substitutivo ao Projeto de Lei dos Bioinsumos. O texto cria um arcabouço regulatório moderno e desburocratizado para o desenvolvimento, produção e comercialização de inoculantes, biofertilizantes e agentes de controle biológico.\n\nUm dos pontos celebrados pelas entidades do setor é a garantia do direito de produção própria on-farm para uso exclusivo nas propriedades rurais, desde que obedecidos os padrões técnicos sanitários previstos em regulamento.\n\nA proposta segue agora para apreciação no Senado Federal antes de ir à sanção presidencial.",
+  "category": "politica",
+  "subcategory": "Legislação",
+  "published_at": "2026-09-09T10:15:00-03:00",
+  "updated_at": "2026-09-09T11:00:00-03:00",
+  "edition_id": "edition-2026-09-09",
+  "is_featured": false,
+  "source": {
+    "name": "Agência Congresso Agro",
+    "url": "https://congressoagro.example.com/marco-bioinsumos"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Agência Congresso Agro",
+      "url": "#"
+    },
+    {
+      "name": "Agência Câmara de Notícias",
+      "url": "#"
+    }
+  ],
+  "tags": ["politica", "bioinsumos", "legislacao", "congresso", "camara-dos-deputados", "inovacao"],
+  "entities": {
+    "pessoas": ["Deputado Sergio Souza"],
+    "empresas": ["Koppert", "Biotrop", "CropLife Brasil"],
+    "organizacoes": ["FPA - Frente Parlamentar da Agropecuária", "Embrapa"],
+    "locais": ["Brasília"],
+    "produtos": ["Biofertilizantes", "Inoculantes", "Defensivos Biológicos"],
+    "commodities": ["Bioinsumos"]
+  },
+  "regions": ["Nacional"],
+  "nlp": {
+    "importance_score": 0.87,
+    "sentiment": "positive",
+    "cluster_id": "cluster-politica-bioinsumos-2026",
+    "topics": ["Marco Regulatória", "Bioinsumos", "Legislação Agrícola"],
+    "key_points": [
+      "Aprovação do Marco Legal dos Bioinsumos na Comissão de Agricultura.",
+      "Garantia de segurança jurídica para a produção on-farm nas propriedades.",
+      "Redução da dependência externa de fertilizantes e químicos sintéticos.",
+      "Texto segue para análise final no Senado Federal."
+    ],
+    "tan_summary": "Aprovação parlamentar do Marco Legal dos Bioinsumos promete impulsionar a biotecnologia agrícola no Brasil. A legislação garante amparo legal para a produção própria on-farm e acelera registros de insumos sustentáveis."
+  },
+  "related_news": ["news-005", "news-006", "news-017"]
+}

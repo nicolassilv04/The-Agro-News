@@ -1,0 +1,159 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import NlpSummary from '../components/NlpSummary.astro';
+import NlpKeyPoints from '../components/NlpKeyPoints.astro';
+import NlpEntities from '../components/NlpEntities.astro';
+import SourceList from '../components/SourceList.astro';
+import RelatedNews from '../components/RelatedNews.astro';
+import type { NewsItem } from '../types/content';
+import { formatDate, formatTime } from '../lib/formatting';
+import { getCategoryUrl, getNewsUrl, getCanonicalUrl } from '../lib/urls';
+import { getNewsArticleJsonLd } from '../lib/seo';
+
+interface Props {
+  newsItem: NewsItem;
+  relatedNewsItems?: NewsItem[];
+}
+
+const { newsItem, relatedNewsItems = [] } = Astro.props;
+const categoryUrl = getCategoryUrl(newsItem.category);
+const canonicalPath = getNewsUrl(newsItem.slug);
+const canonicalUrl = getCanonicalUrl(canonicalPath);
+const formattedDate = formatDate(newsItem.published_at);
+const formattedTime = formatTime(newsItem.published_at);
+const jsonLd = getNewsArticleJsonLd(newsItem, canonicalUrl);
+
+// Curated category images
+const categoryImages: Record<string, string> = {
+  mercado: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+  clima: 'https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=800&q=80',
+  tecnologia: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
+  agricultura: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+  pecuaria: 'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80',
+  politica: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+  sustentabilidade: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80',
+  internacional: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80',
+};
+
+const coverImage = newsItem.heroImage || categoryImages[newsItem.category.toLowerCase()] || 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80';
+
+const seo = {
+  title: `${newsItem.title} — the agro news`,
+  description: newsItem.subtitle || newsItem.summary,
+  canonicalPath,
+  type: 'article' as const,
+  publishedTime: newsItem.published_at,
+  modifiedTime: newsItem.updated_at || newsItem.published_at,
+  category: newsItem.category,
+  keywords: newsItem.tags,
+};
+---
+
+<BaseLayout seo={seo} jsonLd={jsonLd} activePath="/noticias/">
+  <div class="newsletter-reading-container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" style="margin-bottom: 1rem;">
+      <span class="breadcrumb-item"><a href="/">the agro news</a></span>
+      <span class="breadcrumb-separator">&rsaquo;</span>
+      <span class="breadcrumb-item"><a href="/noticias/">notícias</a></span>
+      <span class="breadcrumb-separator">&rsaquo;</span>
+      <span class="breadcrumb-item"><a href={categoryUrl}>{newsItem.category}</a></span>
+    </nav>
+
+    <article class="news-article-full" data-pagefind-body>
+      <header style="margin-bottom: 1.5rem;">
+        <span class="badge badge-category mb-sm">
+          {newsItem.category}
+        </span>
+
+        <h1 class="newsletter-story-title" style="font-size: clamp(1.85rem, 4vw, 2.6rem); margin-top: 0.5rem; margin-bottom: 0.75rem;">
+          {newsItem.title}
+        </h1>
+
+        {newsItem.subtitle && (
+          <p class="lead" style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: 1rem;">
+            {newsItem.subtitle}
+          </p>
+        )}
+
+        <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-border-light); border-bottom: 1px solid var(--color-border-light); padding: 0.65rem 0; font-size: 0.8rem; color: var(--color-text-muted);">
+          <div>
+            <span>{formattedDate} &bull; {formattedTime}</span>
+            {newsItem.source && (
+              <span> &bull; Fonte: <strong>{newsItem.source.name}</strong></span>
+            )}
+          </div>
+
+          <button id="shareArticleBtn" class="btn btn-secondary btn-sm">
+            <span>Compartilhar</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <figure class="newsletter-figure">
+        <img
+          src={coverImage}
+          alt={newsItem.title}
+          loading="eager"
+        />
+      </figure>
+      <div class="newsletter-caption">(imagem: {newsItem.source?.name || 'the agro news'} | reprodução)</div>
+
+      <!-- TAN SUMMARY (NLP) -->
+      <NlpSummary nlp={newsItem.nlp} />
+
+      <!-- ARTICLE BODY -->
+      <section class="newsletter-body-copy" style="margin-top: 1.5rem;">
+        {newsItem.content.split('\n\n').map((p) => <p>{p}</p>)}
+      </section>
+
+      <!-- NLP KEY POINTS -->
+      <NlpKeyPoints nlp={newsItem.nlp} />
+
+      <!-- NLP ENTITIES -->
+      <NlpEntities entities={newsItem.entities} />
+
+      <!-- SOURCES -->
+      <SourceList
+        mainSource={newsItem.source}
+        sourcesList={newsItem.sources_list}
+        sourcesCount={newsItem.sources_count}
+      />
+
+      <!-- WhatsApp Share Link -->
+      <div class="newsletter-whatsapp-share">
+        <a
+          href={`https://api.whatsapp.com/send?text=${encodeURIComponent(newsItem.title + ' - the agro news: ')}`}
+          target="_blank"
+          rel="noopener"
+          class="whatsapp-share-link"
+        >
+          <span>💬 Compartilhe essa notícia no WhatsApp &rarr;</span>
+        </a>
+      </div>
+
+      <!-- RELATED NEWS -->
+      {relatedNewsItems.length > 0 && <RelatedNews news={relatedNewsItems} />}
+    </article>
+  </div>
+</BaseLayout>
+
+<script>
+  const shareBtn = document.getElementById('shareArticleBtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: document.title,
+            url: window.location.href,
+          });
+        } catch {}
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        alert('Link copiado para a área de transferência!');
+      }
+    });
+  }
+</script>

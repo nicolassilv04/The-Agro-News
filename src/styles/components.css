@@ -1,0 +1,1171 @@
+/* ==========================================================================
+   TAN — COMPONENTS CSS (INSPIRED BY THE NEWS)
+   Primary Color: #0c1f12
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HEADER & NAVIGATION (Minimalist, Clean White like The News)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border-light);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-normal);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.brand-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.logo-main {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-brand-primary);
+  line-height: 1;
+}
+
+.logo-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-brand-primary);
+  opacity: 0.75;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-brand-primary);
+  background-color: var(--color-bg-alt);
+}
+
+.nav-link.active {
+  color: var(--color-brand-primary);
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-login-btn {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: #f9fafb;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.header-login-btn:hover {
+  background: var(--color-border-light);
+}
+
+.header-subscribe-btn {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.header-subscribe-btn:hover {
+  background: var(--color-brand-primary-hover);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-brand-primary);
+  padding: var(--space-xs);
+  cursor: pointer;
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 99;
+  padding: var(--space-lg);
+  flex-direction: column;
+  gap: var(--space-md);
+  border-top: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.mobile-nav-drawer.open {
+  display: flex;
+}
+
+.mobile-nav-link {
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO MASTHEAD & NEWSLETTER SUBSCRIPTION (The News Beehiiv Style)
+   -------------------------------------------------------------------------- */
+.hero-masthead {
+  padding: 3rem 0 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.hero-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-md);
+  background: var(--color-brand-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 2.2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-main-title {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.hero-sub-headline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto 1.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Subscribe Input Box (The News Style) */
+.subscribe-form-wrapper {
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.subscribe-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  border: 2px solid var(--color-brand-primary);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  gap: 4px;
+  transition: box-shadow var(--transition-fast);
+}
+
+@media (min-width: 560px) {
+  .subscribe-box {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.subscribe-input-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 0.75rem;
+}
+
+.subscribe-icon {
+  color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.subscribe-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: var(--font-base);
+  color: var(--color-text-primary);
+  outline: none;
+  font-family: var(--font-body);
+  padding: 0.65rem 0.25rem;
+}
+
+.subscribe-input::placeholder {
+  color: var(--color-text-light);
+}
+
+.subscribe-btn {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-xs);
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-base);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+  background-color: var(--color-brand-primary-hover);
+}
+
+/* Social Connect Pills */
+.hero-social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-social-label {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.social-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.social-circle-btn:hover {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   3. EDIÇÕES SECTION (The News Archive - Reference Image 1)
+   -------------------------------------------------------------------------- */
+.editions-section {
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.editions-header-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  color: var(--color-brand-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+/* Search Input Bar */
+.archive-search-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.archive-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.archive-search-input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.85rem;
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast);
+}
+
+.archive-search-input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: var(--color-brand-primary);
+}
+
+/* Day/Topic Filter Pills */
+.archive-pills-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.archive-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-text-primary);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.archive-pill:hover {
+  background-color: #f3f4f6;
+}
+
+.archive-pill.active {
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   4. THE NEWS CARD GRID (Reference Image 1: 3-Column Layout)
+   -------------------------------------------------------------------------- */
+.editions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .editions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .editions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* The News Card Item */
+.the-news-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.the-news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-medium);
+}
+
+/* Card Cover Image */
+.the-news-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #1a3824;
+  overflow: hidden;
+}
+
+.the-news-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.the-news-card:hover .the-news-card-img {
+  transform: scale(1.03);
+}
+
+/* Overlay Pill Badge */
+.the-news-badge-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: var(--shadow-sm);
+}
+
+.the-news-badge-tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 0.65rem;
+}
+
+/* Card Body Section */
+.the-news-card-body {
+  padding: 1.15rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.the-news-card-time {
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.the-news-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.35rem;
+}
+
+.the-news-card-sub {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.the-news-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  padding-top: 0.5rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+/* --------------------------------------------------------------------------
+   5. NEWSLETTER READING VIEW (Reference Image 2)
+   -------------------------------------------------------------------------- */
+.newsletter-reading-container {
+  max-width: var(--container-reading);
+  margin: 0 auto;
+  padding: 1.5rem var(--space-md) 4rem;
+}
+
+/* Reading Header Meta */
+.newsletter-meta-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-edition-date-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.2rem;
+}
+
+.newsletter-date-readtime {
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+}
+
+.newsletter-social-share-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.share-mini-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.share-mini-btn:hover {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+}
+
+/* Newsletter Masthead Header Banner */
+.newsletter-masthead-banner {
+  background: linear-gradient(135deg, var(--color-brand-primary) 0%, #08140c 100%);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.newsletter-banner-emblem {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.newsletter-banner-logo {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.newsletter-banner-sub {
+  font-size: var(--font-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #86efac;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+/* Powered By Line */
+.newsletter-powered-by {
+  text-align: center;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-sponsor-logo {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--color-brand-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Conversational Intro */
+.newsletter-intro-greeting {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.newsletter-intro-text {
+  font-size: var(--font-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Centered Dots Divider (The News classic · · · ·) */
+.newsletter-dots-divider {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.6em;
+  color: var(--color-brand-primary);
+  margin: 1.75rem 0;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+/* Date in Uppercase */
+.newsletter-date-header {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-brand-primary);
+  margin: 0.75rem 0;
+}
+
+/* Quick Topics Box / OUTROS TÓPICOS */
+.newsletter-topics-box {
+  margin: 1.5rem 0;
+}
+
+.newsletter-topics-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.75rem;
+}
+
+.newsletter-topic-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--font-base);
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+.topic-highlight-pill {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.newsletter-topic-item a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.newsletter-topic-item a:hover {
+  color: var(--color-brand-primary);
+  font-weight: 600;
+}
+
+/* Reader Radar / Digest Box (NO RADAR DO AGRO) */
+.newsletter-radar-box {
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.newsletter-radar-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.radar-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: var(--font-base);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.radar-emoji {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/* Streak Callout Banner (🔥 JÁ REGISTROU SUA LEITURA HOJE?) */
+.newsletter-streak-banner {
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border-light);
+  border-left: 4px solid var(--color-brand-primary);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.streak-text {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.streak-action-btn {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-xs);
+  font-size: var(--font-xs);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: opacity var(--transition-fast);
+}
+
+.streak-action-btn:hover {
+  opacity: 0.9;
+}
+
+/* Newsletter Stories / Section */
+.newsletter-story-block {
+  margin: 3rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.newsletter-story-category {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.4rem;
+}
+
+.newsletter-story-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+  font-weight: 800;
+  color: var(--color-brand-primary);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.newsletter-story-title a {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.newsletter-story-title a:hover {
+  opacity: 0.85;
+}
+
+/* Newsletter Article Media & Caption */
+.newsletter-figure {
+  margin: 1.25rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.newsletter-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.newsletter-caption {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.4rem;
+}
+
+/* Newsletter Content Formatting */
+.newsletter-body-copy {
+  font-size: var(--font-base);
+  line-height: 1.75;
+  color: var(--color-text-primary);
+}
+
+.newsletter-body-copy p {
+  margin-bottom: 1.15rem;
+}
+
+.newsletter-body-copy strong {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* P.S. note */
+.newsletter-ps-box {
+  background-color: #f9fafb;
+  border-left: 3px solid var(--color-brand-primary);
+  padding: 0.75rem 1rem;
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  margin: 1.25rem 0;
+}
+
+/* WhatsApp Share CTA Bar */
+.newsletter-whatsapp-share {
+  text-align: right;
+  margin: 1.25rem 0 2rem;
+}
+
+.whatsapp-share-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: #15803d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition-fast);
+}
+
+.whatsapp-share-link:hover {
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   6. NLP BOXES (Single Article View & Features)
+   -------------------------------------------------------------------------- */
+.tan-summary-box {
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border-light);
+  border-left: 4px solid var(--color-brand-primary);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.tan-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.5rem;
+}
+
+.tan-summary-text {
+  font-size: var(--font-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Key Points Box */
+.key-points-box {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.key-points-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.key-points-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.key-points-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.key-points-bullet {
+  color: var(--color-brand-primary);
+  font-weight: 900;
+}
+
+/* Entities Clean Section (Unified Mono/Tonal Palette) */
+.entities-section {
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.entities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.entity-group-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.entity-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.entity-tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-brand-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.entity-tag:hover {
+  border-color: var(--color-brand-primary);
+}
+
+/* Sources Box */
+.sources-box {
+  background-color: #ffffff;
+  border: 1px dashed var(--color-border-medium);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   7. FOOTER (Deep #0c1f12 Forest Background)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-brand-primary);
+  color: rgba(255, 255, 255, 0.85);
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.footer-brand .brand-logo {
+  color: #ffffff;
+}
+
+.footer-brand .brand-emblem {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.footer-brand .logo-main {
+  color: #ffffff;
+}
+
+.footer-brand .logo-tag {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-brand p {
+  font-size: var(--font-sm);
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.footer-col-title {
+  font-family: var(--font-body);
+  font-size: var(--font-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: var(--font-sm);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.editorial-disclaimer {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-xs);
+  font-size: var(--font-xs);
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: var(--font-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE BREAKPOINTS & UTILITIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "news-005",
+  "slug": "politica-plano-safra-credito-sustentavel",
+  "title": "Governo autoriza liberação de novos recursos do Plano Safra focados em transição agroecológica",
+  "summary": "Ministério da Agricultura e Banco do Brasil anunciam aporte complementar de R$ 4,5 bilhões com taxas de juros reduzidas para produtores que adotam práticas de carbono neutro.",
+  "content": "O Ministério da Agricultura e Pecuária (MAPA), em conjunto com o Banco do Brasil, formalizou o lançamento de uma linha adicional de financiamento vinculada às diretrizes do Plano Safra 2026/27. A iniciativa destina R$ 4,5 bilhões exclusivamente para programas de agricultura de baixo carbono (ABC+) e conversão de pastagens degradadas.\n\nProdutores rurais que comprovarem certificação ambiental ou utilização de bioinsumos locais poderão acessar financiamentos com descontos de até 2% na taxa de juros anual.\n\nA medida visa acelerar o cumprimento das metas brasileiras de redução de emissões e incentivar o investimento em conservação de solo, plantio direto e sistemas de integração lavoura-pecuária-floresta (ILPF).",
+  "category": "politica",
+  "subcategory": "Plano Safra",
+  "published_at": "2026-09-10T07:45:00-03:00",
+  "updated_at": "2026-09-10T08:00:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "Agência Brasil Agro",
+    "url": "https://brasilagro.example.com/politica-plano-safra"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Agência Brasil Agro",
+      "url": "#"
+    },
+    {
+      "name": "Diário Oficial da União",
+      "url": "#"
+    },
+    {
+      "name": "Assessoria MAPA",
+      "url": "#"
+    }
+  ],
+  "tags": [
+    "politica",
+    "plano-safra",
+    "credito-rural",
+    "sustentabilidade",
+    "mapa",
+    "banco-do-brasil"
+  ],
+  "entities": {
+    "pessoas": ["Carlos Fávaro"],
+    "empresas": ["Banco do Brasil", "BNDES"],
+    "organizacoes": ["MAPA", "Ministério da Fazenda", "Embrapa"],
+    "locais": ["Brasília", "Brasil"],
+    "produtos": ["Crédito Rural ABC+", "Financiamento ILPF"],
+    "commodities": ["Crédito Agro"]
+  },
+  "regions": ["Nacional"],
+  "nlp": {
+    "importance_score": 0.91,
+    "sentiment": "positive",
+    "cluster_id": "cluster-politica-credito-2026",
+    "topics": ["Política Agrícola", "Plano Safra", "Crédito Rural Verde"],
+    "key_points": [
+      "Aporte complementar de R$ 4,5 bilhões disponibilizado no sistema bancário.",
+      "Taxas de juros bonificadas em até 2% ao ano para produtores sustentáveis.",
+      "Foco na conversão de pastagens degradadas e adoção do sistema ILPF.",
+      "Incentivo busca posicionar o agro nacional na vanguarda da transição verde."
+    ],
+    "tan_summary": "Ministério da Agricultura libera lote complementar do Plano Safra com R$ 4,5 bilhões voltados para o financiamento sustentável. Taxas subsidiadas beneficiam produtores que aplicam técnicas de agricultura de baixo carbono."
+  },
+  "related_news": ["news-006", "news-010", "news-016"]
+}

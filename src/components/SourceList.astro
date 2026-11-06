@@ -1,0 +1,53 @@
+---
+import type { Source } from '../types/content';
+
+interface Props {
+  mainSource?: Source;
+  sourcesList?: Source[];
+  sourcesCount?: number;
+}
+
+const { mainSource, sourcesList, sourcesCount = 1 } = Astro.props;
+---
+
+<div class="sources-box">
+  <h4
+    style="font-size: 0.8rem; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase; color: var(--color-text-muted);"
+  >
+    Fontes de Informação ({sourcesCount})
+  </h4>
+  <p style="font-size: 0.85rem; color: var(--color-text-secondary);">
+    Esta publicação foi compilada a partir das seguintes fontes auditadas pelo pipeline TAN:
+  </p>
+  <ul
+    style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem; color: var(--color-brand-secondary);"
+  >
+    {
+      sourcesList && sourcesList.length > 0 ? (
+        sourcesList.map((source) => (
+          <li>
+            {source.url && source.url !== '#' ? (
+              <a href={source.url} target="_blank" rel="noopener noreferrer">
+                {source.name}
+              </a>
+            ) : (
+              <span>{source.name}</span>
+            )}
+          </li>
+        ))
+      ) : mainSource ? (
+        <li>
+          {mainSource.url && mainSource.url !== '#' ? (
+            <a href={mainSource.url} target="_blank" rel="noopener noreferrer">
+              {mainSource.name}
+            </a>
+          ) : (
+            <span>{mainSource.name}</span>
+          )}
+        </li>
+      ) : (
+        <li>Fonte TAN</li>
+      )
+    }
+  </ul>
+</div>

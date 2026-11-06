@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import { getAllCategories, getNewsByCategory } from '../../lib/content';
+import { getCategoryUrl } from '../../lib/urls';
+import type { Category, NewsItem } from '../../types/content';
+
+export async function getStaticPaths() {
+  const categories = await getAllCategories();
+
+  return Promise.all(
+    categories.map(async (category) => {
+      const newsItems = await getNewsByCategory(category.slug);
+      return {
+        params: { slug: category.slug },
+        props: { category, newsItems },
+      };
+    })
+  );
+}
+
+interface Props {
+  category: Category;
+  newsItems: NewsItem[];
+}
+
+const { category, newsItems } = Astro.props;
+const canonicalPath = getCategoryUrl(category.slug);
+
+const seo = {
+  title: `${category.name} — the agro news`,
+  description: category.description,
+  canonicalPath,
+};
+---
+
+<BaseLayout seo={seo} activePath="/categorias/">
+  <div class="container section-sm" style="padding-top: 2rem;">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <span class="breadcrumb-item"><a href="/">the agro news</a></span>
+      <span class="breadcrumb-separator">&rsaquo;</span>
+      <span class="breadcrumb-item"><a href="/categorias/">categorias</a></span>
+      <span class="breadcrumb-separator">&rsaquo;</span>
+      <span class="breadcrumb-item active">{category.name}</span>
+    </nav>
+
+    <header style="margin-bottom: 2rem;">
+      <span class="badge badge-category mb-sm">
+        {category.name}
+      </span>
+      <h1 class="editions-header-title">{category.name}</h1>
+      <p class="lead mt-sm">{category.description}</p>
+    </header>
+
+    <div
+      style="margin-bottom: 2rem; background: #f9fafb; border: 1px solid var(--color-border-light); border-radius: var(--radius-sm); padding: 1rem 1.25rem;"
+    >
+      <span
+        style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-right: 0.75rem;"
+      >
+        Tópicos Cobertos:
+      </span>
+      <div style="display: inline-flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem;">
+        {
+          category.subcategories.map((sub) => (
+            <span
+              class="badge"
+              style="background: #ffffff; color: var(--color-brand-primary);"
+            >
+              {sub}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    <section>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">
+        Publicações em {category.name} ({newsItems.length})
+      </h2>
+      {
+        newsItems.length > 0 ? (
+          <NewsGrid news={newsItems} />
+        ) : (
+          <div class="empty-state">
+            <p class="empty-state-desc">Nenhuma notícia cadastrada nesta categoria recentemente.</p>
+          </div>
+        )
+      }
+    </section>
+  </div>
+</BaseLayout>

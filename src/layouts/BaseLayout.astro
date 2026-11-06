@@ -1,0 +1,116 @@
+---
+import '../styles/variables.css';
+import '../styles/reset.css';
+import '../styles/global.css';
+import '../styles/components.css';
+import '../styles/responsive.css';
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getSeoMetadata, type SeoProps } from '../lib/seo';
+
+interface Props {
+  seo?: SeoProps;
+  activePath?: string;
+  jsonLd?: string;
+}
+
+const { seo = {}, activePath, jsonLd } = Astro.props;
+const metadata = getSeoMetadata(seo);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Core SEO Meta Tags -->
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+    <link rel="canonical" href={metadata.canonicalUrl} />
+    {metadata.keywords && <meta name="keywords" content={metadata.keywords} />}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={metadata.type} />
+    <meta property="og:url" content={metadata.canonicalUrl} />
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:description" content={metadata.description} />
+    <meta property="og:image" content={metadata.image} />
+    <meta property="og:site_name" content="TAN — The Agro News" />
+    {
+      metadata.publishedTime && (
+        <meta property="article:published_time" content={metadata.publishedTime} />
+      )
+    }
+    {
+      metadata.modifiedTime && (
+        <meta property="article:modified_time" content={metadata.modifiedTime} />
+      )
+    }
+    {metadata.category && <meta property="article:section" content={metadata.category} />}
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metadata.title} />
+    <meta name="twitter:description" content={metadata.description} />
+    <meta name="twitter:image" content={metadata.image} />
+
+    <!-- Preconnect Google Fonts for High-End Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;0,6..72,900;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Optional JSON-LD Structured Data -->
+    {jsonLd && <script type="application/ld+json" is:inline set:html={jsonLd} />}
+  </head>
+
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only btn btn-primary"
+      style="position: absolute; top: 10px; left: 10px; z-index: 1000;"
+    >
+      Pular para o conteúdo principal
+    </a>
+
+    <Header activePath={activePath || Astro.url.pathname} />
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+</style>

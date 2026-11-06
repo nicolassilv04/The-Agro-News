@@ -1,0 +1,41 @@
+---
+import type { Entities } from '../types/content';
+
+interface Props {
+  entities?: Entities;
+}
+
+const { entities } = Astro.props;
+if (!entities) return null;
+
+const groups = [
+  { key: 'pessoas', title: 'Pessoas', items: entities.pessoas },
+  { key: 'empresas', title: 'Empresas', items: entities.empresas },
+  { key: 'organizacoes', title: 'Organizações', items: entities.organizacoes },
+  { key: 'locais', title: 'Locais & Biomas', items: entities.locais },
+  { key: 'produtos', title: 'Insumos & Produtos', items: entities.produtos },
+  { key: 'commodities', title: 'Commodities', items: entities.commodities },
+].filter((g) => g.items && g.items.length > 0);
+
+if (groups.length === 0) return null;
+---
+
+<section class="entities-section">
+  <div class="section-title">Entidades Extraídas (NLP)</div>
+  <div class="entities-grid">
+    {
+      groups.map((group) => (
+        <div>
+          <div class="entity-group-title">{group.title}</div>
+          <div class="entity-chips">
+            {group.items?.map((item) => (
+              <span class="entity-tag" data-type={group.key}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

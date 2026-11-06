@@ -1,0 +1,63 @@
+{
+  "id": "news-023",
+  "slug": "internacional-acordo-mercosul-uniao-europeia-perspectivas",
+  "title": "Negociadores do Mercosul e União Europeia avançam em cláusulas ambientais para conclusão de tratado",
+  "summary": "Rodada de conversas em Bruxelas alinha compromissos de preservação ambiental com salvaguardas comerciais para exportadores sul-americanos.",
+  "content": "Diplomatas do Mercosul e negociadores da Comissão Europeia alcançaram consensos preliminares sobre o anexo ambiental (instrumento adicional) do acordo de livre comércio entre os dois blocos econômicos. As discussões focaram em mecanismos de cooperação para o combate ao desmatamento ilegal e incentivo à economia verde.\n\nSe ratificado, o tratado criará uma das maiores zonas de livre comércio do planeta, zerando tarifas de importação para diversos produtos agrícolas brasileiros em um prazo de até dez anos.\n\nEntidades do agronegócio nacional acompanham o desfecho com otimismo, destacando a relevância da previsibilidade jurídica nas trocas internacionais.",
+  "category": "internacional",
+  "subcategory": "União Europeia",
+  "published_at": "2026-09-06T11:15:00-03:00",
+  "updated_at": "2026-09-06T11:45:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Diplomacia & Agro",
+    "url": "https://diplomaciaagro.example.com/mercosul-ue-bruxelas"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Diplomacia & Agro",
+      "url": "#"
+    },
+    {
+      "name": "Reuters Commercial Mock",
+      "url": "#"
+    },
+    {
+      "name": "Itamaraty Informa",
+      "url": "#"
+    }
+  ],
+  "tags": [
+    "internacional",
+    "mercosul",
+    "uniao-europeia",
+    "acordo-comercial",
+    "bruxelas",
+    "itamaraty"
+  ],
+  "entities": {
+    "pessoas": ["Mauro Vieira", "Ursula von der Leyen"],
+    "empresas": ["CNA Brasil", "BusinessEurope"],
+    "organizacoes": ["Mercosul", "Comissão Europeia", "Itamaraty"],
+    "locais": ["Bruxelas", "Brasília", "Buenos Aires"],
+    "produtos": ["Suco de Laranja", "Carne Bovina Quota Hilton", "Café Especiais"],
+    "commodities": ["Comércio Livre Bloco a Bloco"]
+  },
+  "regions": ["Internacional"],
+  "nlp": {
+    "importance_score": 0.91,
+    "sentiment": "positive",
+    "cluster_id": "cluster-internacional-mercosul-2026",
+    "topics": ["Acordos de Livre Comércio", "Mercosul - União Europeia", "Geopolítica Agrícola"],
+    "key_points": [
+      "Avanço significativo na redação final do anexo ambiental do acordo Mercosul-UE.",
+      "Zerar tarifas para suco de laranja, frutas e carnes em prazos de carência.",
+      "Exigências de sustentabilidade com mecanismos de cooperação técnica mútua.",
+      "Expectativa de votação no Parlamento Europeu até o final do ano."
+    ],
+    "tan_summary": "Reuniões em Bruxelas aproximam Mercosul e União Europeia do fechamento do acordo birregional. A harmonização das exigências ambientais garante acesso privilegiado para os produtos agropecuários do Brasil."
+  },
+  "related_news": ["news-006", "news-007", "news-016"]
+}

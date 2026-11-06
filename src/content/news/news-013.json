@@ -1,0 +1,52 @@
+{
+  "id": "news-013",
+  "slug": "agricultura-milho-segunda-safra-exportacoes",
+  "title": "Escoamento da safrinha de milho ganha ritmo nos corredores logísticos do Arco Norte",
+  "summary": "Movimentação nos portos de Itacoatiara, Santarém e Barcarena cresce 18% em relação ao ano anterior, otimizando custos de frete do Mato Grosso.",
+  "content": "A logística de escoamento da segunda safra de milho (safrinha) registra intenso movimento nos terminais portuários da Região Norte do Brasil. A consolidação dos corredores do Arco Norte tem permitido o escoamento eficiente de milhões de toneladas oriundas do norte do Mato Grosso e do Matopiba.\n\nA utilização de barcaças pela hidrovia Tapajós-Amazonas reduziu a distância percorrida por caminhões e aliviou os custos com frete rodoviário para os produtores da região.\n\nEspecialistas em infraestrutura ressaltam que o desempenho dos portos nortistas é fundamental para manter a competitividade do milho brasileiro frente à concorrência dos exportadores norte-americanos.",
+  "category": "agricultura",
+  "subcategory": "Milho",
+  "published_at": "2026-09-09T15:10:00-03:00",
+  "updated_at": "2026-09-09T15:40:00-03:00",
+  "edition_id": "edition-2026-09-09",
+  "is_featured": false,
+  "source": {
+    "name": "InfraAgro Notícias",
+    "url": "https://infraagro.example.com/arco-norte-milho"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "InfraAgro Notícias",
+      "url": "#"
+    },
+    {
+      "name": "Boletim Logística CNT",
+      "url": "#"
+    }
+  ],
+  "tags": ["agricultura", "milho", "arco-norte", "logistica", "portos", "frete"],
+  "entities": {
+    "pessoas": ["Edeon Vaz Ferreira"],
+    "empresas": ["Hidrovias do Brasil", "VLI Logistics", "Amaggi"],
+    "organizacoes": ["Movimento Pró-Logística", "ANTAQ"],
+    "locais": ["Barcarena", "Itacoatiara", "Santarém", "Mato Grosso", "Pará"],
+    "produtos": ["Milho Safrinha em Grão", "Frete Hidroviário"],
+    "commodities": ["Milho"]
+  },
+  "regions": ["Norte", "Centro-Oeste"],
+  "nlp": {
+    "importance_score": 0.84,
+    "sentiment": "positive",
+    "cluster_id": "cluster-agricultura-milho-2026",
+    "topics": ["Logística Agrícola", "Arco Norte", "Exportação de Milho"],
+    "key_points": [
+      "Volume de milho escoado pelo Arco Norte apresenta crescimento de 18%.",
+      "Modais hidroviários garantem economia expressiva no frete por tonelada.",
+      "Terminais de Barcarena e Santarém operam em capacidade máxima.",
+      "Eficiência logística fortalece margem do produtor mato-grossense."
+    ],
+    "tan_summary": "Corredores logísticos do Arco Norte registram pico de movimentação no escoamento do milho safrinha. O transporte hidroviário reduz custos operacionais e eleva a competitividade do produto no mercado externo."
+  },
+  "related_news": ["news-001", "news-007", "news-023"]
+}

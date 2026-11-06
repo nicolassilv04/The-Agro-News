@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EditionCard from '../components/EditionCard.astro';
+import NewsCard from '../components/NewsCard.astro';
+import { getAllNews, getAllEditions } from '../lib/content';
+
+const editions = await getAllEditions();
+const allNews = await getAllNews();
+
+const seo = {
+  title: 'the agro news — tudo que você precisa saber pra começar seu dia bem e informado',
+  description:
+    'o jornal do agronegócio que todo mundo lê. as notícias mais relevantes do Brasil e do mundo, de forma leve e descontraída.',
+  canonicalPath: '/',
+};
+
+// Map sample badges and images for the archive display mirroring The News
+const sampleImages = [
+  'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80',
+];
+---
+
+<BaseLayout seo={seo} activePath="/">
+  <!-- 1. THE NEWS STYLE HERO MASTHEAD & SUBSCRIBE SECTION -->
+  <section class="hero-masthead">
+    <div class="container">
+      <div class="hero-avatar" aria-hidden="true">
+        🌱
+      </div>
+
+      <h1 class="hero-main-title">the agro news</h1>
+      <p class="hero-sub-headline">
+        tudo que você precisa saber pra começar seu dia bem e informado sobre o agronegócio.
+      </p>
+
+      <!-- Subscription Box -->
+      <div class="subscribe-form-wrapper" id="subscribe">
+        <form class="subscribe-box" onsubmit="event.preventDefault(); alert('Inscrição confirmada com sucesso no the agro news!');">
+          <div class="subscribe-input-group">
+            <div class="subscribe-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <input
+              type="email"
+              required
+              placeholder="coloque seu melhor e-mail"
+              class="subscribe-input"
+              aria-label="Seu endereço de e-mail"
+            />
+          </div>
+          <button type="submit" class="subscribe-btn">
+            inscreva-se
+          </button>
+        </form>
+      </div>
+
+      <!-- Social Connect Pills -->
+      <div class="hero-social-section">
+        <span class="hero-social-label">acompanhe o the agro news</span>
+        <div class="hero-social-links">
+          <!-- WhatsApp -->
+          <a href="https://whatsapp.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Canal WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <!-- RSS -->
+          <a href="/rss.xml" class="social-circle-btn" aria-label="Feed RSS">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. EDIÇÕES ARCHIVE SECTION (MIRRORING THE NEWS REFERENCE IMAGE 1) -->
+  <section class="container editions-section">
+    <h2 class="editions-header-title">Edições</h2>
+
+    <!-- Search input -->
+    <div class="archive-search-container">
+      <div class="archive-search-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <input
+        type="text"
+        id="archiveSearchInput"
+        class="archive-search-input"
+        placeholder="Pesquisar posts..."
+        aria-label="Pesquisar edições e notícias"
+      />
+    </div>
+
+    <!-- Day & Category Pills (Exactly like Image 1) -->
+    <nav class="archive-pills-bar" aria-label="Filtro de edições">
+      <button type="button" class="archive-pill active" data-filter="all">TODAS</button>
+      <button type="button" class="archive-pill" data-filter="quinta">QUINTA</button>
+      <button type="button" class="archive-pill" data-filter="quarta">QUARTA</button>
+      <button type="button" class="archive-pill" data-filter="terca">TERÇA</button>
+      <button type="button" class="archive-pill" data-filter="segunda">SEGUNDA</button>
+      <button type="button" class="archive-pill" data-filter="matinal">MATINAL</button>
+      <button type="button" class="archive-pill" data-filter="mercado">MERCADO</button>
+      <button type="button" class="archive-pill" data-filter="clima">CLIMA</button>
+      <button type="button" class="archive-pill" data-filter="tech">TECH</button>
+      <button type="button" class="archive-pill" data-filter="at-night">AT NIGHT</button>
+    </nav>
+
+    <!-- 3-Column Cards Grid -->
+    <div class="editions-grid" id="editionsGrid">
+      {
+        editions.map((ed, index) => {
+          const badges = ['QUINTA', 'QUARTA', 'TERÇA', 'MATINAL'];
+          const timeAgos = ['9 hours ago', '21 hours ago', 'Sep 08, 2026', 'Sep 07, 2026'];
+          return (
+            <EditionCard
+              edition={ed}
+              badge={badges[index % badges.length]}
+              timeAgo={timeAgos[index % timeAgos.length]}
+              image={sampleImages[index % sampleImages.length]}
+            />
+          );
+        })
+      }
+
+      {/* Additional News Cards in the same grid */}
+      {
+        allNews.slice(0, 6).map((item) => (
+          <NewsCard item={item} />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Client-side quick filter for archive search and pills
+  const searchInput = document.getElementById('archiveSearchInput') as HTMLInputElement | null;
+  const pills = document.querySelectorAll('.archive-pill');
+  const cards = document.querySelectorAll('.the-news-card');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase().trim();
+      cards.forEach((card) => {
+        const text = card.textContent?.toLowerCase() || '';
+        (card as HTMLElement).style.display = text.includes(term) ? 'flex' : 'none';
+      });
+    });
+  }
+
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const filter = pill.getAttribute('data-filter');
+      if (!filter || filter === 'all') {
+        cards.forEach((card) => ((card as HTMLElement).style.display = 'flex'));
+      } else {
+        cards.forEach((card) => {
+          const text = card.textContent?.toLowerCase() || '';
+          const matches = text.includes(filter) || (filter === 'tech' && text.includes('tecnologia'));
+          (card as HTMLElement).style.display = matches ? 'flex' : 'none';
+        });
+      }
+    });
+  });
+</script>

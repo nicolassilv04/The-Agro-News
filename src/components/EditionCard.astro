@@ -1,0 +1,47 @@
+---
+import type { Edition, NewsItem } from '../types/content';
+import { getEditionUrl } from '../lib/urls';
+
+interface Props {
+  edition: Edition;
+  featuredNews?: NewsItem;
+  badge?: string;
+  timeAgo?: string;
+  image?: string;
+}
+
+const {
+  edition,
+  badge = 'MATINAL',
+  timeAgo = 'hoje',
+  image = 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+} = Astro.props;
+
+const editionUrl = getEditionUrl(edition.slug);
+
+// Extract day name from edition date or formatted_date
+const dayOfWeek = edition.date ? new Date(edition.date + 'T12:00:00Z').toLocaleDateString('pt-BR', { weekday: 'long' }).toUpperCase().split('-')[0] : 'EDIÇÃO';
+---
+
+<a href={editionUrl} class="the-news-card" aria-label={`Acessar ${edition.title}`}>
+  <div class="the-news-card-media">
+    <img
+      src={image}
+      alt={edition.title}
+      class="the-news-card-img"
+      loading="lazy"
+    />
+    <div class="the-news-badge-overlay">
+      <span>{badge || dayOfWeek}</span>
+    </div>
+  </div>
+
+  <div class="the-news-card-body">
+    <span class="the-news-card-time">{timeAgo}</span>
+    <h3 class="the-news-card-title">{edition.formatted_date}</h3>
+    <p class="the-news-card-sub">{edition.summary}</p>
+    <div class="the-news-card-footer">
+      <span>🌱 the agro news</span>
+    </div>
+  </div>
+</a>

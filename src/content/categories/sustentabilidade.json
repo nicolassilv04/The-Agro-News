@@ -1,0 +1,14 @@
+{
+  "id": "sustentabilidade",
+  "slug": "sustentabilidade",
+  "name": "Sustentabilidade",
+  "description": "Práticas ESG no Agro, mercado de carbono, agricultura regenerativa, bioinsumos, rastreabilidade e preservação.",
+  "subcategories": [
+    "Mercado de Carbono",
+    "Agricultura Regenerativa",
+    "Bioinsumos",
+    "Rastreabilidade",
+    "ESG"
+  ],
+  "icon": "leaf"
+}

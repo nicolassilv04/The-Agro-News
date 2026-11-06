@@ -1,0 +1,67 @@
+{
+  "id": "news-003",
+  "slug": "agtech-ia-monitoramento-lavouras",
+  "title": "AgTech brasileira lança plataforma baseada em inteligência artificial para detecção precoce de pragas",
+  "summary": "Solução integra imagens de satélite de alta resolução, sensores em drones e modelos preditivos generativos para identificar focos de lagartas e percevejos com até 96% de precisão.",
+  "content": "Uma startup brasileira de tecnologia agrícola apresentou nesta semana um sistema revolucionário focado no manejo integrado de pragas (MIP). A plataforma utiliza modelos avançados de visão computacional e inteligência artificial para diagnosticar pragas agrícolas em estágios iniciais, permitindo pulverizações pontuais e reduzindo em até 40% a aplicação de defensivos quimicos.\n\nTestada em lavouras de grande porte no oeste baiano e em Mato Grosso do Sul, a ferramenta gera mapas de prescrição automática integráveis com computadores de bordo de tratores e pulverizadores autônomos.\n\nA tecnologia atrai atenção de fundos de venture capital e produtores interessados em otimizar custos operacionais e atender aos exigentes critérios globais de sustentabilidade e rastreabilidade.",
+  "category": "tecnologia",
+  "subcategory": "AgTech",
+  "published_at": "2026-09-10T10:30:00-03:00",
+  "updated_at": "2026-09-10T11:00:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "Portal TechCampo",
+    "url": "https://techcampo.example.com/ia-pragas-2026"
+  },
+  "sources_count": 4,
+  "sources_list": [
+    {
+      "name": "Portal TechCampo",
+      "url": "#"
+    },
+    {
+      "name": "AgTech Review",
+      "url": "#"
+    },
+    {
+      "name": "Inovação Rural News",
+      "url": "#"
+    },
+    {
+      "name": "Canal Agricultura Digital",
+      "url": "#"
+    }
+  ],
+  "tags": [
+    "agtech",
+    "inteligencia-artificial",
+    "drones",
+    "manejo-de-pragas",
+    "inovação",
+    "sustentabilidade"
+  ],
+  "entities": {
+    "pessoas": ["Renata Camargo"],
+    "empresas": ["AgroBotics AI", "Embrapa Instrumentação"],
+    "organizacoes": ["Embrapa", "Associação Brasileira de AgTechs"],
+    "locais": ["Bahia", "Mato Grosso do Sul", "Campinas"],
+    "produtos": ["Plataforma AgroBotics Vision", "Drones Agrícolas"],
+    "commodities": ["Soja", "Algodão"]
+  },
+  "regions": ["Nordeste", "Centro-Oeste"],
+  "nlp": {
+    "importance_score": 0.85,
+    "sentiment": "positive",
+    "cluster_id": "cluster-agtech-ia-2026",
+    "topics": ["AgTech", "Inteligência Artificial", "Sustentabilidade"],
+    "key_points": [
+      "Plataforma combina visão computacional e satélites para detectar infestação em fase inicial.",
+      "Testes em lavouras da Bahia e MS demonstraram redução de 40% no uso de químicos.",
+      "Integração nativa com maquinário de pulverização de precisão.",
+      "Solução recebeu certificação de eficiência pela Embrapa Instrumentação."
+    ],
+    "tan_summary": "Nova plataforma de inteligência artificial desenvolvida por AgTech nacional analisa lavouras em tempo real e identifica pragas com elevada acurácia. A ferramenta reduz custos com insumos e fortalece práticas de agricultura de precisão."
+  },
+  "related_news": ["news-006", "news-011", "news-020"]
+}

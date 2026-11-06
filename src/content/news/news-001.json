@@ -1,0 +1,105 @@
+{
+  "id": "news-001",
+  "slug": "soja-registra-nova-movimentacao-no-mercado-internacional",
+  "title": "Soja registra nova movimentação no mercado internacional com impulso nas compras asiáticas",
+  "subtitle": "Mercados externos apresentam valorização nas cotações em Chicago e aumentam a atratividade dos embarques nos portos de Paranaguá e Santos.",
+  "summary": "Os contratos futuros de soja fecharam em alta na Bolsa de Chicago (CBOT), impulsionados pela demanda aquecida da China e apreensão com as condições meteorológicas na América do Sul. No Brasil, os prêmios nos portos registraram elevação firme.",
+  "content": "Os mercados internacionais de commodities agrícolas registraram forte movimentação nesta quinta-feira. Na Bolsa de Mercadorias de Chicago (CBOT), os contratos da soja com vencimento para os próximos meses atingiram os patamares mais elevados das últimas três semanas, refletindo compras estratégicas por parte de tradings asiáticas e ajustes nas estimativas de produção global.\n\nEspecialistas do setor destacam que a combinação entre estoques ajustados nos Estados Unidos e o ritmo acelerado de originação no Mato Grosso sustentou a alta do complexo soja. Nos portos brasileiros de Paranaguá (PR) e Santos (SP), os prêmios de exportação operaram em campo positivo, compensando variações cambiais recentes.\n\nDe acordo com analistas de mercado, o comportamento das cotações nos próximos dias dependerá fundamentalmente dos relatórios mensais de oferta e demanda do Departamento de Agricultura dos Estados Unidos (USDA) e da regularidade das precipitações no bioma Cerrado brasileiro.",
+  "category": "mercado",
+  "subcategory": "commodities",
+  "published_at": "2026-09-10T09:42:00-03:00",
+  "updated_at": "2026-09-10T10:15:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": true,
+  "source": {
+    "name": "Agência AgroDados",
+    "url": "https://agroadados.example.com/noticias/soja-movimentacao"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Agência AgroDados",
+      "url": "#"
+    },
+    {
+      "name": "Global Grain Monitor",
+      "url": "#"
+    },
+    {
+      "name": "Boletim de Commodities BR",
+      "url": "#"
+    }
+  ],
+  "tags": [
+    "soja",
+    "commodities",
+    "chicago",
+    "exportação",
+    "china",
+    "paranaguá"
+  ],
+  "entities": {
+    "pessoas": [
+      "Carlos Alberto Medeiros"
+    ],
+    "empresas": [
+      "Cargill",
+      "ADM",
+      "Bunge"
+    ],
+    "organizacoes": [
+      "USDA",
+      "Bolsa de Chicago (CBOT)",
+      "Aprosoja"
+    ],
+    "locais": [
+      "Brasil",
+      "China",
+      "Mato Grosso",
+      "Paranaguá",
+      "Santos",
+      "Chicago"
+    ],
+    "produtos": [
+      "Farelo de Soja",
+      "Óleo de Soja"
+    ],
+    "commodities": [
+      "Soja em Grão"
+    ]
+  },
+  "regions": [
+    "Mato Grosso",
+    "Paraná",
+    "São Paulo"
+  ],
+  "nlp": {
+    "importance_score": 0.94,
+    "sentiment": "positive",
+    "cluster_id": "cluster-soja-cbot-2026",
+    "topics": [
+      "Mercado de Commodities",
+      "Exportação Agrícola",
+      "Bolsa de Chicago"
+    ],
+    "key_points": [
+      "Contratos futuros da soja operam em alta na Bolsa de Chicago impulsionados pela demanda chinesa.",
+      "Prêmios nos portos de Paranaguá e Santos acumulam ganhos firmes.",
+      "Mercado aguarda novo relatório mensal do USDA para definir tendências globais.",
+      "Produtores do Mato Grosso acompanham cotações e ritmo de vendas antecipadas."
+    ],
+    "tan_summary": "Alta recente na Bolsa de Chicago aliada ao aquecimento das compras chinesas eleva prêmios nos portos brasileiros de Paranaguá e Santos. O cenário favorece exportadores locais, com atenção voltada para o próximo relatório de oferta e demanda do USDA."
+  },
+  "related_news": [
+    "news-003",
+    "news-007",
+    "news-015"
+  ],
+  "persona": {
+    "titulo": "Soja em alta: China compra e mercado reage",
+    "resumao": "A soja subiu forte em Chicago e nos portos brasileiros, puxada pela demanda da China e preocupações com o clima na América do Sul.",
+    "o_que_aconteceu": "A cotação da soja na Bolsa de Chicago (CBOT), que é o principal ponto de referência para o preço da soja no mundo, atingiu os maiores valores das últimas três semanas. Isso aconteceu por dois motivos principais: a China, nosso maior comprador, está com apetite de compra aquecido, e o clima na América do Sul, especialmente a falta de chuva no Cerrado brasileiro, anda preocupando o mercado. Por aqui, os preços de exportação nos portos de Paranaguá (PR) e Santos (SP) também subiram com força, o que é ótimo para compensar o dólar que não para quieto. É como quando o vizinho grande resolve comprar todo o estoque da quitanda: o preço sobe para todo mundo na rua, mesmo que o dinheiro dele seja de outro país.",
+    "o_que_muda_pra_voce": "Se você ainda tem sacas de soja guardadas, seja no armazém da fazenda ou na cooperativa, essa alta nos preços externos e nos prêmios de exportação abre uma boa janela para você negociar sua safra. Com a demanda forte da China, o mercado tende a ficar mais aquecido, e isso significa mais reais entrando no seu bolso por saca vendida. É uma oportunidade para conseguir um preço melhor e dar um fôlego no caixa.",
+    "fechamento": "Quando a China compra, o valor da sua soja sobe."
+  }
+}

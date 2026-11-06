@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Página Não Encontrada (404) — TAN',
+  description: 'A página ou notícia solicitada não foi encontrada no acervo do TAN.',
+  canonicalPath: '/404/',
+};
+---
+
+<BaseLayout seo={seo}>
+  <div class="container section-sm text-center">
+    <div class="empty-state" style="max-width: 540px; margin: 3rem auto;">
+      <div class="empty-state-icon">404</div>
+      <h1 class="empty-state-title">Página Não Encontrada</h1>
+      <p class="empty-state-desc">
+        A página ou notícia que você tentou acessar não existe, mudou de endereço ou foi arquivada
+        em nosso acervo.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/" class="btn btn-primary">Voltar ao Início</a>
+        <a href="/noticias/" class="btn btn-outline">Feed de Notícias</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

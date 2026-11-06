@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const seo = {
+  title: 'Metodologia Editorial & NLP — TAN',
+  description:
+    'Entenda como o TAN coleta, normaliza, classifica e sumariza dados do agronegócio através de processamento de linguagem natural.',
+  canonicalPath: '/metodologia/',
+};
+---
+
+<BaseLayout seo={seo} activePath="/metodologia/">
+  <div class="container container-narrow section-sm">
+    <Breadcrumb items={[{ label: 'Metodologia' }]} />
+
+    <article class="article-content">
+      <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 0.75rem;">
+          Metodologia Editorial & Pipeline NLP
+        </h1>
+        <p class="lead">
+          Transparência total sobre os processos de ingestão, sumarização automática e estruturação
+          temática de notícias.
+        </p>
+      </header>
+
+      <section style="margin-bottom: 2rem;">
+        <h2>1. Coleta e Normalização</h2>
+        <p>
+          O pipeline do TAN monitora feeds de órgãos governamentais (USDA, MAPA, Conab, INMET),
+          bolsas de mercadorias (CBOT, B3) e veículos de imprensa agrícola auditados. O texto
+          original é higienizado e padronizado em estruturas de dados enriquecidas.
+        </p>
+      </section>
+
+      <section style="margin-bottom: 2rem;">
+        <h2>2. Classificação NLP & Score Editorial</h2>
+        <p>
+          Modelos de classificação atribuem a cada publicação uma categoria principal e uma
+          subcategoria temática. Um algoritmo de pontuação de relevância (<code
+            >importance_score</code
+          >) calcula a prioridade de exibição com base em impacto mercadológico, frescor temporal e
+          volume de citações cruzadas.
+        </p>
+      </section>
+
+      <section style="margin-bottom: 2rem;">
+        <h2>3. Sumarização e Extração de Entidades</h2>
+        <p>Cada publicação gera automaticamente dois artefatos sintéticos de leitura rápida:</p>
+        <ul>
+          <li>
+            <strong>Resumo TAN:</strong> Síntese objetiva do acontecimento em parágrafo único.
+          </li>
+          <li><strong>Principais Pontos:</strong> Lista condensada dos fatos essenciais.</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          Além disso, modelos de Named Entity Recognition (NER) extraem pessoas, empresas, órgãos
+          públicos, biomas e commodities citados.
+        </p>
+      </section>
+
+      <section id="auditoria" style="margin-bottom: 2rem;">
+        <h2>4. Agrupamento de Fontes (Clustering)</h2>
+        <p>
+          Para evitar a duplicação de informações idênticas publicadas por múltiplos veículos, o TAN
+          agrupa matérias equivalentes em um único cluster de evento, preservando e listando todas
+          as fontes originais auditadas.
+        </p>
+      </section>
+
+      <section
+        id="privacidade"
+        style="background: var(--color-bg-alt); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border-medium);"
+      >
+        <h3>Integridade & Atribuição</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0;">
+          O TAN respeita os direitos autorais e a atribuição de origem. Todas as matérias contêm
+          link direto para a fonte original e a indicação clara do veículo gerador da informação.
+        </p>
+      </section>
+    </article>
+  </div>
+</BaseLayout>

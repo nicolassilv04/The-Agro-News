@@ -1,0 +1,23 @@
+---
+import EditionLayout from '../../layouts/EditionLayout.astro';
+import { getAllEditions, getAllNews } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const editions = await getAllEditions();
+  const allNews = await getAllNews();
+
+  return editions.map((edition) => {
+    const newsItems = allNews.filter(
+      (n) => edition.news.includes(n.id) || n.edition_id === edition.id
+    );
+    return {
+      params: { slug: edition.slug },
+      props: { edition, newsItems },
+    };
+  });
+}
+
+const { edition, newsItems } = Astro.props;
+---
+
+<EditionLayout edition={edition} newsItems={newsItems} />

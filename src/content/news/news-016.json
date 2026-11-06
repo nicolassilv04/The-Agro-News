@@ -1,0 +1,52 @@
+{
+  "id": "news-016",
+  "slug": "sustentabilidade-rastreabilidade-cadeia-cacau",
+  "title": "Indústria do cacau na Bahia adota protocolo digital inédito de rastreabilidade ponta a ponta",
+  "summary": "Tecnologia de blockchain permite ao consumidor final consultar a origem exata dos amêndoas e o cumprimento de diretrizes desmatamento zero.",
+  "content": "Produtores de cacau do sul da Bahia e cooperativas agroflorestais deram início ao uso de uma plataforma digital de rastreabilidade baseada em tecnologia blockchain. A solução registra todas as etapas da cadeia produtiva, desde a colheita em sistemas de cabruca até a entrega nas moageiras industriais.\n\nO sistema garante que cada lote exportado esteja em conformidade com as novas regras da Regulamento de Desmatamento da União Europeia (EUDR).\n\nA expectativa das entidades regionais é valorizar a amêndoa baiana no mercado internacional e garantir prêmios de preço pela qualidade e preservação ambiental.",
+  "category": "sustentabilidade",
+  "subcategory": "Rastreabilidade",
+  "published_at": "2026-09-08T11:00:00-03:00",
+  "updated_at": "2026-09-08T11:20:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Bahia Agro Sustentável",
+    "url": "https://bahiaagro.example.com/cacau-rastreabilidade"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Bahia Agro Sustentável",
+      "url": "#"
+    },
+    {
+      "name": "Inovação Ilhéus Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["sustentabilidade", "cacau", "rastreabilidade", "blockchain", "bahia", "eudr"],
+  "entities": {
+    "pessoas": ["Guilherme Alcantara"],
+    "empresas": ["Barry Callebaut", "Dengo Chocolates"],
+    "organizacoes": ["CEPLAC", "União Europeia"],
+    "locais": ["Ilhéus", "Bahia", "Europa"],
+    "produtos": ["Cacau Cabruca", "Amêndoa Fina de Cacau"],
+    "commodities": ["Cacau"]
+  },
+  "regions": ["Nordeste"],
+  "nlp": {
+    "importance_score": 0.83,
+    "sentiment": "positive",
+    "cluster_id": "cluster-sustentabilidade-cacau-2026",
+    "topics": ["Rastreabilidade", "Cacau Cabruca", "Regulamentação Europeia"],
+    "key_points": [
+      "Plataforma em blockchain monitora a jornada do cacau baiano da árvore ao chocolate.",
+      "Atendimento antecipado aos requisitos da legislação antidesmatamento europeia.",
+      "Valorização do sistema cabruca como modelo de conservação da Mata Atlântica.",
+      "Consumidores podem escanear QR Code e verificar origem socioambiental."
+    ],
+    "tan_summary": "Cadeia do cacau na Bahia implementa sistema inovador de rastreabilidade digital por blockchain. A transparência socioambiental assegura conformidade com o mercado europeu e agrega valor aos produtores locais."
+  },
+  "related_news": ["news-006", "news-010", "news-017"]
+}

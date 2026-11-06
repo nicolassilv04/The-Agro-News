@@ -1,0 +1,56 @@
+{
+  "id": "news-012",
+  "slug": "mercado-credito-rural-verdes-fundos",
+  "title": "Fundos de investimento (Fiagro) batem marca de R$ 40 bilhões em patrimônio gerido",
+  "summary": "Instrumento financeiro consolida-se como alternativa vital de financiamento privado para produtores, cooperativas e tradings agrícolas.",
+  "content": "Os Fondos de Investimento nas Cadeias Produtivas Agroindustriais (Fiagros) alcançaram uma importante marca histórica no mercado de capitais brasileiro. O patrimônio líquido total da modalidade ultrapassou os R$ 40 bilhões, impulsionado por emissões de Certificados de Recebíveis do Agronegócio (CRA) e letras financeiras.\n\nA atratividade dos rendimentos isentos de imposto de renda para pessoas físicas e a segurança das garantias reais vinculadas a imóveis rurais atraem milhares de investidores individuais e institucionais.\n\nCom a taxa de juros básica em processo de convergência, o mercado prevê que os Fiagros continuem expandindo sua fatia no financiamento da safra nacional.",
+  "category": "mercado",
+  "subcategory": "Crédito Rural",
+  "published_at": "2026-09-09T11:40:00-03:00",
+  "updated_at": "2026-09-09T12:00:00-03:00",
+  "edition_id": "edition-2026-09-09",
+  "is_featured": false,
+  "source": {
+    "name": "Capital Agro News",
+    "url": "https://capitalagro.example.com/fiagro-recorde"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Capital Agro News",
+      "url": "#"
+    },
+    {
+      "name": "Boletim ANBIMA Mock",
+      "url": "#"
+    },
+    {
+      "name": "Relatório B3",
+      "url": "#"
+    }
+  ],
+  "tags": ["mercado", "fiagro", "credito-rural", "investimentos", "cra", "b3"],
+  "entities": {
+    "pessoas": ["Octacilio da Silva"],
+    "empresas": ["B3", "Kinea Investimentos", "XP Asset"],
+    "organizacoes": ["CVM", "ANBIMA"],
+    "locais": ["São Paulo", "Brasil"],
+    "produtos": ["Fiagro-Imobiliário", "CRA Verde", "CPR Física"],
+    "commodities": ["Mercado Financeiro Agro"]
+  },
+  "regions": ["Nacional"],
+  "nlp": {
+    "importance_score": 0.86,
+    "sentiment": "positive",
+    "cluster_id": "cluster-mercado-fiagro-2026",
+    "topics": ["Mercado de Capitais", "Fiagro", "Crédito Rural Privado"],
+    "key_points": [
+      "Patrimônio gerido pelos Fiagros supera a marca de R$ 40 bilhões no Brasil.",
+      "Emissões de CRA e títulos verdes impulsionam a captação no mercado financeiro.",
+      "Isenção fiscal atrai mais de 500 mil investidores individuais para a categoria.",
+      "Diversificação de fontes reduz dependência exclusiva de subsídios estatais."
+    ],
+    "tan_summary": "Mercado de Fiagros atinge feito histórico ao superar R$ 40 bilhões em recursos geridos. A expansão do crédito privado fortalece o financiamento independente do agronegócio nacional."
+  },
+  "related_news": ["news-005", "news-006", "news-019"]
+}

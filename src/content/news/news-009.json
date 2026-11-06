@@ -1,0 +1,56 @@
+{
+  "id": "news-009",
+  "slug": "pecuaria-exportacoes-carne-bovina-asia",
+  "title": "Exportações brasileiras de carne bovina atingem novo recorde mensal impulsionadas por embarques asiáticos",
+  "summary": "Volume embarcado em agosto superou 230 mil toneladas, gerando receita cambial superior a US$ 1 bilhão, revela balanço das entidades do setor.",
+  "content": "A Associação Brasileira das Indústrias Exportadoras de Carne (ABIEC) divulgou os dados consolidados relativos ao comércio exterior do setor pecuário. As remessas de carne bovina in natura e processada alcançaram a marca histórica de 234,5 mil toneladas no último mês.\n\nA China manteve o posto de principal destino, absorvendo mais de 58% do volume total. Destaca-se também a expansão das vendas para países do Oriente Médio e sudeste asiático, como Filipinas e Indonésia.\n\nO resultado positivo reforça a liderança do Brasil no mercado global de proteínas animais e proporciona sustentabilidade financeira aos frigoríficos habilitados.",
+  "category": "pecuaria",
+  "subcategory": "Exportação",
+  "published_at": "2026-09-09T14:20:00-03:00",
+  "updated_at": "2026-09-09T15:00:00-03:00",
+  "edition_id": "edition-2026-09-09",
+  "is_featured": true,
+  "source": {
+    "name": "Portal Pecuária Brasil",
+    "url": "https://pecuaria.example.com/recorde-exportacao"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Portal Pecuária Brasil",
+      "url": "#"
+    },
+    {
+      "name": "Boletim ABIEC",
+      "url": "#"
+    },
+    {
+      "name": "Secex / MDIC",
+      "url": "#"
+    }
+  ],
+  "tags": ["pecuaria", "exportacao", "carne-bovina", "recorde", "china", "abiec"],
+  "entities": {
+    "pessoas": ["Antonio Camardelli"],
+    "empresas": ["JBS", "Minerva", "BRF"],
+    "organizacoes": ["ABIEC", "MDIC", "ApexBrasil"],
+    "locais": ["Brasil", "China", "Filipinas", "Indonésia"],
+    "produtos": ["Carne Bovina In Natura", "Cortes Especiais"],
+    "commodities": ["Carne Bovina"]
+  },
+  "regions": ["Nacional", "Internacional"],
+  "nlp": {
+    "importance_score": 0.93,
+    "sentiment": "positive",
+    "cluster_id": "cluster-pecuaria-exportacao-2026",
+    "topics": ["Exportação de Proteína Animal", "Balança Comercial", "Pecuária de Corte"],
+    "key_points": [
+      "Embarques de carne bovina atingem recorde histórico de 234,5 mil toneladas em um único mês.",
+      "Receita cambial ultrapassa marca de US$ 1 bilhão.",
+      "China responde por quase 60% das compras, seguida por países do Oriente Médio.",
+      "Projeções para o encerramento do ano apontam para crescimento de 8% em volume."
+    ],
+    "tan_summary": "Mercado exportador de proteína bovina bate recorde histórico mensal de volume e faturamento. Demanda concentrada na China e novos mercados da Ásia consolidam o desempenho do setor frigorífico nacional."
+  },
+  "related_news": ["news-004", "news-007", "news-014"]
+}

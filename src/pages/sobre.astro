@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const seo = {
+  title: 'Sobre o TAN — The Agro News',
+  description:
+    'Conheça o propósito, a visão e a estrutura editorial do portal TAN — The Agro News.',
+  canonicalPath: '/sobre/',
+};
+---
+
+<BaseLayout seo={seo} activePath="/sobre/">
+  <div class="container container-narrow section-sm">
+    <Breadcrumb items={[{ label: 'Sobre' }]} />
+
+    <article class="article-content">
+      <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 0.75rem;">
+          Sobre o TAN — The Agro News
+        </h1>
+        <p class="lead">
+          Conectando inteligência de dados, jornalismo especializado e tecnologia para simplificar o
+          acompanhamento do agronegócio.
+        </p>
+      </header>
+
+      <section style="margin-bottom: 2rem;">
+        <h2>O que somos</h2>
+        <p>
+          O TAN nasceu com a proposta de tornar o fluxo diário de informações do agronegócio
+          simples, estruturado e acionável. Em um setor dinâmico onde cotações de commodities,
+          boletins meteorológicos e decisões políticas acontecem simultaneamente em diversas fontes,
+          o TAN atua como uma camada de organização editorial e compilação de dados.
+        </p>
+      </section>
+
+      <section style="margin-bottom: 2rem;">
+        <h2>Por que existimos</h2>
+        <p>
+          Produtores rurais, investidores e profissionais do setor despendem tempo valioso navegando
+          por dezenas de portais regionais e institucionais. O TAN sintetiza essa fragmentação
+          através de edições diárias organizadas por temas estratégicos: Agricultura, Pecuária,
+          Mercado, Tecnologia, Clima, Política e Sustentabilidade.
+        </p>
+      </section>
+
+      <section style="margin-bottom: 2rem;">
+        <h2>Visão Tecnológica</h2>
+        <p>
+          Nossa arquitetura é desenvolvida sob o princípio da publicação estática de alta
+          performance (SSG), garantindo carregamento instantâneo em conexões de baixa velocidade no
+          campo, semântica acessível e SEO de nível industrial.
+        </p>
+      </section>
+
+      <section
+        id="contato"
+        style="background: var(--color-bg-alt); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border-medium);"
+      >
+        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Contato Editorial</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">
+          Para sugestões de pauta, correções ou parceria de dados:
+        </p>
+        <a href="mailto:redacao@tan.agro.br" class="btn btn-primary btn-sm">
+          redacao@tan.agro.br
+        </a>
+      </section>
+    </article>
+  </div>
+</BaseLayout>

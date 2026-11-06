@@ -1,0 +1,14 @@
+{
+  "id": "tecnologia",
+  "slug": "tecnologia",
+  "name": "Tecnologia",
+  "description": "Inovações em AgTech, inteligência artificial, conectividade 5G no campo, automação, drones e sensores agrícolas.",
+  "subcategories": [
+    "AgTech",
+    "Inteligência Artificial",
+    "Drones & Sensores",
+    "Software Agrícola",
+    "Automação"
+  ],
+  "icon": "cpu"
+}

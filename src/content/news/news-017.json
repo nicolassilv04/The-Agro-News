@@ -1,0 +1,56 @@
+{
+  "id": "news-017",
+  "slug": "agricultura-algodao-produtividade-recorde",
+  "title": "Colheita do algodão no cerrado baiano e mato-grossense confirma marcas históricas de fibra",
+  "summary": "Condições de iluminação e controle sanitário eficiente resultaram em pluma de altíssima qualidade para a indústria têxtil global.",
+  "content": "A colheita da safra de algodão entra na reta final nas principais regiões produtoras do Brasil, consolidando um ano de resultados excepcionais. Relatórios técnicos da Associação Brasileira dos Produtores de Algodão (Abrapa) indicam produtividade média média superior a 300 arrobas de caroço por hectare em polos de excelência como Luís Eduardo Magalhães (BA) e Sapezal (MT).\n\nA qualidade visual, comprimento e resistência da fibra foram classificados com nota máxima pelos laboratórios de análise HVI.\n\nCom a safra recorde, o Brasil reafirma sua posição de maior exportador global de algodão pluma, ultrapassando concorrentes tradicionais.",
+  "category": "agricultura",
+  "subcategory": "Algodão",
+  "published_at": "2026-09-08T14:00:00-03:00",
+  "updated_at": "2026-09-08T14:30:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Revista Fibra Brasil",
+    "url": "https://fibrabrasil.example.com/algodao-recorde"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Revista Fibra Brasil",
+      "url": "#"
+    },
+    {
+      "name": "Boletim ABRAPA",
+      "url": "#"
+    },
+    {
+      "name": "AgroBahiatech",
+      "url": "#"
+    }
+  ],
+  "tags": ["agricultura", "algodao", "fibra", "abrapa", "bahia", "mato-grosso"],
+  "entities": {
+    "pessoas": ["Alexandre Scheffer"],
+    "empresas": ["SLC Agrícola", "Grupo Scheffer", "Bom Futuro"],
+    "organizacoes": ["ABRAPA", "Abapa"],
+    "locais": ["Luís Eduardo Magalhães", "Sapezal", "Bahia", "Mato Grosso"],
+    "produtos": ["Algodão em Pluma", " Caroço de Algodão"],
+    "commodities": ["Algodão"]
+  },
+  "regions": ["Centro-Oeste", "Nordeste"],
+  "nlp": {
+    "importance_score": 0.88,
+    "sentiment": "positive",
+    "cluster_id": "cluster-agricultura-algodao-2026",
+    "topics": ["Produção de Algodão", "Produtividade Agrícola", "Exportação de Fibra"],
+    "key_points": [
+      "Colheita de algodão é concluída com produtividade superior a 300 arrobas/ha.",
+      "Análises HVI comprovam padrões internacionais de resistência e comprimento da fibra.",
+      "Brasil se consolida na liderança das exportações mundiais da commodity.",
+      "Demanda por fiação asiática garante liquidez para a produção nacional."
+    ],
+    "tan_summary": "Encerramento da colheita de algodão no Cerrado brasileiro registra números históricos de produção e qualidade de pluma. Resultados operacionais elevam o Brasil à liderança global nas vendas da fibra."
+  },
+  "related_news": ["news-001", "news-008", "news-023"]
+}

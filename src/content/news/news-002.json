@@ -1,0 +1,52 @@
+{
+  "id": "news-002",
+  "slug": "clima-projecoes-chuvas-regioes-produtoras",
+  "title": "Novas projeções meteorológicas indicam regularização das chuvas nas principais regiões produtoras do país",
+  "summary": "Modelos numéricos apontam chegada de frentes frias com volumes acumulados de até 80mm no Centro-Oeste e Sudeste, favorecendo a umidade do solo para o início do plantio da safra 2026/27.",
+  "content": "Os principais institutos de meteorologia divulgaram uma atualização nas previsões de precipitação para as próximas duas semanas nas áreas agrícolas do Brasil. As simulações indicam a formação de um corredor de umidade que deverá cortar o país a partir do Sul até os estados de Mato Grosso, Goiás e Minas Gerais.\n\nA previsão traz alívio para os agricultores que planejam as operações de semeadura das culturas de verão. Segundo climatologistas, a transição para a fase de neutralidade do clima afasta os riscos de estiagens severas prolongadas no início do ciclo vegetativo.\n\nContudo, especialistas orientam monitorar a distribuição regional das chuvas, uma vez que bolsas de calor pontuais ainda podem exigir cautela no escalonamento do plantio em solos de menor retenção hídrica.",
+  "category": "clima",
+  "subcategory": "Previsão do Tempo",
+  "published_at": "2026-09-10T08:15:00-03:00",
+  "updated_at": "2026-09-10T08:30:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "ClimaAgro Brasil",
+    "url": "https://climaagro.example.com/previsao-setembro"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "ClimaAgro Brasil",
+      "url": "#"
+    },
+    {
+      "name": "Instituto Nacional de Meteorologia",
+      "url": "#"
+    }
+  ],
+  "tags": ["clima", "chuvas", "safra 2026", "plantio", "centro-oeste", "previsão"],
+  "entities": {
+    "pessoas": ["Dr. Marcos Vinícius Siqueira"],
+    "empresas": ["ClimaTempo", "Inmet"],
+    "organizacoes": ["INMET", "CPTEC/INPE"],
+    "locais": ["Mato Grosso", "Goiás", "Minas Gerais", "Paraná", "Rio Grande do Sul"],
+    "produtos": ["Umidade do Solo", "Precipitação"],
+    "commodities": ["Soja", "Milho Safra"]
+  },
+  "regions": ["Centro-Oeste", "Sudeste", "Sul"],
+  "nlp": {
+    "importance_score": 0.88,
+    "sentiment": "positive",
+    "cluster_id": "cluster-clima-chuvas-2026",
+    "topics": ["Previsão Meteorológica", "Umidade do Solo", "Safra 2026/27"],
+    "key_points": [
+      "Corredor de umidade trará precipitações acumuladas de até 80mm nas regiões produtoras.",
+      "Fim do período crítico de seca estimula preparação de máquinas e sementes para a semeadura.",
+      "Fase de neutralidade climática reduz riscos de anomalias extremas no trimestre.",
+      "Consultorias recomendam análise da capacidade de retenção hídrica por talhão."
+    ],
+    "tan_summary": "Atualização meteorológica confirma alinhamento de frentes frias trazendo precipitações consistentes para o Centro-Oeste e Sudeste. O cenário cria condições favoráveis para o arranque da semeadura da nova safra."
+  },
+  "related_news": ["news-001", "news-005", "news-018"]
+}

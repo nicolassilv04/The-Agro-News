@@ -1,0 +1,8 @@
+{
+  "id": "agricultura",
+  "slug": "agricultura",
+  "name": "Agricultura",
+  "description": "Acompanhe novidades sobre produção vegetal, safra de grãos, sementes, insumos e manejo sustentável no campo.",
+  "subcategories": ["Soja", "Milho", "Algodão", "Café", "Trigo", "Cana-de-açúcar", "Fertilizantes"],
+  "icon": "sprout"
+}

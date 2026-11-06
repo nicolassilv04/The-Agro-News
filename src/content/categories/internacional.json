@@ -1,0 +1,14 @@
+{
+  "id": "internacional",
+  "slug": "internacional",
+  "name": "Internacional",
+  "description": "Panoramas geopolíticos, acordos comerciais com China, EUA e Europa, e acontecimentos globais que afetam o Agro.",
+  "subcategories": [
+    "China",
+    "Estados Unidos",
+    "União Europeia",
+    "Acordos Comerciais",
+    "Geopolítica"
+  ],
+  "icon": "globe"
+}

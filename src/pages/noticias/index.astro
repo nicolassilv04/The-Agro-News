@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EditionCard from '../../components/EditionCard.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import { getAllNews, getAllEditions, getAllCategories } from '../../lib/content';
+import { getCategoryUrl } from '../../lib/urls';
+
+const allNews = await getAllNews();
+const editions = await getAllEditions();
+const categories = await getAllCategories();
+
+const sampleImages = [
+  'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80',
+];
+
+const seo = {
+  title: 'Edições & Notícias — the agro news',
+  description:
+    'Consulte o arquivo completo de edições e reportagens diárias do agronegócio.',
+  canonicalPath: '/noticias/',
+};
+---
+
+<BaseLayout seo={seo} activePath="/noticias/">
+  <div class="container editions-section" style="padding-top: 2rem;">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <span class="breadcrumb-item"><a href="/">the agro news</a></span>
+      <span class="breadcrumb-separator">&rsaquo;</span>
+      <span class="breadcrumb-item active">edições</span>
+    </nav>
+
+    <h1 class="editions-header-title">Edições</h1>
+
+    <!-- Search Input -->
+    <div class="archive-search-container">
+      <div class="archive-search-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <input
+        type="text"
+        id="archiveSearchInput"
+        class="archive-search-input"
+        placeholder="Pesquisar posts..."
+        aria-label="Pesquisar edições e notícias"
+      />
+    </div>
+
+    <!-- Category / Day Filter Pills -->
+    <nav class="archive-pills-bar" aria-label="Filtro de categorias">
+      <a href="/noticias/" class="archive-pill active">TODAS</a>
+      {
+        categories.map((cat) => (
+          <a href={getCategoryUrl(cat.slug)} class="archive-pill">
+            {cat.name.toUpperCase()}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- 3-Column Card Grid -->
+    <div class="editions-grid" id="editionsGrid">
+      {
+        editions.map((ed, index) => {
+          const badges = ['MATINAL', 'QUINTA', 'AT NIGHT', 'QUARTA'];
+          const times = ['9 hours ago', '21 hours ago', 'Sep 09, 2026', 'Sep 08, 2026'];
+          return (
+            <EditionCard
+              edition={ed}
+              badge={badges[index % badges.length]}
+              timeAgo={times[index % times.length]}
+              image={sampleImages[index % sampleImages.length]}
+            />
+          );
+        })
+      }
+
+      {
+        allNews.map((item) => (
+          <NewsCard item={item} />
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('archiveSearchInput') as HTMLInputElement | null;
+  const cards = document.querySelectorAll('.the-news-card');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase().trim();
+      cards.forEach((card) => {
+        const text = card.textContent?.toLowerCase() || '';
+        (card as HTMLElement).style.display = text.includes(term) ? 'flex' : 'none';
+      });
+    });
+  }
+</script>

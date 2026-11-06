@@ -1,0 +1,52 @@
+{
+  "id": "news-025",
+  "slug": "politica-credito-orientado-agricultura-familiar",
+  "title": "Pronaf reforça repasses de crédito voltados para a modernização da agricultura familiar",
+  "summary": "Novas linhas de microcrédito visam a aquisição de microtratores, energia solar e sistemas de irrigação por pequenos produtores.",
+  "content": "O Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA) anunciou o início das liberações do novo lote de contratos do Pronaf Mais Alimentos. A linha é focada no apoio à modernização tecnológica de pequenas propriedades rurais e agricultura familiar em todo o país.\n\nCom juros subsidiados a partir de 2,5% ao ano e prazos de carência estendidos de até 3 anos, o programa permite que pequenos agricultores adquiram kits de irrigação eficiente, placas de energia fotovoltaica e implementos adaptados.\n\nA meta do governo é atender mais de 120 mil famílias produtoras de hortaliças, leite e frutas no ciclo 2026/27.",
+  "category": "politica",
+  "subcategory": "Plano Safra",
+  "published_at": "2026-09-06T08:30:00-03:00",
+  "updated_at": "2026-09-06T09:00:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Desenvolvimento Rural BR",
+    "url": "https://desenvolvimentorural.example.com/pronaf-mais-alimentos"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Desenvolvimento Rural BR",
+      "url": "#"
+    },
+    {
+      "name": "Agência MDA Notícias",
+      "url": "#"
+    }
+  ],
+  "tags": ["politica", "pronaf", "agricultura-familiar", "credito", "energia-solar", "mda"],
+  "entities": {
+    "pessoas": ["Paulo Teixeira"],
+    "empresas": ["Cresol", "Sicredi", "Banco do Nordeste"],
+    "organizacoes": ["MDA", "CONTAG"],
+    "locais": ["Brasília", "Recife", "Chapecó"],
+    "produtos": ["Kits de Energia Fotovoltaica Rural", "Microtratores Tobatta"],
+    "commodities": ["Hortifrúti e Leite"]
+  },
+  "regions": ["Nacional"],
+  "nlp": {
+    "importance_score": 0.83,
+    "sentiment": "positive",
+    "cluster_id": "cluster-politica-pronaf-2026",
+    "topics": ["Agricultura Familiar", "Pronaf", "Crédito Orientado"],
+    "key_points": [
+      "Programa Pronaf Mais Alimentos disponibiliza linhas de financiamento com juros de 2,5% a.a.",
+      "Foco na aquisição de energia solar, microtratores e irrigação sustentável.",
+      "Meta de beneficiar 120 mil famílias de pequenos produtores.",
+      "Estímulo à sucessão familiar e aumento da renda nas comunidades rurais."
+    ],
+    "tan_summary": "Governo reforça crédito do Pronaf para modernização e transição energética de pequenas propriedades rurais. Recursos com juros subsidiados estimulam a sustentabilidade e a produtividade da agricultura familiar."
+  },
+  "related_news": ["news-005", "news-010", "news-018"]
+}

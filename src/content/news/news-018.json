@@ -1,0 +1,52 @@
+{
+  "id": "news-018",
+  "slug": "clima-monitoramento-reservatorios-irrigacao",
+  "title": "Nível dos reservatórios para irrigação no São Francisco atinge capacidade otimizada para o segundo semestre",
+  "summary": "Bacia hidrográfica apresenta volumes confortáveis nas represas de Sobradinho e Três Marias, garantindo água para fruticultura de exportação.",
+  "content": "O Operador Nacional do Sistema Elétrico (ONS) e a Agência Nacional de Águas (ANA) atualizaram o boletim de monitoramento dos reservatórios da bacia do Rio São Francisco. Os dados mostram que os principais açudes e represas operam com mais de 72% de sua capacidade armazenada útil.\n\nA disponibilidade hídrica traz segurança para os irrigantes do Polo Petrolina-Juazeiro, grande centro produtor e exportador de mangas, uvas e melões de mesa.\n\nTécnicos da Codevasf destacam que o planejamento hídrico conjunto evitou conflitos pelo uso da água e assegurou a eficiência da irrigação por gotejamento na região semiárida.",
+  "category": "clima",
+  "subcategory": "Chuva & Seca",
+  "published_at": "2026-09-08T09:40:00-03:00",
+  "updated_at": "2026-09-08T10:00:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Semiárido Água & Fruta",
+    "url": "https://semiaridoagua.example.com/sao-francisco-reservatorios"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Semiárido Água & Fruta",
+      "url": "#"
+    },
+    {
+      "name": "Relatório ANA / ONS Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["clima", "irrigacao", "sao-francisco", "fruticultura", "petrolina", "ana"],
+  "entities": {
+    "pessoas": ["Eng. Valmir de Souza"],
+    "empresas": ["Agrovale", "Grandes Frutas S.A."],
+    "organizacoes": ["ANA", "CODEVASF", "ONS"],
+    "locais": ["Petrolina", "Juazeiro", "Pernambuco", "Bahia", "Sobradinho"],
+    "produtos": ["Manga Tommy", "Uva sem Semente", "Irrigação por Gotejamento"],
+    "commodities": ["Frutas de Exportação"]
+  },
+  "regions": ["Nordeste"],
+  "nlp": {
+    "importance_score": 0.81,
+    "sentiment": "positive",
+    "cluster_id": "cluster-clima-reservatorios-2026",
+    "topics": ["Recursos Hídricos", "Irrigação", "Fruticultura"],
+    "key_points": [
+      "Reservatório de Sobradinho atinge 72% de volume útil acumulado.",
+      "Garantia de água para o polo produtor de Petrolina e Juazeiro.",
+      "Exportação de frutas no Vale do São Francisco projeta alta de 10%.",
+      "Gestão eficiente evita racionamento de outorgas na bacia."
+    ],
+    "tan_summary": "Níveis de reservatórios no Rio São Francisco garantem oferta hídrica abundante para a fruticultura irrigada no Nordeste. A estabilidade hídrica beneficia produtores e impulsiona embarques de mangas e uvas."
+  },
+  "related_news": ["news-002", "news-016", "news-025"]
+}

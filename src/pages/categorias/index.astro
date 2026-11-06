@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllCategories, getNewsByCategory } from '../../lib/content';
+import { getCategoryUrl } from '../../lib/urls';
+
+const categories = await getAllCategories();
+
+const categoriesWithCount = await Promise.all(
+  categories.map(async (cat) => {
+    const newsList = await getNewsByCategory(cat.slug);
+    return {
+      ...cat,
+      count: newsList.length,
+    };
+  })
+);
+
+const seo = {
+  title: 'Categorias Editoriais — the agro news',
+  description:
+    'Explore notícias do agronegócio divididas por editorias: Agricultura, Pecuária, Mercado, Tecnologia, Clima, Política e Sustentabilidade.',
+  canonicalPath: '/categorias/',
+};
+---
+
+<BaseLayout seo={seo} activePath="/categorias/">
+  <div class="container section-sm" style="padding-top: 2rem;">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <span class="breadcrumb-item"><a href="/">the agro news</a></span>
+      <span class="breadcrumb-separator">&rsaquo;</span>
+      <span class="breadcrumb-item active">categorias</span>
+    </nav>
+
+    <h1 class="editions-header-title">Categorias Editoriais</h1>
+    <p class="lead" style="margin-bottom: 2rem;">
+      Acompanhe os pilares que constroem a inteligência e o fluxo diário do agronegócio.
+    </p>
+
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem;"
+    >
+      {
+        categoriesWithCount.map((cat) => (
+          <a
+            href={getCategoryUrl(cat.slug)}
+            class="the-news-card"
+            style="padding: 1.5rem; text-decoration: none;"
+          >
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span class="badge badge-category">
+                  {cat.name}
+                </span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted);">
+                  {cat.count} {cat.count === 1 ? 'notícia' : 'notícias'}
+                </span>
+              </div>
+              <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--color-brand-primary); margin-bottom: 0.5rem;">
+                {cat.name}
+              </h2>
+              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 1rem;">
+                {cat.description}
+              </p>
+            </div>
+
+            <div style="margin-top: auto; border-top: 1px solid #f3f4f6; padding-top: 0.75rem;">
+              <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 0.4rem;">
+                Tópicos:
+              </span>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                {cat.subcategories.map((sub) => (
+                  <span style="font-size: 0.75rem; background: #f3f4f6; padding: 0.15rem 0.5rem; border-radius: var(--radius-xs); color: var(--color-brand-primary); font-weight: 500;">
+                    {sub}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,247 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { Edition, NewsItem } from '../types/content';
+import { getEditionUrl, getNewsUrl } from '../lib/urls';
+
+interface Props {
+  edition: Edition;
+  newsItems: NewsItem[];
+}
+
+const { edition, newsItems } = Astro.props;
+const canonicalPath = getEditionUrl(edition.slug);
+
+const seo = {
+  title: `${edition.title} — the agro news`,
+  description: edition.summary,
+  canonicalPath,
+};
+
+// Calculate estimated read time
+const totalWords = newsItems.reduce((acc, item) => acc + item.content.split(/\s+/).length, 0);
+const readTime = Math.max(3, Math.ceil(totalWords / 200));
+
+// Curated category images
+const categoryImages: Record<string, string> = {
+  mercado: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+  clima: 'https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=800&q=80',
+  tecnologia: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
+  agricultura: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80',
+  pecuaria: 'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80',
+  politica: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+  sustentabilidade: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80',
+  internacional: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80',
+};
+---
+
+<BaseLayout seo={seo} activePath="/noticias/">
+  <div class="newsletter-reading-container">
+    <!-- Breadcrumb & Top Meta -->
+    <div class="newsletter-meta-top">
+      <div>
+        <nav class="breadcrumb" style="margin-bottom: 0.25rem;">
+          <span class="breadcrumb-item"><a href="/">the agro news</a></span>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-item"><a href="/noticias/">edições</a></span>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-item active">{edition.formatted_date}</span>
+        </nav>
+        <h1 class="newsletter-edition-date-title">{edition.formatted_date}</h1>
+        <div class="newsletter-date-readtime">
+          {edition.formatted_date} &bull; Tempo de leitura: {readTime} minutos
+        </div>
+      </div>
+
+      <!-- Quick Share Mini Buttons -->
+      <div class="newsletter-social-share-mini">
+        <button id="quickShareBtn" class="share-mini-btn" title="Compartilhar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+            <polyline points="16 6 12 2 8 6"></polyline>
+            <line x1="12" y1="2" x2="12" y2="15"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 1. BIG NEWSLETTER MASTHEAD BANNER (In The News style) -->
+    <div class="newsletter-masthead-banner">
+      <div class="newsletter-banner-emblem" aria-hidden="true">🌱</div>
+      <div class="newsletter-banner-logo">the agro news</div>
+      <div class="newsletter-banner-sub">edição diária &bull; inteligência do agro</div>
+    </div>
+
+    <!-- 2. POWERED BY SPONSOR TAG -->
+    <div class="newsletter-powered-by">POWERED BY</div>
+    <div class="newsletter-sponsor-logo">TAN INTEL.</div>
+
+    <!-- 3. OPENING CONVERSATIONAL GREETING -->
+    <div class="newsletter-intro-greeting">aumenta o som do campo</div>
+    <p class="newsletter-intro-text">
+      bom dia. se a cadeia produtiva fosse uma orquestra afinada, cada decisão no campo seria uma melodia bem executada.
+      aqui está o seu resumo matinal com o que realmente move o agronegócio hoje.
+    </p>
+
+    <!-- Centered dots divider -->
+    <div class="newsletter-dots-divider">&bull; &bull; &bull; &bull;</div>
+
+    <!-- Date Subtitle -->
+    <div class="newsletter-date-header">
+      {edition.formatted_date.toUpperCase()}
+    </div>
+
+    <!-- Centered dots divider -->
+    <div class="newsletter-dots-divider">&bull; &bull; &bull; &bull;</div>
+
+    <!-- 4. OUTROS TÓPICOS (Quick Digest Pills List) -->
+    <div class="newsletter-topics-box">
+      <div class="newsletter-topics-title">OUTROS TÓPICOS</div>
+
+      {
+        newsItems.slice(0, 4).map((item, i) => {
+          const tags = ['Pra ler:', 'Mercado:', 'Clima:', 'Tech:', 'Curiosidade:'];
+          return (
+            <div class="newsletter-topic-item">
+              <span class="topic-highlight-pill">{tags[i % tags.length]}</span>
+              <a href={`#story-${item.id}`}>{item.title}</a>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <!-- Centered dots divider -->
+    <div class="newsletter-dots-divider">&bull; &bull; &bull; &bull;</div>
+
+    <!-- 5. NO RADAR DO AGRO (Emoji Bullets Box) -->
+    <div class="newsletter-radar-box">
+      <div class="newsletter-radar-title">
+        <span>🌾</span> NO RADAR DO AGRO DE HOJE
+      </div>
+      <ul class="radar-list">
+        {
+          newsItems.map((item) => (
+            <li>
+              <span class="radar-emoji">
+                {item.category === 'mercado' && '📈'}
+                {item.category === 'clima' && '🌧️'}
+                {item.category === 'tecnologia' && '🤖'}
+                {item.category === 'agricultura' && '🌱'}
+                {item.category === 'pecuaria' && '🥩'}
+                {item.category === 'sustentabilidade' && '🌿'}
+                {item.category === 'politica' && '🏛️'}
+                {item.category === 'internacional' && '🌍'}
+              </span>
+              <span>
+                <a href={getNewsUrl(item.slug)} style="color: inherit; text-decoration: underline;">
+                  {item.title}
+                </a>
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- 6. READING STREAK BANNER -->
+    <div class="newsletter-streak-banner">
+      <div class="streak-text">
+        <span>🔥</span> JÁ REGISTROU SUA LEITURA HOJE?
+      </div>
+      <a href="#subscribe" class="streak-action-btn">
+        Mantenha sua sequência &rarr;
+      </a>
+    </div>
+
+    <!-- Centered dots divider -->
+    <div class="newsletter-dots-divider">&bull; &bull; &bull; &bull;</div>
+
+    <!-- 7. NEWS STORIES IN FULL NEWSLETTER FORMAT -->
+    <section class="newsletter-stories-feed">
+      {
+        newsItems.map((item) => {
+          const imageSrc = item.heroImage || categoryImages[item.category.toLowerCase()] || 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80';
+          const sourceName = item.source ? item.source.name : 'the agro news';
+
+          return (
+            <article class="newsletter-story-block" id={`story-${item.id}`}>
+              <div class="newsletter-story-category">{item.category}</div>
+              <h2 class="newsletter-story-title">
+                <a href={getNewsUrl(item.slug)}>{item.title}</a>
+              </h2>
+
+              <figure class="newsletter-figure">
+                <img
+                  src={imageSrc}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </figure>
+              <div class="newsletter-caption">(imagem: {sourceName} | reprodução)</div>
+
+              <div class="newsletter-body-copy" style="margin-top: 1.25rem;">
+                {
+                  item.content.split('\n\n').map((paragraph) => (
+                    <p>{paragraph}</p>
+                  ))
+                }
+              </div>
+
+              {item.nlp && item.nlp.key_points && item.nlp.key_points.length > 0 && (
+                <div class="newsletter-ps-box">
+                  <strong>Destaques rápidos:</strong>
+                  <ul style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
+                    {item.nlp.key_points.slice(0, 2).map((pt) => (
+                      <li style="margin-bottom: 0.25rem;">{pt}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div class="newsletter-whatsapp-share">
+                <a
+                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent(item.title + ' - Leia no the agro news: ')}`}
+                  target="_blank"
+                  rel="noopener"
+                  class="whatsapp-share-link"
+                >
+                  <span>💬 Compartilhe essa matéria pelo WhatsApp &rarr;</span>
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </section>
+
+    <!-- Postscript Outro -->
+    <div class="newsletter-ps-box" style="margin-top: 2rem;">
+      <strong>P.S.</strong> Gostou da edição de hoje? Encaminhe para quem também acompanha o agronegócio e precisa começar o dia bem informado.
+    </div>
+
+    <div class="text-center" style="margin-top: 3rem;">
+      <a href="/noticias/" class="btn btn-primary btn-lg">
+        &larr; Ver todas as edições
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const shareBtn = document.getElementById('quickShareBtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: document.title,
+            url: window.location.href,
+          });
+        } catch {}
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        alert('Link copiado para a área de transferência!');
+      }
+    });
+  }
+</script>

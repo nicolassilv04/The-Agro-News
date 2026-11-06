@@ -1,0 +1,52 @@
+{
+  "id": "news-004",
+  "slug": "pecuaria-perspectivas-preco-gado",
+  "title": "Mercado boiadeiro reage e cotações do boi gordo encontram suporte firme com forte ritmo de abate",
+  "summary": "Recuperação do consumo interno e manutenção do fluxo comprador chinês sustentam valores da arroba acima de R$ 260 nas principais praças paulistas e mato-grossenses.",
+  "content": "O mercado físico da pecuária de corte apresentou sinais consolidados de firmeza nesta semana. A cotação do boi gordo padrão exportação voltou a ser negociada com valorização nas principais praças de referência do estado de São Paulo, Mato Grosso e Goiás.\n\nAnalistas do setor pecuário destacam que as escalas de abate das indústrias frigoríficas encontram-se relativamente ajustadas, girando entre 6 a 8 dias uteis. A menor disponibilidade de animais terminados a pasto, aliada ao ritmo contínuo das exportações de carne in natura para o continente asiático, impede pressões baixistas nas arrobas.\n\nAlém disso, o custo da ração para confinamentos vem mostrando estabilização, o que melhora as margens dos recriadores e terminadores para o último trimestre do ano.",
+  "category": "pecuaria",
+  "subcategory": "Bovinos",
+  "published_at": "2026-09-10T11:10:00-03:00",
+  "updated_at": "2026-09-10T11:25:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "Boletim Pecuário On-line",
+    "url": "https://pecuariaonline.example.com/boi-gordo-setembro"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Boletim Pecuário On-line",
+      "url": "#"
+    },
+    {
+      "name": "Scot Consultoria Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["pecuaria", "boi-gordo", "arroba", "exportacao-carne", "frigorificos", "china"],
+  "entities": {
+    "pessoas": ["Fernando Junqueira"],
+    "empresas": ["JBS", "Minerva Foods", "Marfrig"],
+    "organizacoes": ["Abiec", "Cana"],
+    "locais": ["São Paulo", "Mato Grosso", "Goiás", "China"],
+    "produtos": ["Carne Bovina in Natura", "Arroba do Boi"],
+    "commodities": ["Boi Gordo"]
+  },
+  "regions": ["Sudeste", "Centro-Oeste"],
+  "nlp": {
+    "importance_score": 0.83,
+    "sentiment": "positive",
+    "cluster_id": "cluster-pecuaria-boi-2026",
+    "topics": ["Pecuária de Corte", "Cotação do Boi Gordo", "Exportação de Carne"],
+    "key_points": [
+      "Preço da arroba do boi gordo opera em alta atingindo R$ 265 nas praças paulistas.",
+      "Frigoríficos trabalham com escalas de abate controladas de até 8 dias.",
+      "Exportações mantêm volume recorde embarcado para o porto de Xangai.",
+      "Custo de confinamento apresenta ligeira queda com estabilização do milho."
+    ],
+    "tan_summary": "Mercado pecuário mantém viés autista com arroba do boi gordo valorizada nas praças paulistas e mato-grossenses. Escalas de abate confortáveis e forte demanda chinesa impulsionam as cotações."
+  },
+  "related_news": ["news-009", "news-014", "news-022"]
+}

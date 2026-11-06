@@ -1,0 +1,52 @@
+{
+  "id": "news-019",
+  "slug": "mercado-fertilizantes-precos-importacao",
+  "title": "Preços dos fertilizantes NPK apresentam estabilização nos portos brasileiros com desembarque contínuo",
+  "summary": "Cotações do potássio (KCl) e da ureia registram variações estreitas com bom nível de estocagem nas distribuidoras nacionais.",
+  "content": "O mercado de insumos agrícolas iniciou a semana com cotações estáveis para os principais adubos e fertilizantes importados. De acordo com o indicador de insumos, a tonelada de Cloreto de Potássio (KCl) desembarcada no Porto de Paranaguá manteve-se firme na faixa de US$ 320 a US$ 335.\n\nA chegada constante de navios vindos do Canadá e do Leste Europeu garantiu o abastecimento das misturadoras no Paraná, Mato Grosso e Goiás, afastando o risco de gargalos no início da semeadura de verão.\n\nConsultorias de insumos recomendam que produtores que ainda não fecharam a compra dos pacotes de cobertura aproveitem as janelas de calmaria de preços.",
+  "category": "mercado",
+  "subcategory": "Commodities",
+  "published_at": "2026-09-08T16:20:00-03:00",
+  "updated_at": "2026-09-08T16:50:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Insumos & Safra BR",
+    "url": "https://insumossafra.example.com/fertilizantes-estabilizacao"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Insumos & Safra BR",
+      "url": "#"
+    },
+    {
+      "name": "Global Fertilizer Index Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["mercado", "fertilizantes", "npk", "ureia", "potassio", "insumos"],
+  "entities": {
+    "pessoas": ["Marcelo Mello"],
+    "empresas": ["Yara Brasil", "Mosaic Fertilizantes", "EuroChem"],
+    "organizacoes": ["ANDA", "Porto de Paranaguá"],
+    "locais": ["Paranaguá", "Canadá", "Paraná", "Mato Grosso"],
+    "produtos": ["Cloreto de Potássio (KCl)", "Ureia Agrícola", "MAP 11-52-00"],
+    "commodities": ["Fertilizantes NPK"]
+  },
+  "regions": ["Sul", "Centro-Oeste"],
+  "nlp": {
+    "importance_score": 0.84,
+    "sentiment": "neutral",
+    "cluster_id": "cluster-mercado-insumos-2026",
+    "topics": ["Insumos Agrícolas", "Fertilizantes NPK", "Custo de Produção"],
+    "key_points": [
+      "Preço do cloreto de potássio estabiliza em US$ 325/t no Porto de Paranaguá.",
+      "Navios mantêm fluxo de descarregamento pontual sem filas de atracação.",
+      "Custo de produção da safra 2026/27 apresenta maior previsibilidade.",
+      "Analistas sugerem fechamento de barter para proteção de margens."
+    ],
+    "tan_summary": "Estabilidade nos preços dos fertilizantes importados traz alívio para os custos de implantação da próxima safra. Fluxo regular de navios nos portos assegura o suprimento de misturas NPK para os agricultores."
+  },
+  "related_news": ["news-001", "news-012", "news-015"]
+}

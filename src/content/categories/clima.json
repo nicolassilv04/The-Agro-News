@@ -1,0 +1,13 @@
+{
+  "id": "clima",
+  "slug": "clima",
+  "name": "Clima",
+  "description": "Previsões meteorológicas, monitoramento de secas e chuvas, fenômenos El Niño/La Niña e alerta de eventos extremos.",
+  "subcategories": [
+    "Previsão do Tempo",
+    "Chuva & Seca",
+    "El Niño / La Niña",
+    "Radar Meteorológico"
+  ],
+  "icon": "cloud-sun"
+}

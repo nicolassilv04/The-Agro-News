@@ -1,0 +1,22 @@
+---
+import NewsLayout from '../../layouts/NewsLayout.astro';
+import { getAllNews, getRelatedNews } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const newsList = await getAllNews();
+
+  return Promise.all(
+    newsList.map(async (newsItem) => {
+      const relatedNewsItems = await getRelatedNews(newsItem.id, 3);
+      return {
+        params: { slug: newsItem.slug },
+        props: { newsItem, relatedNewsItems },
+      };
+    })
+  );
+}
+
+const { newsItem, relatedNewsItems } = Astro.props;
+---
+
+<NewsLayout newsItem={newsItem} relatedNewsItems={relatedNewsItems} />

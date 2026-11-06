@@ -1,0 +1,38 @@
+---
+import type { NlpData } from '../types/content';
+
+interface Props {
+  nlp?: NlpData;
+}
+
+const { nlp } = Astro.props;
+if (!nlp || !nlp.key_points || nlp.key_points.length === 0) return null;
+---
+
+<div class="key-points-box">
+  <div class="key-points-title">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      aria-hidden="true"
+    >
+      <polyline points="9 11 12 14 22 4"></polyline>
+      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+    </svg>
+    <span>Principais Pontos</span>
+  </div>
+  <div class="key-points-list">
+    {
+      nlp.key_points.map((point) => (
+        <div class="key-points-item">
+          <span class="key-points-bullet">&bull;</span>
+          <span>{point}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>

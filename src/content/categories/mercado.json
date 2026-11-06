@@ -1,0 +1,8 @@
+{
+  "id": "mercado",
+  "slug": "mercado",
+  "name": "Mercado",
+  "description": "Cotações de commodities, análise financeira, câmbio, exportações, importações e tendências de comércio global.",
+  "subcategories": ["Commodities", "Exportação", "Câmbio", "Crédito Rural", "Bolsa de Mercadorias"],
+  "icon": "trending-up"
+}

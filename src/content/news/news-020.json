@@ -1,0 +1,56 @@
+{
+  "id": "news-020",
+  "slug": "tecnologia-biotecnologia-sementes-resistentest-seca",
+  "title": "Pesquisa científica nacional avança no desenvolvimento de biotecnologia para resistência ao estresse hídrico",
+  "summary": "Novas linhagens de soja geneticamente editadas por CRISPR apresentam retenção foliar e raízes mais profundas sob condições de calor intenso.",
+  "content": "Cientistas de um consórcio público-privado liderado pela Embrapa Soja anunciaram resultados promissores em ensaios de campo com cultivares de soja desenvolvidas por meio de edição gênica (CRISPR-Cas9). As plantas testadas demonstraram maior tolerância a períodos prolongados sem chuva.\n\nAs modificações genéticas pontuais permitiram às raízes explorarem camadas mais profundas do solo em busca de umidade, mantendo a taxa fotossintética elevada mesmo em temperaturas acima de 38°C.\n\nA tecnologia está em fase final de homologação junto à CTNBio e tem previsão de chegar comercialmente ao mercado nas próximas três safras.",
+  "category": "tecnologia",
+  "subcategory": "AgTech",
+  "published_at": "2026-09-07T13:10:00-03:00",
+  "updated_at": "2026-09-07T13:40:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": false,
+  "source": {
+    "name": "Biotecnologia Agro",
+    "url": "https://biotecagro.example.com/crispr-soja-seca"
+  },
+  "sources_count": 3,
+  "sources_list": [
+    {
+      "name": "Biotecnologia Agro",
+      "url": "#"
+    },
+    {
+      "name": "Embrapa Notícias",
+      "url": "#"
+    },
+    {
+      "name": "Journal of Agricultural Biotechnology Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["tecnologia", "biotecnologia", "crispr", "soja", "embrapa", "seca"],
+  "entities": {
+    "pessoas": ["Dr. Alexandre Nepomuceno"],
+    "empresas": ["Embrapa Soja", "Corteva Agriscience"],
+    "organizacoes": ["CTNBio", "Embrapa"],
+    "locais": ["Londrina", "Paraná", "Brasília"],
+    "produtos": ["Sementes Soja CRISPR Drought-Pro"],
+    "commodities": ["Biotecnologia Agrícola"]
+  },
+  "regions": ["Sul", "Nacional"],
+  "nlp": {
+    "importance_score": 0.89,
+    "sentiment": "positive",
+    "cluster_id": "cluster-tecnologia-crispr-2026",
+    "topics": ["Biotecnologia", "Edição Gênica", "Resistência à Seca"],
+    "key_points": [
+      "Desenvolvimento de cultivares de soja com edição gênica CRISPR para tolerância à seca.",
+      "Raízes mais profundas garantem absorção de água em horizontes inferiores do solo.",
+      "Ensaios confirmam manutenção da produtividade mesmo com estresse hídrico.",
+      "Submissão para aprovação comercial na CTNBio em andamento."
+    ],
+    "tan_summary": "Avanço científico brasileiro desenvolve sementes de soja editadas geneticamente para resistir a secas extremas. A inovação tecnológica promete blindar a produtividade das lavouras frente às mudanças climáticas."
+  },
+  "related_news": ["news-002", "news-003", "news-011"]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "news-015",
+  "slug": "mercado-cafe-arabica-cotacoes-nova-york",
+  "title": "Café arábica volta a operar em patamares elevados na Bolsa de Nova York por apreensão com estoques",
+  "summary": "Preocupações com a safra colombiana e estoques certificados baixos no porto de Antuérpia sustentam cotações acima de US$ 2,40 por libra-peso.",
+  "content": "Os contratos futuros do café arábica encerraram o pregão da Bolsa de Nova York (ICE Futures US) em forte alta. A busca por cobertura por parte de torrefadoras multinacionais e fundos de investimento impulsionou as cotações para os níveis mais altos dos últimos quatro meses.\n\nEspecialistas apontam que a combinação de atrasos logísticos na América Central com estoques monitorados em níveis críticos na Europa sustenta o ímpeto comprador.\n\nNo mercado físico brasileiro, cafeicultores do Sul de Minas e da Alta Mogiana mantêm postura cautelosa, comercializando lotes de forma cadenciada à espera de novas altas.",
+  "category": "mercado",
+  "subcategory": "Commodities",
+  "published_at": "2026-09-08T15:30:00-03:00",
+  "updated_at": "2026-09-08T16:00:00-03:00",
+  "edition_id": "edition-2026-09-08",
+  "is_featured": true,
+  "source": {
+    "name": "Café & Mercado",
+    "url": "https://cafemercado.example.com/arabica-nova-york"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "Café & Mercado",
+      "url": "#"
+    },
+    {
+      "name": "ICE Futures US Report Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["mercado", "cafe", "arabica", "nova-york", "ice-futures", "minas-gerais"],
+  "entities": {
+    "pessoas": ["Silvanio Guimarães"],
+    "empresas": ["Cooxupé", "Neumann Kaffee Gruppe", "Nestlé"],
+    "organizacoes": ["CECAFÉ", "ICE Futures US"],
+    "locais": ["Nova York", "Minas Gerais", "Colômbia", "Antuérpia"],
+    "produtos": ["Café Arábica Fino", "Café Beneficiado"],
+    "commodities": ["Café"]
+  },
+  "regions": ["Sudeste", "Internacional"],
+  "nlp": {
+    "importance_score": 0.9,
+    "sentiment": "positive",
+    "cluster_id": "cluster-mercado-cafe-2026",
+    "topics": ["Cotação do Café", "Bolsa de Nova York", "Exportação de Café"],
+    "key_points": [
+      "Café arábica atinge US$ 2,42 por libra-peso na Bolsa de Nova York.",
+      "Estoques certificados europeus continuam em níveis baixos.",
+      "Cafeicultores mineiros comercializam lotes de forma fracionada.",
+      "Demanda por cafés especiais do Brasil continua em expansão."
+    ],
+    "tan_summary": "Alta nos contratos futuros do café arábica na Bolsa de Nova York reflete aperto na oferta global e estoques reduzidos no exterior. Cafeicultores brasileiros aproveitam o momento favorável para realizar vendas pontuais."
+  },
+  "related_news": ["news-001", "news-008", "news-019"]
+}

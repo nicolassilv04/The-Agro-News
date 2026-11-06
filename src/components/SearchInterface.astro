@@ -1,0 +1,70 @@
+---
+
+---
+
+<div class="search-box-container">
+  <div id="search"></div>
+</div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-ui.js" is:inline></script>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (typeof PagefindUI !== 'undefined') {
+      new PagefindUI({
+        element: '#search',
+        showImages: false,
+        translations: {
+          placeholder: 'Digite sua busca por cultura, mercado, clima...',
+          clear_search: 'Limpar',
+          load_more: 'Carregar mais resultados',
+          search_label: 'Buscar neste site',
+          filters_label: 'Filtros',
+          zero_results: 'Nenhuma notícia encontrada para [SEARCH_TERM]',
+          many_results: '[COUNT] resultados encontrados para [SEARCH_TERM]',
+          one_result: '[COUNT] resultado encontrado para [SEARCH_TERM]',
+        },
+      });
+    }
+  });
+</script>
+
+<style is:global>
+  /* Pagefind UI Custom Styling to match TAN Editorial Theme */
+  :root {
+    --pagefind-ui-scale: 0.95;
+    --pagefind-ui-primary: var(--color-brand-primary);
+    --pagefind-ui-text: var(--color-text-primary);
+    --pagefind-ui-background: var(--color-surface);
+    --pagefind-ui-border: var(--color-border-medium);
+    --pagefind-ui-tag: var(--color-bg-alt);
+    --pagefind-ui-border-radius: var(--radius-md);
+    --pagefind-ui-font: var(--font-body);
+  }
+
+  .pagefind-ui__search-input {
+    font-size: var(--font-md) !important;
+    padding: 0.85rem 1.25rem !important;
+    border-color: var(--color-border-medium) !important;
+  }
+
+  .pagefind-ui__search-input:focus {
+    border-color: var(--color-brand-primary) !important;
+    outline: none !important;
+  }
+
+  .pagefind-ui__result-title {
+    font-family: var(--font-heading) !important;
+    font-size: var(--font-lg) !important;
+    font-weight: 700 !important;
+  }
+
+  .pagefind-ui__result-link {
+    color: var(--color-brand-primary) !important;
+  }
+
+  .pagefind-ui__result-link:hover {
+    color: var(--color-brand-accent) !important;
+  }
+</style>

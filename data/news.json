@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "news-001",
+    "slug": "soja-registra-nova-movimentacao-no-mercado-internacional",
+    "title": "Soja registra nova movimentação no mercado internacional com impulso nas compras asiáticas",
+    "subtitle": "Mercados externos apresentam valorização nas cotações em Chicago e aumentam a atratividade dos embarques nos portos de Paranaguá e Santos.",
+    "summary": "Os contratos futuros de soja fecharam em alta na Bolsa de Chicago (CBOT), impulsionados pela demanda aquecida da China e apreensão com as condições meteorológicas na América do Sul. No Brasil, os prêmios nos portos registraram elevação firme.",
+    "content": "Os mercados internacionais de commodities agrícolas registraram forte movimentação nesta quinta-feira. Na Bolsa de Mercadorias de Chicago (CBOT), os contratos da soja com vencimento para os próximos meses atingiram os patamares mais elevados das últimas três semanas, refletindo compras estratégicas por parte de tradings asiáticas e ajustes nas estimativas de produção global.\n\nEspecialistas do setor destacam que a combinação entre estoques ajustados nos Estados Unidos e o ritmo acelerado de originação no Mato Grosso sustentou a alta do complexo soja. Nos portos brasileiros de Paranaguá (PR) e Santos (SP), os prêmios de exportação operaram em campo positivo, compensando variações cambiais recentes.\n\nDe acordo com analistas de mercado, o comportamento das cotações nos próximos dias dependerá fundamentalmente dos relatórios mensais de oferta e demanda do Departamento de Agricultura dos Estados Unidos (USDA) e da regularidade das precipitações no bioma Cerrado brasileiro.",
+    "category": "mercado",
+    "subcategory": "commodities",
+    "published_at": "2026-09-10T09:42:00-03:00",
+    "updated_at": "2026-09-10T10:15:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": true,
+    "source": {
+      "name": "Agência AgroDados",
+      "url": "https://agroadados.example.com/noticias/soja-movimentacao"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Agência AgroDados", "url": "#" },
+      { "name": "Global Grain Monitor", "url": "#" },
+      { "name": "Boletim de Commodities BR", "url": "#" }
+    ],
+    "tags": ["soja", "commodities", "chicago", "exportação", "china", "paranaguá"],
+    "entities": {
+      "pessoas": ["Carlos Alberto Medeiros"],
+      "empresas": ["Cargill", "ADM", "Bunge"],
+      "organizacoes": ["USDA", "Bolsa de Chicago (CBOT)", "Aprosoja"],
+      "locais": ["Brasil", "China", "Mato Grosso", "Paranaguá", "Santos", "Chicago"],
+      "produtos": ["Farelo de Soja", "Óleo de Soja"],
+      "commodities": ["Soja em Grão"]
+    },
+    "regions": ["Mato Grosso", "Paraná", "São Paulo"],
+    "nlp": {
+      "importance_score": 0.94,
+      "sentiment": "positive",
+      "cluster_id": "cluster-soja-cbot-2026",
+      "topics": ["Mercado de Commodities", "Exportação Agrícola", "Bolsa de Chicago"],
+      "key_points": [
+        "Contratos futuros da soja operam em alta na Bolsa de Chicago impulsionados pela demanda chinesa.",
+        "Prêmios nos portos de Paranaguá e Santos acumulam ganhos firmes.",
+        "Mercado aguarda novo relatório mensal do USDA para definir tendências globais.",
+        "Produtores do Mato Grosso acompanham cotações e ritmo de vendas antecipadas."
+      ],
+      "tan_summary": "Alta recente na Bolsa de Chicago aliada ao aquecimento das compras chinesas eleva prêmios nos portos brasileiros de Paranaguá e Santos. O cenário favorece exportadores locais, com atenção voltada para o próximo relatório de oferta e demanda do USDA."
+    },
+    "related_news": ["news-003", "news-007", "news-015"]
+  },
+  {
+    "id": "news-002",
+    "slug": "clima-projecoes-chuvas-regioes-produtoras",
+    "title": "Novas projeções meteorológicas indicam regularização das chuvas nas principais regiões produtoras do país",
+    "summary": "Modelos numéricos apontam chegada de frentes frias com volumes acumulados de até 80mm no Centro-Oeste e Sudeste, favorecendo a umidade do solo para o início do plantio da safra 2026/27.",
+    "content": "Os principais institutos de meteorologia divulgaram uma atualização nas previsões de precipitação para as próximas duas semanas nas áreas agrícolas do Brasil. As simulações indicam a formação de um corredor de umidade que deverá cortar o país a partir do Sul até os estados de Mato Grosso, Goiás e Minas Gerais.\n\nA previsão traz alívio para os agricultores que planejam as operações de semeadura das culturas de verão. Segundo climatologistas, a transição para a fase de neutralidade do clima afasta os riscos de estiagens severas prolongadas no início do ciclo vegetativo.\n\nContudo, especialistas orientam monitorar a distribuição regional das chuvas, uma vez que bolsas de calor pontuais ainda podem exigir cautela no escalonamento do plantio em solos de menor retenção hídrica.",
+    "category": "clima",
+    "subcategory": "Previsão do Tempo",
+    "published_at": "2026-09-10T08:15:00-03:00",
+    "updated_at": "2026-09-10T08:30:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "ClimaAgro Brasil",
+      "url": "https://climaagro.example.com/previsao-setembro"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "ClimaAgro Brasil", "url": "#" },
+      { "name": "Instituto Nacional de Meteorologia", "url": "#" }
+    ],
+    "tags": ["clima", "chuvas", "safra 2026", "plantio", "centro-oeste", "previsão"],
+    "entities": {
+      "pessoas": ["Dr. Marcos Vinícius Siqueira"],
+      "empresas": ["ClimaTempo", "Inmet"],
+      "organizacoes": ["INMET", "CPTEC/INPE"],
+      "locais": ["Mato Grosso", "Goiás", "Minas Gerais", "Paraná", "Rio Grande do Sul"],
+      "produtos": ["Umidade do Solo", "Precipitação"],
+      "commodities": ["Soja", "Milho Safra"]
+    },
+    "regions": ["Centro-Oeste", "Sudeste", "Sul"],
+    "nlp": {
+      "importance_score": 0.88,
+      "sentiment": "positive",
+      "cluster_id": "cluster-clima-chuvas-2026",
+      "topics": ["Previsão Meteorológica", "Umidade do Solo", "Safra 2026/27"],
+      "key_points": [
+        "Corredor de umidade trará precipitações acumuladas de até 80mm nas regiões produtoras.",
+        "Fim do período crítico de seca estimula preparação de máquinas e sementes para a semeadura.",
+        "Fase de neutralidade climática reduz riscos de anomalias extremas no trimestre.",
+        "Consultorias recomendam análise da capacidade de retenção hídrica por talhão."
+      ],
+      "tan_summary": "Atualização meteorológica confirma alinhamento de frentes frias trazendo precipitações consistentes para o Centro-Oeste e Sudeste. O cenário cria condições favoráveis para o arranque da semeadura da nova safra."
+    },
+    "related_news": ["news-001", "news-005", "news-018"]
+  },
+  {
+    "id": "news-003",
+    "slug": "agtech-ia-monitoramento-lavouras",
+    "title": "AgTech brasileira lança plataforma baseada em inteligência artificial para detecção precoce de pragas",
+    "summary": "Solução integra imagens de satélite de alta resolução, sensores em drones e modelos preditivos generativos para identificar focos de lagartas e percevejos com até 96% de precisão.",
+    "content": "Uma startup brasileira de tecnologia agrícola apresentou nesta semana um sistema revolucionário focado no manejo integrado de pragas (MIP). A plataforma utiliza modelos avançados de visão computacional e inteligência artificial para diagnosticar pragas agrícolas em estágios iniciais, permitindo pulverizações pontuais e reduzindo em até 40% a aplicação de defensivos quimicos.\n\nTestada em lavouras de grande porte no oeste baiano e em Mato Grosso do Sul, a ferramenta gera mapas de prescrição automática integráveis com computadores de bordo de tratores e pulverizadores autônomos.\n\nA tecnologia atrai atenção de fundos de venture capital e produtores interessados em otimizar custos operacionais e atender aos exigentes critérios globais de sustentabilidade e rastreabilidade.",
+    "category": "tecnologia",
+    "subcategory": "AgTech",
+    "published_at": "2026-09-10T10:30:00-03:00",
+    "updated_at": "2026-09-10T11:00:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "Portal TechCampo",
+      "url": "https://techcampo.example.com/ia-pragas-2026"
+    },
+    "sources_count": 4,
+    "sources_list": [
+      { "name": "Portal TechCampo", "url": "#" },
+      { "name": "AgTech Review", "url": "#" },
+      { "name": "Inovação Rural News", "url": "#" },
+      { "name": "Canal Agricultura Digital", "url": "#" }
+    ],
+    "tags": [
+      "agtech",
+      "inteligencia-artificial",
+      "drones",
+      "manejo-de-pragas",
+      "inovação",
+      "sustentabilidade"
+    ],
+    "entities": {
+      "pessoas": ["Renata Camargo"],
+      "empresas": ["AgroBotics AI", "Embrapa Instrumentação"],
+      "organizacoes": ["Embrapa", "Associação Brasileira de AgTechs"],
+      "locais": ["Bahia", "Mato Grosso do Sul", "Campinas"],
+      "produtos": ["Plataforma AgroBotics Vision", "Drones Agrícolas"],
+      "commodities": ["Soja", "Algodão"]
+    },
+    "regions": ["Nordeste", "Centro-Oeste"],
+    "nlp": {
+      "importance_score": 0.85,
+      "sentiment": "positive",
+      "cluster_id": "cluster-agtech-ia-2026",
+      "topics": ["AgTech", "Inteligência Artificial", "Sustentabilidade"],
+      "key_points": [
+        "Plataforma combina visão computacional e satélites para detectar infestação em fase inicial.",
+        "Testes em lavouras da Bahia e MS demonstraram redução de 40% no uso de químicos.",
+        "Integração nativa com maquinário de pulverização de precisão.",
+        "Solução recebeu certificação de eficiência pela Embrapa Instrumentação."
+      ],
+      "tan_summary": "Nova plataforma de inteligência artificial desenvolvida por AgTech nacional analisa lavouras em tempo real e identifica pragas com elevada acurácia. A ferramenta reduz custos com insumos e fortalece práticas de agricultura de precisão."
+    },
+    "related_news": ["news-006", "news-011", "news-020"]
+  },
+  {
+    "id": "news-004",
+    "slug": "pecuaria-perspectivas-preco-gado",
+    "title": "Mercado boiadeiro reage e cotações do boi gordo encontram suporte firme com forte ritmo de abate",
+    "summary": "Recuperação do consumo interno e manutenção do fluxo comprador chinês sustentam valores da arroba acima de R$ 260 nas principais praças paulistas e mato-grossenses.",
+    "content": "O mercado físico da pecuária de corte apresentou sinais consolidados de firmeza nesta semana. A cotação do boi gordo padrão exportação voltou a ser negociada com valorização nas principais praças de referência do estado de São Paulo, Mato Grosso e Goiás.\n\nAnalistas do setor pecuário destacam que as escalas de abate das indústrias frigoríficas encontram-se relativamente ajustadas, girando entre 6 a 8 dias uteis. A menor disponibilidade de animais terminados a pasto, aliada ao ritmo contínuo das exportações de carne in natura para o continente asiático, impede pressões baixistas nas arrobas.\n\nAlém disso, o custo da ração para confinamentos vem mostrando estabilização, o que melhora as margens dos recriadores e terminadores para o último trimestre do ano.",
+    "category": "pecuaria",
+    "subcategory": "Bovinos",
+    "published_at": "2026-09-10T11:10:00-03:00",
+    "updated_at": "2026-09-10T11:25:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "Boletim Pecuário On-line",
+      "url": "https://pecuariaonline.example.com/boi-gordo-setembro"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Boletim Pecuário On-line", "url": "#" },
+      { "name": "Scot Consultoria Mock", "url": "#" }
+    ],
+    "tags": ["pecuaria", "boi-gordo", "arroba", "exportacao-carne", "frigorificos", "china"],
+    "entities": {
+      "pessoas": ["Fernando Junqueira"],
+      "empresas": ["JBS", "Minerva Foods", "Marfrig"],
+      "organizacoes": ["Abiec", "Cana"],
+      "locais": ["São Paulo", "Mato Grosso", "Goiás", "China"],
+      "produtos": ["Carne Bovina in Natura", "Arroba do Boi"],
+      "commodities": ["Boi Gordo"]
+    },
+    "regions": ["Sudeste", "Centro-Oeste"],
+    "nlp": {
+      "importance_score": 0.83,
+      "sentiment": "positive",
+      "cluster_id": "cluster-pecuaria-boi-2026",
+      "topics": ["Pecuária de Corte", "Cotação do Boi Gordo", "Exportação de Carne"],
+      "key_points": [
+        "Preço da arroba do boi gordo opera em alta atingindo R$ 265 nas praças paulistas.",
+        "Frigoríficos trabalham com escalas de abate controladas de até 8 dias.",
+        "Exportações mantêm volume recorde embarcado para o porto de Xangai.",
+        "Custo de confinamento apresenta ligeira queda com estabilização do milho."
+      ],
+      "tan_summary": "Mercado pecuário mantém viés autista com arroba do boi gordo valorizada nas praças paulistas e mato-grossenses. Escalas de abate confortáveis e forte demanda chinesa impulsionam as cotações."
+    },
+    "related_news": ["news-009", "news-014", "news-022"]
+  },
+  {
+    "id": "news-005",
+    "slug": "politica-plano-safra-credito-sustentavel",
+    "title": "Governo autoriza liberação de novos recursos do Plano Safra focados em transição agroecológica",
+    "summary": "Ministério da Agricultura e Banco do Brasil anunciam aporte complementar de R$ 4,5 bilhões com taxas de juros reduzidas para produtores que adotam práticas de carbono neutro.",
+    "content": "O Ministério da Agricultura e Pecuária (MAPA), em conjunto com o Banco do Brasil, formalizou o lançamento de uma linha adicional de financiamento vinculada às diretrizes do Plano Safra 2026/27. A iniciativa destina R$ 4,5 bilhões exclusivamente para programas de agricultura de baixo carbono (ABC+) e conversão de pastagens degradadas.\n\nProdutores rurais que comprovarem certificação ambiental ou utilização de bioinsumos locais poderão acessar financiamentos com descontos de até 2% na taxa de juros anual.\n\nA medida visa acelerar o cumprimento das metas brasileiras de redução de emissões e incentivar o investimento em conservação de solo, plantio direto e sistemas de integração lavoura-pecuária-floresta (ILPF).",
+    "category": "politica",
+    "subcategory": "Plano Safra",
+    "published_at": "2026-09-10T07:45:00-03:00",
+    "updated_at": "2026-09-10T08:00:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "Agência Brasil Agro",
+      "url": "https://brasilagro.example.com/politica-plano-safra"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Agência Brasil Agro", "url": "#" },
+      { "name": "Diário Oficial da União", "url": "#" },
+      { "name": "Assessoria MAPA", "url": "#" }
+    ],
+    "tags": [
+      "politica",
+      "plano-safra",
+      "credito-rural",
+      "sustentabilidade",
+      "mapa",
+      "banco-do-brasil"
+    ],
+    "entities": {
+      "pessoas": ["Carlos Fávaro"],
+      "empresas": ["Banco do Brasil", "BNDES"],
+      "organizacoes": ["MAPA", "Ministério da Fazenda", "Embrapa"],
+      "locais": ["Brasília", "Brasil"],
+      "produtos": ["Crédito Rural ABC+", "Financiamento ILPF"],
+      "commodities": ["Crédito Agro"]
+    },
+    "regions": ["Nacional"],
+    "nlp": {
+      "importance_score": 0.91,
+      "sentiment": "positive",
+      "cluster_id": "cluster-politica-credito-2026",
+      "topics": ["Política Agrícola", "Plano Safra", "Crédito Rural Verde"],
+      "key_points": [
+        "Aporte complementar de R$ 4,5 bilhões disponibilizado no sistema bancário.",
+        "Taxas de juros bonificadas em até 2% ao ano para produtores sustentáveis.",
+        "Foco na conversão de pastagens degradadas e adoção do sistema ILPF.",
+        "Incentivo busca posicionar o agro nacional na vanguarda da transição verde."
+      ],
+      "tan_summary": "Ministério da Agricultura libera lote complementar do Plano Safra com R$ 4,5 bilhões voltados para o financiamento sustentável. Taxas subsidiadas beneficiam produtores que aplicam técnicas de agricultura de baixo carbono."
+    },
+    "related_news": ["news-006", "news-010", "news-016"]
+  },
+  {
+    "id": "news-006",
+    "slug": "sustentabilidade-mercado-carbono-agro",
+    "title": "Projetos de créditos de carbono no Agro brasileiro recebem validação internacional de alto padrão",
+    "summary": "Metodologia desenvolvida para rastreamento de estoque de carbono em solos tropicais obtém certificação global, abrindo oportunidade bilionária para produtores de grãos.",
+    "content": "Uma aliança entre pesquisadores da Embrapa e entidades de certificação internacional aprovou uma nova metodologia para mensurar a remoção de dióxido de carbono da atmosfera através do plantio direto e rotação de culturas em solos tropicais.\n\nCom a validação, produtores rurais brasileiros poderão converter práticas conservacionistas em créditos de carbono auditáveis com alto valor de comercialização nos mercados voluntários da Europa e América do Norte.\n\nEstudos preliminares indicam que propriedades que praticam integração lavoura-pecuária podem gerar ganhos extras de até US$ 35 por hectare ao ano com a venda dos ativos ambientais.",
+    "category": "sustentabilidade",
+    "subcategory": "Mercado de Carbono",
+    "published_at": "2026-09-10T12:00:00-03:00",
+    "updated_at": "2026-09-10T12:15:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "EcoAgro Notícias",
+      "url": "https://ecoagro.example.com/carbono-validacao"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "EcoAgro Notícias", "url": "#" },
+      { "name": "Verra Carbon Standards Mock", "url": "#" }
+    ],
+    "tags": ["sustentabilidade", "carbono", "esg", "embrapa", "plantio-direto", "certificacao"],
+    "entities": {
+      "pessoas": ["Dra. Mariane Mendes"],
+      "empresas": ["Verra Standard", "CarbonAgro Solutions"],
+      "organizacoes": ["Embrapa Solos", "ONU Meio Ambiente"],
+      "locais": ["Brasília", "Genebra", "Mato Grosso"],
+      "produtos": ["Créditos de Carbono Tropicais"],
+      "commodities": ["Crédito Voluntário de Carbono"]
+    },
+    "regions": ["Nacional"],
+    "nlp": {
+      "importance_score": 0.89,
+      "sentiment": "positive",
+      "cluster_id": "cluster-sustentabilidade-carbono-2026",
+      "topics": ["Mercado de Carbono", "Agricultura Regenerativa", "Sustentabilidade"],
+      "key_points": [
+        "Nova metodologia de medição de carbono em solo tropical recebe aprovação internacional.",
+        "Produtores rurais poderão comercializar créditos no mercado global.",
+        "Potencial de receita adicional estimado em até US$ 35 por hectare/ano.",
+        "Técnicas de plantio direto e ILPF são os pilares da certificação."
+      ],
+      "tan_summary": "Aprovação de nova metodologia científica valida o potencial do solo brasileiro na retenção de carbono. A certificação abre portas para a remuneração direta de produtores por serviços ambientais prestados."
+    },
+    "related_news": ["news-005", "news-012", "news-017"]
+  },
+  {
+    "id": "news-007",
+    "slug": "internacional-china-demanda-graos-brasil",
+    "title": "China intensifica acordos fitossanitários com o Brasil para ampliação na importação de farelo e milho",
+    "summary": "Reunião de cúpula em Pequim resulta na autorização de 15 novas unidades fabris brasileiras para exportação direta de subprodutos agrícolas.",
+    "content": "Representantes do Ministério da Agricultura do Brasil e da Administração Geral de Alfândegas da China (GACC) concluíram negociações bilaterais em Pequim. O acordo habilita 15 novos estabelecimentos industriais brasileiros a exportarem farelo de soja, DDG de milho e óleos vegetais para o mercado chinês.\n\nA expansão das habilitações reforça a parceria estratégica geopolítica e comercial entre os dois países, garantindo maior previsibilidade de escoamento para os processadores nacionais.\n\nAnalistas de comércio exterior preveem que a medida aumentará o faturamento das exportações do agronegócio em mais de US$ 1,2 bilhão nos próximos doze meses.",
+    "category": "internacional",
+    "subcategory": "China",
+    "published_at": "2026-09-10T06:30:00-03:00",
+    "updated_at": "2026-09-10T07:00:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "Global Trade Agro",
+      "url": "https://globaltrade.example.com/china-brasil-acordo"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Global Trade Agro", "url": "#" },
+      { "name": "Xinhua News Agency", "url": "#" },
+      { "name": "Boletim de Comércio Exterior MAPA", "url": "#" }
+    ],
+    "tags": ["internacional", "china", "acordo-comercial", "exportacao", "farelo-soja", "gacc"],
+    "entities": {
+      "pessoas": ["Wang Wentao", "Roberto Perosa"],
+      "empresas": ["COFCO", "FS Agrisolucões", "Caramuru Alimentos"],
+      "organizacoes": ["GACC China", "MAPA", "Abiove"],
+      "locais": ["Pequim", "Brasília", "China", "Brasil"],
+      "produtos": ["Farelo de Soja", "DDGS de Milho"],
+      "commodities": ["Milho", "Soja Processada"]
+    },
+    "regions": ["Internacional", "Nacional"],
+    "nlp": {
+      "importance_score": 0.92,
+      "sentiment": "positive",
+      "cluster_id": "cluster-internacional-china-2026",
+      "topics": ["Comércio Internacional", "Acordos Bilaterais", "Mercado Chinês"],
+      "key_points": [
+        "China habilita 15 novas plantas industriais brasileiras de farelo e derivados.",
+        "Acordo gera expectativa de incremento de US$ 1,2 bi na pauta exportadora.",
+        "Foco no processamento com maior valor agregado no território nacional.",
+        "Parceria sinaliza consolidação do Brasil como principal fornecedor de segurança alimentar da Ásia."
+      ],
+      "tan_summary": "Conclusão bem-sucedida de negociações fitossanitárias em Pequim resulta na habilitação de 15 indústrias brasileiras para o envio de derivados de soja e milho à China. O acerto fortalece a agregação de valor na pauta exportadora nacional."
+    },
+    "related_news": ["news-001", "news-004", "news-013"]
+  },
+  {
+    "id": "news-008",
+    "slug": "agricultura-avanco-semeadura-trigo-sul",
+    "title": "Colheita da safra de inverno e avanço da semeadura de grãos movimentam o campo no Sul",
+    "summary": "Tricultores do Paraná e Rio Grande do Sul registram produtividade satisfatória e boa qualidade fitossanitária com a ajuda do clima seco recente.",
+    "content": "A colheita do trigo na Região Sul do país atingiu cerca de 35% da área plantada total, apresentando ritmo superior à média histórica dos últimos cinco anos. Os dados divulgados por órgãos estaduais de extensão rural confirmam que a qualidade dos grãos colhidos apresenta excelente Peso do Hectolitro (PH).\n\nApesar das oscilações pontuais de preços no mercado interno, a boa produtividade por hectare compensa custos operacionais de colheita e transporte.\n\nCom a conclusão gradual dos trabalhos no trigo, produtores rurais preparam o maquinário para iniciar o plantio da safra de verão assim que o calendário oficial permitir.",
+    "category": "agricultura",
+    "subcategory": "Trigo",
+    "published_at": "2026-09-10T11:45:00-03:00",
+    "updated_at": "2026-09-10T12:10:00-03:00",
+    "edition_id": "edition-2026-09-10",
+    "is_featured": false,
+    "source": {
+      "name": "SulAgro Hoje",
+      "url": "https://sulagro.example.com/trigo-colheita"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "SulAgro Hoje", "url": "#" },
+      { "name": "Deral/SEAB PR Mock", "url": "#" }
+    ],
+    "tags": ["agricultura", "trigo", "colheita", "sul", "parana", "rio-grande-do-sul"],
+    "entities": {
+      "pessoas": ["Geraldo Eichenberg"],
+      "empresas": ["Cooperativa Agrária", "Cotrijal"],
+      "organizacoes": ["DERAL-PR", "Emater-RS"],
+      "locais": ["Paraná", "Rio Grande do Sul", "Guarapuava", "Passo Fundo"],
+      "produtos": ["Trigo Pão", "Trigo Especial"],
+      "commodities": ["Trigo em Grão"]
+    },
+    "regions": ["Sul"],
+    "nlp": {
+      "importance_score": 0.8,
+      "sentiment": "neutral",
+      "cluster_id": "cluster-agricultura-trigo-2026",
+      "topics": ["Produção Agrícola", "Colheita do Trigo", "Safra de Inverno"],
+      "key_points": [
+        "Colheita atinge 35% das áreas de trigo na Região Sul com ritmo acelerado.",
+        "Qualidade dos grãos é avaliada como superior com alto índice PH.",
+        "Clima favorável acelera secagem e transporte até os moinhos regionais.",
+        "Produtores alinham logística para entrada imediata das culturas de Verão."
+      ],
+      "tan_summary": "Trabalhos de colheita do trigo avançam com rapidez no Sul do Brasil, entregando boa qualidade de grão e elevados índices de produtividade. Produtores ajustam operações para a transição safra de verão."
+    },
+    "related_news": ["news-002", "news-015", "news-021"]
+  },
+  {
+    "id": "news-009",
+    "slug": "pecuaria-exportacoes-carne-bovina-asia",
+    "title": "Exportações brasileiras de carne bovina atingem novo recorde mensal impulsionadas por embarques asiáticos",
+    "summary": "Volume embarcado em agosto superou 230 mil toneladas, gerando receita cambial superior a US$ 1 bilhão, revela balanço das entidades do setor.",
+    "content": "A Associação Brasileira das Indústrias Exportadoras de Carne (ABIEC) divulgou os dados consolidados relativos ao comércio exterior do setor pecuário. As remessas de carne bovina in natura e processada alcançaram a marca histórica de 234,5 mil toneladas no último mês.\n\nA China manteve o posto de principal destino, absorvendo mais de 58% do volume total. Destaca-se também a expansão das vendas para países do Oriente Médio e sudeste asiático, como Filipinas e Indonésia.\n\nO resultado positivo reforça a liderança do Brasil no mercado global de proteínas animais e proporciona sustentabilidade financeira aos frigoríficos habilitados.",
+    "category": "pecuaria",
+    "subcategory": "Exportação",
+    "published_at": "2026-09-09T14:20:00-03:00",
+    "updated_at": "2026-09-09T15:00:00-03:00",
+    "edition_id": "edition-2026-09-09",
+    "is_featured": true,
+    "source": {
+      "name": "Portal Pecuária Brasil",
+      "url": "https://pecuaria.example.com/recorde-exportacao"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Portal Pecuária Brasil", "url": "#" },
+      { "name": "Boletim ABIEC", "url": "#" },
+      { "name": "Secex / MDIC", "url": "#" }
+    ],
+    "tags": ["pecuaria", "exportacao", "carne-bovina", "recorde", "china", "abiec"],
+    "entities": {
+      "pessoas": ["Antonio Camardelli"],
+      "empresas": ["JBS", "Minerva", "BRF"],
+      "organizacoes": ["ABIEC", "MDIC", "ApexBrasil"],
+      "locais": ["Brasil", "China", "Filipinas", "Indonésia"],
+      "produtos": ["Carne Bovina In Natura", "Cortes Especiais"],
+      "commodities": ["Carne Bovina"]
+    },
+    "regions": ["Nacional", "Internacional"],
+    "nlp": {
+      "importance_score": 0.93,
+      "sentiment": "positive",
+      "cluster_id": "cluster-pecuaria-exportacao-2026",
+      "topics": ["Exportação de Proteína Animal", "Balança Comercial", "Pecuária de Corte"],
+      "key_points": [
+        "Embarques de carne bovina atingem recorde histórico de 234,5 mil toneladas em um único mês.",
+        "Receita cambial ultrapassa marca de US$ 1 bilhão.",
+        "China responde por quase 60% das compras, seguida por países do Oriente Médio.",
+        "Projeções para o encerramento do ano apontam para crescimento de 8% em volume."
+      ],
+      "tan_summary": "Mercado exportador de proteína bovina bate recorde histórico mensal de volume e faturamento. Demanda concentrada na China e novos mercados da Ásia consolidam o desempenho do setor frigorífico nacional."
+    },
+    "related_news": ["news-004", "news-007", "news-014"]
+  },
+  {
+    "id": "news-010",
+    "slug": "politica-regulamentacao-bioinsumos-congresso",
+    "title": "Comissão aprova marco legal para incentivar a produção e uso de bioinsumos na agricultura",
+    "summary": "Projeto de lei simplifica regras de registro para defensivos biológicos produzidos na própria fazenda (on-farm) e estabelece incentivos fiscais.",
+    "content": "A Comissão de Agricultura da Câmara dos Deputados aprovou por unanimidade o substitutivo ao Projeto de Lei dos Bioinsumos. O texto cria um arcabouço regulatório moderno e desburocratizado para o desenvolvimento, produção e comercialização de inoculantes, biofertilizantes e agentes de controle biológico.\n\nUm dos pontos celebrados pelas entidades do setor é a garantia do direito de produção própria on-farm para uso exclusivo nas propriedades rurais, desde que obedecidos os padrões técnicos sanitários previstos em regulamento.\n\nA proposta segue agora para apreciação no Senado Federal antes de ir à sanção presidencial.",
+    "category": "politica",
+    "subcategory": "Legislação",
+    "published_at": "2026-09-09T10:15:00-03:00",
+    "updated_at": "2026-09-09T11:00:00-03:00",
+    "edition_id": "edition-2026-09-09",
+    "is_featured": false,
+    "source": {
+      "name": "Agência Congresso Agro",
+      "url": "https://congressoagro.example.com/marco-bioinsumos"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Agência Congresso Agro", "url": "#" },
+      { "name": "Agência Câmara de Notícias", "url": "#" }
+    ],
+    "tags": [
+      "politica",
+      "bioinsumos",
+      "legislacao",
+      "congresso",
+      "camara-dos-deputados",
+      "inovacao"
+    ],
+    "entities": {
+      "pessoas": ["Deputado Sergio Souza"],
+      "empresas": ["Koppert", "Biotrop", "CropLife Brasil"],
+      "organizacoes": ["FPA - Frente Parlamentar da Agropecuária", "Embrapa"],
+      "locais": ["Brasília"],
+      "produtos": ["Biofertilizantes", "Inoculantes", "Defensivos Biológicos"],
+      "commodities": ["Bioinsumos"]
+    },
+    "regions": ["Nacional"],
+    "nlp": {
+      "importance_score": 0.87,
+      "sentiment": "positive",
+      "cluster_id": "cluster-politica-bioinsumos-2026",
+      "topics": ["Marco Regulatória", "Bioinsumos", "Legislação Agrícola"],
+      "key_points": [
+        "Aprovação do Marco Legal dos Bioinsumos na Comissão de Agricultura.",
+        "Garantia de segurança jurídica para a produção on-farm nas propriedades.",
+        "Redução da dependência externa de fertilizantes e químicos sintéticos.",
+        "Texto segue para análise final no Senado Federal."
+      ],
+      "tan_summary": "Aprovação parlamentar do Marco Legal dos Bioinsumos promete impulsionar a biotecnologia agrícola no Brasil. A legislação garante amparo legal para a produção própria on-farm e acelera registros de insumos sustentáveis."
+    },
+    "related_news": ["news-005", "news-006", "news-017"]
+  },
+  {
+    "id": "news-011",
+    "slug": "tecnologia-drones-pulverizacao-carga-pesada",
+    "title": "Nova geração de drones de carga pesada transforma operações de pulverização no Centro-Oeste",
+    "summary": "Equipamentos com capacidade para até 70 litros de calda garantem alta autonomia e rendimento diário de até 150 hectares por aeronave.",
+    "content": "A utilização de aeronaves remotamente pilotadas (drones) para a aplicação de insumos agrícolas deu um salto tecnológico com a chegada de modelos de grande porte ao mercado nacional. Capazes de transportar reservatórios de até 70 litros, esses drones cobrem áreas extensas em fração do tempo das gerações anteriores.\n\nA tecnologia permite pulverizações de precisão mesmo em terrenos declivosos ou após chuvas intensas, quando o solo úmido impede a entrada de tratores pesados sem causar compactação.\n\nEmpresas de prestação de serviços no Mato Grosso relatam alta procura e redução de custos logísticos por parte de médios e grandes produtores.",
+    "category": "tecnologia",
+    "subcategory": "Drones & Sensores",
+    "published_at": "2026-09-09T16:00:00-03:00",
+    "updated_at": "2026-09-09T16:30:00-03:00",
+    "edition_id": "edition-2026-09-09",
+    "is_featured": false,
+    "source": {
+      "name": "Mundo Drones Agro",
+      "url": "https://dronesagro.example.com/pulverizacao-alta-capacidade"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Mundo Drones Agro", "url": "#" },
+      { "name": "Revista Agricultura de Precisão", "url": "#" }
+    ],
+    "tags": ["tecnologia", "drones", "pulverizacao", "agricultura-de-precisao", "maquinario"],
+    "entities": {
+      "pessoas": ["Eng. Tiago Alencar"],
+      "empresas": ["DJI Agriculture", "XAG Brasil"],
+      "organizacoes": ["ANAC", "DECEA"],
+      "locais": ["Sinop", "Mato Grosso", "Rondonópolis"],
+      "produtos": ["Drone Agrícola T70", "Sistema de Pulverização Atomizada"],
+      "commodities": ["Maquinário Agrícola"]
+    },
+    "regions": ["Centro-Oeste"],
+    "nlp": {
+      "importance_score": 0.82,
+      "sentiment": "positive",
+      "cluster_id": "cluster-tecnologia-drones-2026",
+      "topics": ["Drones Agrícolas", "Pulverização de Precisão", "Mecanização"],
+      "key_points": [
+        "Drones de pulverização passam a suportar até 70 litros de carga útil.",
+        "Rendimento operacional atinge marca de 150 hectares aplicados por dia.",
+        "Eliminação do amassamento de plantas e compactação de solo.",
+        "Regulamentação simplificada pela ANAC impulsiona adesão no campo."
+      ],
+      "tan_summary": "Chegada de drones pulverizadores de alta capacidade revoluciona operações de campo na Região Centro-Oeste. Equipamentos garantem aplicação precisa, evitam amassa de culturas e reduzem custos com combustível."
+    },
+    "related_news": ["news-003", "news-020", "news-024"]
+  },
+  {
+    "id": "news-012",
+    "slug": "mercado-credito-rural-verdes-fundos",
+    "title": "Fundos de investimento (Fiagro) batem marca de R$ 40 bilhões em patrimônio gerido",
+    "summary": "Instrumento financeiro consolida-se como alternativa vital de financiamento privado para produtores, cooperativas e tradings agrícolas.",
+    "content": "Os Fondos de Investimento nas Cadeias Produtivas Agroindustriais (Fiagros) alcançaram uma importante marca histórica no mercado de capitais brasileiro. O patrimônio líquido total da modalidade ultrapassou os R$ 40 bilhões, impulsionado por emissões de Certificados de Recebíveis do Agronegócio (CRA) e letras financeiras.\n\nA atratividade dos rendimentos isentos de imposto de renda para pessoas físicas e a segurança das garantias reais vinculadas a imóveis rurais atraem milhares de investidores individuais e institucionais.\n\nCom a taxa de juros básica em processo de convergência, o mercado prevê que os Fiagros continuem expandindo sua fatia no financiamento da safra nacional.",
+    "category": "mercado",
+    "subcategory": "Crédito Rural",
+    "published_at": "2026-09-09T11:40:00-03:00",
+    "updated_at": "2026-09-09T12:00:00-03:00",
+    "edition_id": "edition-2026-09-09",
+    "is_featured": false,
+    "source": {
+      "name": "Capital Agro News",
+      "url": "https://capitalagro.example.com/fiagro-recorde"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Capital Agro News", "url": "#" },
+      { "name": "Boletim ANBIMA Mock", "url": "#" },
+      { "name": "Relatório B3", "url": "#" }
+    ],
+    "tags": ["mercado", "fiagro", "credito-rural", "investimentos", "cra", "b3"],
+    "entities": {
+      "pessoas": ["Octacilio da Silva"],
+      "empresas": ["B3", "Kinea Investimentos", "XP Asset"],
+      "organizacoes": ["CVM", "ANBIMA"],
+      "locais": ["São Paulo", "Brasil"],
+      "produtos": ["Fiagro-Imobiliário", "CRA Verde", "CPR Física"],
+      "commodities": ["Mercado Financeiro Agro"]
+    },
+    "regions": ["Nacional"],
+    "nlp": {
+      "importance_score": 0.86,
+      "sentiment": "positive",
+      "cluster_id": "cluster-mercado-fiagro-2026",
+      "topics": ["Mercado de Capitais", "Fiagro", "Crédito Rural Privado"],
+      "key_points": [
+        "Patrimônio gerido pelos Fiagros supera a marca de R$ 40 bilhões no Brasil.",
+        "Emissões de CRA e títulos verdes impulsionam a captação no mercado financeiro.",
+        "Isenção fiscal atrai mais de 500 mil investidores individuais para a categoria.",
+        "Diversificação de fontes reduz dependência exclusiva de subsídios estatais."
+      ],
+      "tan_summary": "Mercado de Fiagros atinge feito histórico ao superar R$ 40 bilhões em recursos geridos. A expansão do crédito privado fortalece o financiamento independente do agronegócio nacional."
+    },
+    "related_news": ["news-005", "news-006", "news-019"]
+  },
+  {
+    "id": "news-013",
+    "slug": "agricultura-milho-segunda-safra-exportacoes",
+    "title": "Escoamento da safrinha de milho ganha ritmo nos corredores logísticos do Arco Norte",
+    "summary": "Movimentação nos portos de Itacoatiara, Santarém e Barcarena cresce 18% em relação ao ano anterior, otimizando custos de frete do Mato Grosso.",
+    "content": "A logística de escoamento da segunda safra de milho (safrinha) registra intenso movimento nos terminais portuários da Região Norte do Brasil. A consolidação dos corredores do Arco Norte tem permitido o escoamento eficiente de milhões de toneladas oriundas do norte do Mato Grosso e do Matopiba.\n\nA utilização de barcaças pela hidrovia Tapajós-Amazonas reduziu a distância percorrida por caminhões e aliviou os custos com frete rodoviário para os produtores da região.\n\nEspecialistas em infraestrutura ressaltam que o desempenho dos portos nortistas é fundamental para manter a competitividade do milho brasileiro frente à concorrência dos exportadores norte-americanos.",
+    "category": "agricultura",
+    "subcategory": "Milho",
+    "published_at": "2026-09-09T15:10:00-03:00",
+    "updated_at": "2026-09-09T15:40:00-03:00",
+    "edition_id": "edition-2026-09-09",
+    "is_featured": false,
+    "source": {
+      "name": "InfraAgro Notícias",
+      "url": "https://infraagro.example.com/arco-norte-milho"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "InfraAgro Notícias", "url": "#" },
+      { "name": "Boletim Logística CNT", "url": "#" }
+    ],
+    "tags": ["agricultura", "milho", "arco-norte", "logistica", "portos", "frete"],
+    "entities": {
+      "pessoas": ["Edeon Vaz Ferreira"],
+      "empresas": ["Hidrovias do Brasil", "VLI Logistics", "Amaggi"],
+      "organizacoes": ["Movimento Pró-Logística", "ANTAQ"],
+      "locais": ["Barcarena", "Itacoatiara", "Santarém", "Mato Grosso", "Pará"],
+      "produtos": ["Milho Safrinha em Grão", "Frete Hidroviário"],
+      "commodities": ["Milho"]
+    },
+    "regions": ["Norte", "Centro-Oeste"],
+    "nlp": {
+      "importance_score": 0.84,
+      "sentiment": "positive",
+      "cluster_id": "cluster-agricultura-milho-2026",
+      "topics": ["Logística Agrícola", "Arco Norte", "Exportação de Milho"],
+      "key_points": [
+        "Volume de milho escoado pelo Arco Norte apresenta crescimento de 18%.",
+        "Modais hidroviários garantem economia expressiva no frete por tonelada.",
+        "Terminais de Barcarena e Santarém operam em capacidade máxima.",
+        "Eficiência logística fortalece margem do produtor mato-grossense."
+      ],
+      "tan_summary": "Corredores logísticos do Arco Norte registram pico de movimentação no escoamento do milho safrinha. O transporte hidroviário reduz custos operacionais e eleva a competitividade do produto no mercado externo."
+    },
+    "related_news": ["news-001", "news-007", "news-023"]
+  },
+  {
+    "id": "news-014",
+    "slug": "pecuaria-sanidade-animal-vacinacao-febre-aftosa",
+    "title": "Brasil consolida status internacional de zona livre de febre aftosa sem vacinação",
+    "summary": "Reconhecimento da WOAH abre portas para exportação de carnes para mercados de alto valor agregado, como Japão e Coreia do Sul.",
+    "content": "A Organização Mundial de Saúde Animal (WOAH) homologou formalmente a ampliação das zonas brasileiras reconhecidas como livres de febre aftosa sem vacinação. Com a decisão, praticamente todo o território nacional passa a integrar o grupo internacional com o status sanitário mais rigoroso do mundo.\n\nA conquista é fruto de décadas de cooperação entre governos estaduais, Ministério da Agricultura e pecuaristas rurais que mantiveram vigilância epidemiológica constante.\n\nCom o novo status, o Brasil inicia tratativas bilaterais para vender cortes nobres de bovinos e suínos para mercados exigentes do Leste Asiático e América do Norte.",
+    "category": "pecuaria",
+    "subcategory": "Sanidade",
+    "published_at": "2026-09-09T09:00:00-03:00",
+    "updated_at": "2026-09-09T09:30:00-03:00",
+    "edition_id": "edition-2026-09-09",
+    "is_featured": false,
+    "source": {
+      "name": "Sanidade Pecuária BR",
+      "url": "https://sanidade.example.com/aftosa-livre"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Sanidade Pecuária BR", "url": "#" },
+      { "name": "Comunicado Oficial WOAH", "url": "#" },
+      { "name": "Assessoria de Imprensa MAPA", "url": "#" }
+    ],
+    "tags": ["pecuaria", "sanidade", "febre-aftosa", "woah", "exportacao", "carne"],
+    "entities": {
+      "pessoas": ["Dr. Luiz Carlos de Oliveira"],
+      "empresas": ["BRF", "Seara", "Frigol"],
+      "organizacoes": ["WOAH", "MAPA", "IAGRO"],
+      "locais": ["Paris", "Brasília", "Japão", "Coreia do Sul"],
+      "produtos": ["Carne Suína", "Cortes Nobres Bovinos"],
+      "commodities": ["Carne Bovina e Suína"]
+    },
+    "regions": ["Nacional"],
+    "nlp": {
+      "importance_score": 0.95,
+      "sentiment": "positive",
+      "cluster_id": "cluster-pecuaria-sanidade-2026",
+      "topics": ["Sanidade Animal", "Febre Aftosa", "Acesso a Mercados"],
+      "key_points": [
+        "WOAH confirma ampliação das zonas brasileiras livres de aftosa sem vacinação.",
+        "Abertura de negociações comerciais prioritárias com Japão e Coreia do Sul.",
+        "Eliminação dos custos com campanhas vacinais periódicas.",
+        "Reforço nos sistemas estaduais de vigilância de fronteira."
+      ],
+      "tan_summary": "Homologação internacional confirma o Brasil como zona livre de febre aftosa sem vacinação em escala nacional. O feito histórico viabiliza a entrada de cortes brasileiros em mercados premium de alto valor agregado."
+    },
+    "related_news": ["news-004", "news-009", "news-022"]
+  },
+  {
+    "id": "news-015",
+    "slug": "mercado-cafe-arabica-cotacoes-nova-york",
+    "title": "Café arábica volta a operar em patamares elevados na Bolsa de Nova York por apreensão com estoques",
+    "summary": "Preocupações com a safra colombiana e estoques certificados baixos no porto de Antuérpia sustentam cotações acima de US$ 2,40 por libra-peso.",
+    "content": "Os contratos futuros do café arábica encerraram o pregão da Bolsa de Nova York (ICE Futures US) em forte alta. A busca por cobertura por parte de torrefadoras multinacionais e fundos de investimento impulsionou as cotações para os níveis mais altos dos últimos quatro meses.\n\nEspecialistas apontam que a combinação de atrasos logísticos na América Central com estoques monitorados em níveis críticos na Europa sustenta o ímpeto comprador.\n\nNo mercado físico brasileiro, cafeicultores do Sul de Minas e da Alta Mogiana mantêm postura cautelosa, comercializando lotes de forma cadenciada à espera de novas altas.",
+    "category": "mercado",
+    "subcategory": "Commodities",
+    "published_at": "2026-09-08T15:30:00-03:00",
+    "updated_at": "2026-09-08T16:00:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": true,
+    "source": {
+      "name": "Café & Mercado",
+      "url": "https://cafemercado.example.com/arabica-nova-york"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Café & Mercado", "url": "#" },
+      { "name": "ICE Futures US Report Mock", "url": "#" }
+    ],
+    "tags": ["mercado", "cafe", "arabica", "nova-york", "ice-futures", "minas-gerais"],
+    "entities": {
+      "pessoas": ["Silvanio Guimarães"],
+      "empresas": ["Cooxupé", "Neumann Kaffee Gruppe", "Nestlé"],
+      "organizacoes": ["CECAFÉ", "ICE Futures US"],
+      "locais": ["Nova York", "Minas Gerais", "Colômbia", "Antuérpia"],
+      "produtos": ["Café Arábica Fino", "Café Beneficiado"],
+      "commodities": ["Café"]
+    },
+    "regions": ["Sudeste", "Internacional"],
+    "nlp": {
+      "importance_score": 0.9,
+      "sentiment": "positive",
+      "cluster_id": "cluster-mercado-cafe-2026",
+      "topics": ["Cotação do Café", "Bolsa de Nova York", "Exportação de Café"],
+      "key_points": [
+        "Café arábica atinge US$ 2,42 por libra-peso na Bolsa de Nova York.",
+        "Estoques certificados europeus continuam em níveis baixos.",
+        "Cafeicultores mineiros comercializam lotes de forma fracionada.",
+        "Demanda por cafés especiais do Brasil continua em expansão."
+      ],
+      "tan_summary": "Alta nos contratos futuros do café arábica na Bolsa de Nova York reflete aperto na oferta global e estoques reduzidos no exterior. Cafeicultores brasileiros aproveitam o momento favorável para realizar vendas pontuais."
+    },
+    "related_news": ["news-001", "news-008", "news-019"]
+  },
+  {
+    "id": "news-016",
+    "slug": "sustentabilidade-rastreabilidade-cadeia-cacau",
+    "title": "Indústria do cacau na Bahia adota protocolo digital inédito de rastreabilidade ponta a ponta",
+    "summary": "Tecnologia de blockchain permite ao consumidor final consultar a origem exata dos amêndoas e o cumprimento de diretrizes desmatamento zero.",
+    "content": "Produtores de cacau do sul da Bahia e cooperativas agroflorestais deram início ao uso de uma plataforma digital de rastreabilidade baseada em tecnologia blockchain. A solução registra todas as etapas da cadeia produtiva, desde a colheita em sistemas de cabruca até a entrega nas moageiras industriais.\n\nO sistema garante que cada lote exportado esteja em conformidade com as novas regras da Regulamento de Desmatamento da União Europeia (EUDR).\n\nA expectativa das entidades regionais é valorizar a amêndoa baiana no mercado internacional e garantir prêmios de preço pela qualidade e preservação ambiental.",
+    "category": "sustentabilidade",
+    "subcategory": "Rastreabilidade",
+    "published_at": "2026-09-08T11:00:00-03:00",
+    "updated_at": "2026-09-08T11:20:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Bahia Agro Sustentável",
+      "url": "https://bahiaagro.example.com/cacau-rastreabilidade"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Bahia Agro Sustentável", "url": "#" },
+      { "name": "Inovação Ilhéus Mock", "url": "#" }
+    ],
+    "tags": ["sustentabilidade", "cacau", "rastreabilidade", "blockchain", "bahia", "eudr"],
+    "entities": {
+      "pessoas": ["Guilherme Alcantara"],
+      "empresas": ["Barry Callebaut", "Dengo Chocolates"],
+      "organizacoes": ["CEPLAC", "União Europeia"],
+      "locais": ["Ilhéus", "Bahia", "Europa"],
+      "produtos": ["Cacau Cabruca", "Amêndoa Fina de Cacau"],
+      "commodities": ["Cacau"]
+    },
+    "regions": ["Nordeste"],
+    "nlp": {
+      "importance_score": 0.83,
+      "sentiment": "positive",
+      "cluster_id": "cluster-sustentabilidade-cacau-2026",
+      "topics": ["Rastreabilidade", "Cacau Cabruca", "Regulamentação Europeia"],
+      "key_points": [
+        "Plataforma em blockchain monitora a jornada do cacau baiano da árvore ao chocolate.",
+        "Atendimento antecipado aos requisitos da legislação antidesmatamento europeia.",
+        "Valorização do sistema cabruca como modelo de conservação da Mata Atlântica.",
+        "Consumidores podem escanear QR Code e verificar origem socioambiental."
+      ],
+      "tan_summary": "Cadeia do cacau na Bahia implementa sistema inovador de rastreabilidade digital por blockchain. A transparência socioambiental assegura conformidade com o mercado europeu e agrega valor aos produtores locais."
+    },
+    "related_news": ["news-006", "news-010", "news-017"]
+  },
+  {
+    "id": "news-017",
+    "slug": "agricultura-algodao-produtividade-recorde",
+    "title": "Colheita do algodão no cerrado baiano e mato-grossense confirma marcas históricas de fibra",
+    "summary": "Condições de iluminação e controle sanitário eficiente resultaram em pluma de altíssima qualidade para a indústria têxtil global.",
+    "content": "A colheita da safra de algodão entra na reta final nas principais regiões produtoras do Brasil, consolidando um ano de resultados excepcionais. Relatórios técnicos da Associação Brasileira dos Produtores de Algodão (Abrapa) indicam produtividade média média superior a 300 arrobas de caroço por hectare em polos de excelência como Luís Eduardo Magalhães (BA) e Sapezal (MT).\n\nA qualidade visual, comprimento e resistência da fibra foram classificados com nota máxima pelos laboratórios de análise HVI.\n\nCom a safra recorde, o Brasil reafirma sua posição de maior exportador global de algodão pluma, ultrapassando concorrentes tradicionais.",
+    "category": "agricultura",
+    "subcategory": "Algodão",
+    "published_at": "2026-09-08T14:00:00-03:00",
+    "updated_at": "2026-09-08T14:30:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Revista Fibra Brasil",
+      "url": "https://fibrabrasil.example.com/algodao-recorde"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Revista Fibra Brasil", "url": "#" },
+      { "name": "Boletim ABRAPA", "url": "#" },
+      { "name": "AgroBahiatech", "url": "#" }
+    ],
+    "tags": ["agricultura", "algodao", "fibra", "abrapa", "bahia", "mato-grosso"],
+    "entities": {
+      "pessoas": ["Alexandre Scheffer"],
+      "empresas": ["SLC Agrícola", "Grupo Scheffer", "Bom Futuro"],
+      "organizacoes": ["ABRAPA", "Abapa"],
+      "locais": ["Luís Eduardo Magalhães", "Sapezal", "Bahia", "Mato Grosso"],
+      "produtos": ["Algodão em Pluma", " Caroço de Algodão"],
+      "commodities": ["Algodão"]
+    },
+    "regions": ["Centro-Oeste", "Nordeste"],
+    "nlp": {
+      "importance_score": 0.88,
+      "sentiment": "positive",
+      "cluster_id": "cluster-agricultura-algodao-2026",
+      "topics": ["Produção de Algodão", "Produtividade Agrícola", "Exportação de Fibra"],
+      "key_points": [
+        "Colheita de algodão é concluída com produtividade superior a 300 arrobas/ha.",
+        "Análises HVI comprovam padrões internacionais de resistência e comprimento da fibra.",
+        "Brasil se consolida na liderança das exportações mundiais da commodity.",
+        "Demanda por fiação asiática garante liquidez para a produção nacional."
+      ],
+      "tan_summary": "Encerramento da colheita de algodão no Cerrado brasileiro registra números históricos de produção e qualidade de pluma. Resultados operacionais elevam o Brasil à liderança global nas vendas da fibra."
+    },
+    "related_news": ["news-001", "news-008", "news-023"]
+  },
+  {
+    "id": "news-018",
+    "slug": "clima-monitoramento-reservatorios-irrigacao",
+    "title": "Nível dos reservatórios para irrigação no São Francisco atinge capacidade otimizada para o segundo semestre",
+    "summary": "Bacia hidrográfica apresenta volumes confortáveis nas represas de Sobradinho e Três Marias, garantindo água para fruticultura de exportação.",
+    "content": "O Operador Nacional do Sistema Elétrico (ONS) e a Agência Nacional de Águas (ANA) atualizaram o boletim de monitoramento dos reservatórios da bacia do Rio São Francisco. Os dados mostram que os principais açudes e represas operam com mais de 72% de sua capacidade armazenada útil.\n\nA disponibilidade hídrica traz segurança para os irrigantes do Polo Petrolina-Juazeiro, grande centro produtor e exportador de mangas, uvas e melões de mesa.\n\nTécnicos da Codevasf destacam que o planejamento hídrico conjunto evitou conflitos pelo uso da água e assegurou a eficiência da irrigação por gotejamento na região semiárida.",
+    "category": "clima",
+    "subcategory": "Chuva & Seca",
+    "published_at": "2026-09-08T09:40:00-03:00",
+    "updated_at": "2026-09-08T10:00:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Semiárido Água & Fruta",
+      "url": "https://semiaridoagua.example.com/sao-francisco-reservatorios"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Semiárido Água & Fruta", "url": "#" },
+      { "name": "Relatório ANA / ONS Mock", "url": "#" }
+    ],
+    "tags": ["clima", "irrigacao", "sao-francisco", "fruticultura", "petrolina", "ana"],
+    "entities": {
+      "pessoas": ["Eng. Valmir de Souza"],
+      "empresas": ["Agrovale", "Grandes Frutas S.A."],
+      "organizacoes": ["ANA", "CODEVASF", "ONS"],
+      "locais": ["Petrolina", "Juazeiro", "Pernambuco", "Bahia", "Sobradinho"],
+      "produtos": ["Manga Tommy", "Uva sem Semente", "Irrigação por Gotejamento"],
+      "commodities": ["Frutas de Exportação"]
+    },
+    "regions": ["Nordeste"],
+    "nlp": {
+      "importance_score": 0.81,
+      "sentiment": "positive",
+      "cluster_id": "cluster-clima-reservatorios-2026",
+      "topics": ["Recursos Hídricos", "Irrigação", "Fruticultura"],
+      "key_points": [
+        "Reservatório de Sobradinho atinge 72% de volume útil acumulado.",
+        "Garantia de água para o polo produtor de Petrolina e Juazeiro.",
+        "Exportação de frutas no Vale do São Francisco projeta alta de 10%.",
+        "Gestão eficiente evita racionamento de outorgas na bacia."
+      ],
+      "tan_summary": "Níveis de reservatórios no Rio São Francisco garantem oferta hídrica abundante para a fruticultura irrigada no Nordeste. A estabilidade hídrica beneficia produtores e impulsiona embarques de mangas e uvas."
+    },
+    "related_news": ["news-002", "news-016", "news-025"]
+  },
+  {
+    "id": "news-019",
+    "slug": "mercado-fertilizantes-precos-importacao",
+    "title": "Preços dos fertilizantes NPK apresentam estabilização nos portos brasileiros com desembarque contínuo",
+    "summary": "Cotações do potássio (KCl) e da ureia registram variações estreitas com bom nível de estocagem nas distribuidoras nacionais.",
+    "content": "O mercado de insumos agrícolas iniciou a semana com cotações estáveis para os principais adubos e fertilizantes importados. De acordo com o indicador de insumos, a tonelada de Cloreto de Potássio (KCl) desembarcada no Porto de Paranaguá manteve-se firme na faixa de US$ 320 a US$ 335.\n\nA chegada constante de navios vindos do Canadá e do Leste Europeu garantiu o abastecimento das misturadoras no Paraná, Mato Grosso e Goiás, afastando o risco de gargalos no início da semeadura de verão.\n\nConsultorias de insumos recomendam que produtores que ainda não fecharam a compra dos pacotes de cobertura aproveitem as janelas de calmaria de preços.",
+    "category": "mercado",
+    "subcategory": "Commodities",
+    "published_at": "2026-09-08T16:20:00-03:00",
+    "updated_at": "2026-09-08T16:50:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Insumos & Safra BR",
+      "url": "https://insumossafra.example.com/fertilizantes-estabilizacao"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Insumos & Safra BR", "url": "#" },
+      { "name": "Global Fertilizer Index Mock", "url": "#" }
+    ],
+    "tags": ["mercado", "fertilizantes", "npk", "ureia", "potassio", "insumos"],
+    "entities": {
+      "pessoas": ["Marcelo Mello"],
+      "empresas": ["Yara Brasil", "Mosaic Fertilizantes", "EuroChem"],
+      "organizacoes": ["ANDA", "Porto de Paranaguá"],
+      "locais": ["Paranaguá", "Canadá", "Paraná", "Mato Grosso"],
+      "produtos": ["Cloreto de Potássio (KCl)", "Ureia Agrícola", "MAP 11-52-00"],
+      "commodities": ["Fertilizantes NPK"]
+    },
+    "regions": ["Sul", "Centro-Oeste"],
+    "nlp": {
+      "importance_score": 0.84,
+      "sentiment": "neutral",
+      "cluster_id": "cluster-mercado-insumos-2026",
+      "topics": ["Insumos Agrícolas", "Fertilizantes NPK", "Custo de Produção"],
+      "key_points": [
+        "Preço do cloreto de potássio estabiliza em US$ 325/t no Porto de Paranaguá.",
+        "Navios mantêm fluxo de descarregamento pontual sem filas de atracação.",
+        "Custo de produção da safra 2026/27 apresenta maior previsibilidade.",
+        "Analistas sugerem fechamento de barter para proteção de margens."
+      ],
+      "tan_summary": "Estabilidade nos preços dos fertilizantes importados traz alívio para os custos de implantação da próxima safra. Fluxo regular de navios nos portos assegura o suprimento de misturas NPK para os agricultores."
+    },
+    "related_news": ["news-001", "news-012", "news-015"]
+  },
+  {
+    "id": "news-020",
+    "slug": "tecnologia-biotecnologia-sementes-resistentest-seca",
+    "title": "Pesquisa científica nacional avança no desenvolvimento de biotecnologia para resistência ao estresse hídrico",
+    "summary": "Novas linhagens de soja geneticamente editadas por CRISPR apresentam retenção foliar e raízes mais profundas sob condições de calor intenso.",
+    "content": "Cientistas de um consórcio público-privado liderado pela Embrapa Soja anunciaram resultados promissores em ensaios de campo com cultivares de soja desenvolvidas por meio de edição gênica (CRISPR-Cas9). As plantas testadas demonstraram maior tolerância a períodos prolongados sem chuva.\n\nAs modificações genéticas pontuais permitiram às raízes explorarem camadas mais profundas do solo em busca de umidade, mantendo a taxa fotossintética elevada mesmo em temperaturas acima de 38°C.\n\nA tecnologia está em fase final de homologação junto à CTNBio e tem previsão de chegar comercialmente ao mercado nas próximas três safras.",
+    "category": "tecnologia",
+    "subcategory": "AgTech",
+    "published_at": "2026-09-07T13:10:00-03:00",
+    "updated_at": "2026-09-07T13:40:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Biotecnologia Agro",
+      "url": "https://biotecagro.example.com/crispr-soja-seca"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Biotecnologia Agro", "url": "#" },
+      { "name": "Embrapa Notícias", "url": "#" },
+      { "name": "Journal of Agricultural Biotechnology Mock", "url": "#" }
+    ],
+    "tags": ["tecnologia", "biotecnologia", "crispr", "soja", "embrapa", "seca"],
+    "entities": {
+      "pessoas": ["Dr. Alexandre Nepomuceno"],
+      "empresas": ["Embrapa Soja", "Corteva Agriscience"],
+      "organizacoes": ["CTNBio", "Embrapa"],
+      "locais": ["Londrina", "Paraná", "Brasília"],
+      "produtos": ["Sementes Soja CRISPR Drought-Pro"],
+      "commodities": ["Biotecnologia Agrícola"]
+    },
+    "regions": ["Sul", "Nacional"],
+    "nlp": {
+      "importance_score": 0.89,
+      "sentiment": "positive",
+      "cluster_id": "cluster-tecnologia-crispr-2026",
+      "topics": ["Biotecnologia", "Edição Gênica", "Resistência à Seca"],
+      "key_points": [
+        "Desenvolvimento de cultivares de soja com edição gênica CRISPR para tolerância à seca.",
+        "Raízes mais profundas garantem absorção de água em horizontes inferiores do solo.",
+        "Ensaios confirmam manutenção da produtividade mesmo com estresse hídrico.",
+        "Submissão para aprovação comercial na CTNBio em andamento."
+      ],
+      "tan_summary": "Avanço científico brasileiro desenvolve sementes de soja editadas geneticamente para resistir a secas extremas. A inovação tecnológica promete blindar a produtividade das lavouras frente às mudanças climáticas."
+    },
+    "related_news": ["news-002", "news-003", "news-011"]
+  },
+  {
+    "id": "news-021",
+    "slug": "agricultura-cafe-conilon-espirito-santo-safra",
+    "title": "Produção de café conilon no Espírito Santo supera expectativas e bate recorde de produtividade",
+    "summary": "Investimentos em irrigação localizada e renovação de cafezais impulsionam rendimento médio para 55 sacas por hectare no estado.",
+    "content": "A colheita do café conilon (robusta) no estado do Espírito Santo foi concluída com números extremamente positivos para os cafeicultores capixabas. O balanço final aponta para uma produção estadual recorde, impulsionada pelo manejo nutricional moderno e pela expansão da irrigação por gotejamento.\n\nO resultado consolida o Espírito Santo como o maior produtor nacional e uma das principais referências mundiais na espécie conilon.\n\nA liquidez no mercado interno permanece alta, com forte demanda por parte de indústrias de café solúvel e exportadores que atendem aos mercados da Europa e África.",
+    "category": "agricultura",
+    "subcategory": "Café",
+    "published_at": "2026-09-07T10:00:00-03:00",
+    "updated_at": "2026-09-07T10:30:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Capixaba Agro",
+      "url": "https://capixabaagro.example.com/conilon-recorde"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Capixaba Agro", "url": "#" },
+      { "name": "Incaper Boletim Mock", "url": "#" }
+    ],
+    "tags": ["agricultura", "cafe", "conilon", "espirito-santo", "produtividade", "irrigacao"],
+    "entities": {
+      "pessoas": ["Luiz Carlos Bastianello"],
+      "empresas": ["Cooabriel", "Realcafé"],
+      "organizacoes": ["INCAPER", "Conab"],
+      "locais": ["Linhares", "São Mateus", "Espírito Santo"],
+      "produtos": ["Café Conilon Tipo 7", "Café Solúvel"],
+      "commodities": ["Café Robusta"]
+    },
+    "regions": ["Sudeste"],
+    "nlp": {
+      "importance_score": 0.82,
+      "sentiment": "positive",
+      "cluster_id": "cluster-agricultura-conilon-2026",
+      "topics": ["Produção de Café", "Café Conilon", "Irrigação no Campo"],
+      "key_points": [
+        "Espírito Santo encerra colheita do conilon com marca recorde de produção.",
+        "Média de produtividade atinge 55 sacas por hectare no estado.",
+        "Uso de tecnologia de irrigação por gotejamento foi decisivo.",
+        "Indústria de café solúvel absorve grande parte da safra com ágio."
+      ],
+      "tan_summary": "Espírito Santo alcança resultado histórico na colheita do café conilon. A combinação de irrigação eficiente e técnicas avançadas de manejo elevou a produtividade capixaba a patamares inéditos."
+    },
+    "related_news": ["news-008", "news-015", "news-018"]
+  },
+  {
+    "id": "news-022",
+    "slug": "pecuaria-suinocultura-exportacoes-mercado-mexico",
+    "title": "Setor de suínos comemora ampliação de cotas e novas plantas autorizadas para o México",
+    "summary": "Abertura comercial diversifica os destinos da carne suína brasileira e reduz concentração no mercado asiático.",
+    "content": "A Associação Brasileira de Proteína Animal (ABPA) confirmou o recebimento da notificação oficial das autoridades sanitárias do México autorizando o início das operações de seis novos frigoríficos de carne suína localizados em Santa Catarina e no Rio Grande do Sul.\n\nO México é um dos maiores importadores globais de cortes suínos, e a expansão da presença brasileira é vista como fundamental para garantir o equilíbrio da oferta e demanda no setor.\n\nProdutores do Sul comemoram a medida, que deve sustentar o valor do quilo do suíno vivo pago ao integrado ao longo do segundo semestre.",
+    "category": "pecuaria",
+    "subcategory": "Suínos",
+    "published_at": "2026-09-07T14:40:00-03:00",
+    "updated_at": "2026-09-07T15:10:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Suino & Aves Notícias",
+      "url": "https://suinoeaves.example.com/mexico-suinos"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Suino & Aves Notícias", "url": "#" },
+      { "name": "Comunicado ABPA Mock", "url": "#" }
+    ],
+    "tags": ["pecuaria", "suinos", "exportacao", "mexico", "abpa", "santa-catarina"],
+    "entities": {
+      "pessoas": ["Ricardo Santin"],
+      "empresas": ["BRF", "Aurora Coop", "Pamplona Alimentos"],
+      "organizacoes": ["ABPA", "SENASICA México"],
+      "locais": ["Cidade do México", "Santa Catarina", "Rio Grande do Sul"],
+      "produtos": ["Pernil Suíno", "Paleta Suína In Natura"],
+      "commodities": ["Carne Suína"]
+    },
+    "regions": ["Sul", "Internacional"],
+    "nlp": {
+      "importance_score": 0.85,
+      "sentiment": "positive",
+      "cluster_id": "cluster-pecuaria-suinos-2026",
+      "topics": ["Suinocultura", "Exportação de Carne", "Mercado Mexicano"],
+      "key_points": [
+        "México habilita 6 novas plantas brasileiras de processamento de carne suína.",
+        "Diversificação de mercados reduz dependência da demanda chinesa.",
+        "Expectativa de alta nos preços pagos ao produtor integrado no Sul.",
+        "Segurança sanitária do rebanho brasileiro foi diferencial nas auditorias."
+      ],
+      "tan_summary": "Habilitação de novas indústrias de carne suína para exportação ao México fortalece a proteína animal brasileira. A diversificação comercial beneficia produtores integrados da Região Sul."
+    },
+    "related_news": ["news-004", "news-009", "news-014"]
+  },
+  {
+    "id": "news-023",
+    "slug": "internacional-acordo-mercosul-uniao-europeia-perspectivas",
+    "title": "Negociadores do Mercosul e União Europeia avançam em cláusulas ambientais para conclusão de tratado",
+    "summary": "Rodada de conversas em Bruxelas alinha compromissos de preservação ambiental com salvaguardas comerciais para exportadores sul-americanos.",
+    "content": "Diplomatas do Mercosul e negociadores da Comissão Europeia alcançaram consensos preliminares sobre o anexo ambiental (instrumento adicional) do acordo de livre comércio entre os dois blocos econômicos. As discussões focaram em mecanismos de cooperação para o combate ao desmatamento ilegal e incentivo à economia verde.\n\nSe ratificado, o tratado criará uma das maiores zonas de livre comércio do planeta, zerando tarifas de importação para diversos produtos agrícolas brasileiros em um prazo de até dez anos.\n\nEntidades do agronegócio nacional acompanham o desfecho com otimismo, destacando a relevância da previsibilidade jurídica nas trocas internacionais.",
+    "category": "internacional",
+    "subcategory": "União Europeia",
+    "published_at": "2026-09-06T11:15:00-03:00",
+    "updated_at": "2026-09-06T11:45:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Diplomacia & Agro",
+      "url": "https://diplomaciaagro.example.com/mercosul-ue-bruxelas"
+    },
+    "sources_count": 3,
+    "sources_list": [
+      { "name": "Diplomacia & Agro", "url": "#" },
+      { "name": "Reuters Commercial Mock", "url": "#" },
+      { "name": "Itamaraty Informa", "url": "#" }
+    ],
+    "tags": [
+      "internacional",
+      "mercosul",
+      "uniao-europeia",
+      "acordo-comercial",
+      "bruxelas",
+      "itamaraty"
+    ],
+    "entities": {
+      "pessoas": ["Mauro Vieira", "Ursula von der Leyen"],
+      "empresas": ["CNA Brasil", "BusinessEurope"],
+      "organizacoes": ["Mercosul", "Comissão Europeia", "Itamaraty"],
+      "locais": ["Bruxelas", "Brasília", "Buenos Aires"],
+      "produtos": ["Suco de Laranja", "Carne Bovina Quota Hilton", "Café Especiais"],
+      "commodities": ["Comércio Livre Bloco a Bloco"]
+    },
+    "regions": ["Internacional"],
+    "nlp": {
+      "importance_score": 0.91,
+      "sentiment": "positive",
+      "cluster_id": "cluster-internacional-mercosul-2026",
+      "topics": ["Acordos de Livre Comércio", "Mercosul - União Europeia", "Geopolítica Agrícola"],
+      "key_points": [
+        "Avanço significativo na redação final do anexo ambiental do acordo Mercosul-UE.",
+        "Zerar tarifas para suco de laranja, frutas e carnes em prazos de carência.",
+        "Exigências de sustentabilidade com mecanismos de cooperação técnica mútua.",
+        "Expectativa de votação no Parlamento Europeu até o final do ano."
+      ],
+      "tan_summary": "Reuniões em Bruxelas aproximam Mercosul e União Europeia do fechamento do acordo birregional. A harmonização das exigências ambientais garante acesso privilegiado para os produtos agropecuários do Brasil."
+    },
+    "related_news": ["news-006", "news-007", "news-016"]
+  },
+  {
+    "id": "news-024",
+    "slug": "tecnologia-conectividade-5g-rural-cooperativas",
+    "title": "Consórcio de cooperativas agrícolas expande redes 5G privadas para cobrir 2 milhões de hectares",
+    "summary": "Antenas instaladas em torres de comunicação rurais levam sinal de alta velocidade para máquinas agrícolas e sistemas de telemetria.",
+    "content": "Um conjunto de dez cooperativas agropecuárias dos estados do Paraná, Santa Catarina e Mato Grosso do Sul concluiu a primeira fase de implantação de redes móveis privadas de quinta geração (5G) na zona rural. O projeto piloto cobriu mais de 2 milhões de hectares com sinal de alta velocidade e baixíssima latência.\n\nA conectividade no campo permite o monitoramento remotos em tempo real do consumo de combustível de tratores, velocidade de semeadura e envio instantâneo de dados agronômicos para nuvem.\n\nProdutores associados relatam ganhos operacionais imediatos e facilidade no controle de frotas e telemetria de precisão.",
+    "category": "tecnologia",
+    "subcategory": "Automação",
+    "published_at": "2026-09-06T15:00:00-03:00",
+    "updated_at": "2026-09-06T15:30:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Conectividade Rural News",
+      "url": "https://conectividadag.example.com/5g-privado-cooperativas"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Conectividade Rural News", "url": "#" },
+      { "name": "Boletim ConectarAgro Mock", "url": "#" }
+    ],
+    "tags": ["tecnologia", "5g", "conectividade", "cooperativas", "telemetria", "parana"],
+    "entities": {
+      "pessoas": ["Eng. Claudio Rizzotto"],
+      "empresas": ["Ericsson Brasil", "TIM Brasil", "Coamo"],
+      "organizacoes": ["Associação ConectarAgro", "Anatel"],
+      "locais": ["Campo Mourão", "Cascavel", "Paraná"],
+      "produtos": ["Rede Privada 5G SA", "Módulos IoT Agrícolas"],
+      "commodities": ["Infraestrutura de Telecom"]
+    },
+    "regions": ["Sul", "Centro-Oeste"],
+    "nlp": {
+      "importance_score": 0.86,
+      "sentiment": "positive",
+      "cluster_id": "cluster-tecnologia-5g-2026",
+      "topics": ["5G no Campo", "Conectividade Rural", "IoT Agrícola"],
+      "key_points": [
+        "Rede 5G privada leva sinal móvel de alta velocidade a 2 milhões de hectares.",
+        "Telemetria em tempo real reduz tempo de parada de máquinas no campo.",
+        "Parceria entre cooperativas agrícolas barateou custos de infraestrutura.",
+        "Iniciativa serve de modelo para expansão em outras regiões produtoras."
+      ],
+      "tan_summary": "Cooperativas rurais lideram a maior expansão de conectividade 5G privada no campo brasileiro. A infraestrutura digital viabiliza a agricultura 4.0 e impulsiona a eficiência das frotas agrícolas."
+    },
+    "related_news": ["news-003", "news-011", "news-020"]
+  },
+  {
+    "id": "news-025",
+    "slug": "politica-credito-orientado-agricultura-familiar",
+    "title": "Pronaf reforça repasses de crédito voltados para a modernização da agricultura familiar",
+    "summary": "Novas linhas de microcrédito visam a aquisição de microtratores, energia solar e sistemas de irrigação por pequenos produtores.",
+    "content": "O Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA) anunciou o início das liberações do novo lote de contratos do Pronaf Mais Alimentos. A linha é focada no apoio à modernização tecnológica de pequenas propriedades rurais e agricultura familiar em todo o país.\n\nCom juros subsidiados a partir de 2,5% ao ano e prazos de carência estendidos de até 3 anos, o programa permite que pequenos agricultores adquiram kits de irrigação eficiente, placas de energia fotovoltaica e implementos adaptados.\n\nA meta do governo é atender mais de 120 mil famílias produtoras de hortaliças, leite e frutas no ciclo 2026/27.",
+    "category": "politica",
+    "subcategory": "Plano Safra",
+    "published_at": "2026-09-06T08:30:00-03:00",
+    "updated_at": "2026-09-06T09:00:00-03:00",
+    "edition_id": "edition-2026-09-08",
+    "is_featured": false,
+    "source": {
+      "name": "Desenvolvimento Rural BR",
+      "url": "https://desenvolvimentorural.example.com/pronaf-mais-alimentos"
+    },
+    "sources_count": 2,
+    "sources_list": [
+      { "name": "Desenvolvimento Rural BR", "url": "#" },
+      { "name": "Agência MDA Notícias", "url": "#" }
+    ],
+    "tags": ["politica", "pronaf", "agricultura-familiar", "credito", "energia-solar", "mda"],
+    "entities": {
+      "pessoas": ["Paulo Teixeira"],
+      "empresas": ["Cresol", "Sicredi", "Banco do Nordeste"],
+      "organizacoes": ["MDA", "CONTAG"],
+      "locais": ["Brasília", "Recife", "Chapecó"],
+      "produtos": ["Kits de Energia Fotovoltaica Rural", "Microtratores Tobatta"],
+      "commodities": ["Hortifrúti e Leite"]
+    },
+    "regions": ["Nacional"],
+    "nlp": {
+      "importance_score": 0.83,
+      "sentiment": "positive",
+      "cluster_id": "cluster-politica-pronaf-2026",
+      "topics": ["Agricultura Familiar", "Pronaf", "Crédito Orientado"],
+      "key_points": [
+        "Programa Pronaf Mais Alimentos disponibiliza linhas de financiamento com juros de 2,5% a.a.",
+        "Foco na aquisição de energia solar, microtratores e irrigação sustentável.",
+        "Meta de beneficiar 120 mil famílias de pequenos produtores.",
+        "Estímulo à sucessão familiar e aumento da renda nas comunidades rurais."
+      ],
+      "tan_summary": "Governo reforça crédito do Pronaf para modernização e transição energética de pequenas propriedades rurais. Recursos com juros subsidiados estimulam a sustentabilidade e a produtividade da agricultura familiar."
+    },
+    "related_news": ["news-005", "news-010", "news-018"]
+  }
+]

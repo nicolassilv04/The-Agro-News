@@ -1,0 +1,52 @@
+{
+  "id": "news-008",
+  "slug": "agricultura-avanco-semeadura-trigo-sul",
+  "title": "Colheita da safra de inverno e avanço da semeadura de grãos movimentam o campo no Sul",
+  "summary": "Tricultores do Paraná e Rio Grande do Sul registram produtividade satisfatória e boa qualidade fitossanitária com a ajuda do clima seco recente.",
+  "content": "A colheita do trigo na Região Sul do país atingiu cerca de 35% da área plantada total, apresentando ritmo superior à média histórica dos últimos cinco anos. Os dados divulgados por órgãos estaduais de extensão rural confirmam que a qualidade dos grãos colhidos apresenta excelente Peso do Hectolitro (PH).\n\nApesar das oscilações pontuais de preços no mercado interno, a boa produtividade por hectare compensa custos operacionais de colheita e transporte.\n\nCom a conclusão gradual dos trabalhos no trigo, produtores rurais preparam o maquinário para iniciar o plantio da safra de verão assim que o calendário oficial permitir.",
+  "category": "agricultura",
+  "subcategory": "Trigo",
+  "published_at": "2026-09-10T11:45:00-03:00",
+  "updated_at": "2026-09-10T12:10:00-03:00",
+  "edition_id": "edition-2026-09-10",
+  "is_featured": false,
+  "source": {
+    "name": "SulAgro Hoje",
+    "url": "https://sulagro.example.com/trigo-colheita"
+  },
+  "sources_count": 2,
+  "sources_list": [
+    {
+      "name": "SulAgro Hoje",
+      "url": "#"
+    },
+    {
+      "name": "Deral/SEAB PR Mock",
+      "url": "#"
+    }
+  ],
+  "tags": ["agricultura", "trigo", "colheita", "sul", "parana", "rio-grande-do-sul"],
+  "entities": {
+    "pessoas": ["Geraldo Eichenberg"],
+    "empresas": ["Cooperativa Agrária", "Cotrijal"],
+    "organizacoes": ["DERAL-PR", "Emater-RS"],
+    "locais": ["Paraná", "Rio Grande do Sul", "Guarapuava", "Passo Fundo"],
+    "produtos": ["Trigo Pão", "Trigo Especial"],
+    "commodities": ["Trigo em Grão"]
+  },
+  "regions": ["Sul"],
+  "nlp": {
+    "importance_score": 0.8,
+    "sentiment": "neutral",
+    "cluster_id": "cluster-agricultura-trigo-2026",
+    "topics": ["Produção Agrícola", "Colheita do Trigo", "Safra de Inverno"],
+    "key_points": [
+      "Colheita atinge 35% das áreas de trigo na Região Sul com ritmo acelerado.",
+      "Qualidade dos grãos é avaliada como superior com alto índice PH.",
+      "Clima favorável acelera secagem e transporte até os moinhos regionais.",
+      "Produtores alinham logística para entrada imediata das culturas de Verão."
+    ],
+    "tan_summary": "Trabalhos de colheita do trigo avançam com rapidez no Sul do Brasil, entregando boa qualidade de grão e elevados índices de produtividade. Produtores ajustam operações para a transição safra de verão."
+  },
+  "related_news": ["news-002", "news-015", "news-021"]
+}

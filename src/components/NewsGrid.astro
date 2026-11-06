@@ -1,0 +1,19 @@
+---
+import type { NewsItem } from '../types/content';
+import NewsCard from './NewsCard.astro';
+
+interface Props {
+  news: NewsItem[];
+  featuredIndex?: number;
+}
+
+const { news } = Astro.props;
+---
+
+<div class="editions-grid">
+  {
+    news.map((item) => (
+      <NewsCard item={item} />
+    ))
+  }
+</div>

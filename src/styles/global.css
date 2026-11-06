@@ -1,0 +1,272 @@
+/* ==========================================================================
+   TAN — GLOBAL STYLES (THE NEWS INSPIRED)
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+.container-narrow {
+  max-width: var(--container-reading);
+}
+
+.section {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.section-sm {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+/* Typography Base & Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-brand-primary);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+}
+h3 {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+h4 {
+  font-size: var(--font-base);
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.lead {
+  font-size: var(--font-md);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Section Header Bar */
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-brand-primary);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-brand-primary);
+}
+
+.section-link {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.section-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Buttons System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.65rem 1.25rem;
+  font-size: var(--font-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  border-color: var(--color-brand-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-primary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-border-light);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  font-size: var(--font-xs);
+}
+
+.btn-lg {
+  padding: 0.85rem 1.75rem;
+  font-size: var(--font-base);
+}
+
+/* Badges & Tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-xs);
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--badge-border);
+}
+
+.badge-primary {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  border-color: var(--color-brand-primary);
+}
+
+.badge-category {
+  background-color: var(--color-brand-primary);
+  color: #ffffff;
+  border: none;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.breadcrumb-item a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.breadcrumb-separator {
+  color: var(--color-border-dark);
+}
+
+/* Editorial Dividers & Lines */
+.divider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+/* Helper Utilities */
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: var(--color-text-muted);
+}
+.mt-xs {
+  margin-top: var(--space-xs);
+}
+.mt-sm {
+  margin-top: var(--space-sm);
+}
+.mt-md {
+  margin-top: var(--space-md);
+}
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+.mb-xs {
+  margin-bottom: var(--space-xs);
+}
+.mb-sm {
+  margin-bottom: var(--space-sm);
+}
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import SearchInterface from '../components/SearchInterface.astro';
+
+const seo = {
+  title: 'Busca — TAN — The Agro News',
+  description:
+    'Pesquise notícias, cotações de commodities, regiões, entidades e dados de mercado no portal TAN.',
+  canonicalPath: '/busca/',
+};
+---
+
+<BaseLayout seo={seo} activePath="/busca/">
+  <div class="container section-sm">
+    <Breadcrumb items={[{ label: 'Busca' }]} />
+
+    <header class="text-center" style="margin-bottom: 2.5rem;">
+      <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 0.5rem;">Buscar no TAN</h1>
+      <p class="lead" style="max-width: 600px; margin: 0 auto;">
+        Pesquise por commodities, empresas, pessoas, regiões ou palavras-chave no acervo estático de
+        notícias.
+      </p>
+    </header>
+
+    <SearchInterface />
+  </div>
+</BaseLayout>
